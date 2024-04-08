@@ -1,10 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header";
+import CustomSlider from "../components/CustomSlider";
+import Hero from "../components/Hero.astro";
 ---
 
-<Layout title="Centro Medico Agliana">
+<Layout>
   <main>
     <Header client:load />
+    <Hero />
+    <CustomSlider client:load />
   </main>
 </Layout>

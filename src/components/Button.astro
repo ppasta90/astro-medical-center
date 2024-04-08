@@ -1,0 +1,22 @@
+---
+const primaryTailwindClass =
+  "rounded-lg cursor-pointer font-semibold py-[10px] px-4 border-none bg-primary text-white";
+
+const secondaryTailwindClass =
+  "rounded-lg cursor-pointer font-semibold py-[10px] px-4 border-none bg-secondary text-white";
+
+interface Props {
+  variant?: "primary" | "secondary";
+  text: string;
+  icon?: string;
+}
+
+const { variant = "primary", text, icon } = Astro.props;
+---
+
+<button
+  class={variant === "primary" ? primaryTailwindClass : secondaryTailwindClass}
+>
+  {icon && <span class="icon">{icon}</span>}
+  {text}
+</button>

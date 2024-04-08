@@ -7,8 +7,7 @@ import {FaHamburger} from 'react-icons/fa'
 import { isDrawerMenuOpen } from "../stores/drawerMenuStore";
 import { useStore } from "@nanostores/react";
 
-import { getImage } from "astro:assets";
-
+import logo from '../images/logo.svg'
 
 const Header = ()  => {
 
@@ -16,10 +15,9 @@ const Header = ()  => {
   const toggleDrawer = () => isDrawerMenuOpen.set(!$isMenuOpen)
 
   return (
-    <header className="h-[72px] flex items-center justify-between bg-slate-700">
+    <header className="h-[72px] flex items-center justify-between bg-lightGreen text-secondary">
         <div className="flex items-center justify-between mx-4 w-full">
-          {/* TODO https://www.reddit.com/r/astrojs/comments/1bia6lq/how_to_utilize_image_with_react_component/ add Logo with getImage */}
-          <span>LOGO</span>
+          <img src={logo.src} />
 
           {/* MOBILE */}
             <div className="lg:hidden">
