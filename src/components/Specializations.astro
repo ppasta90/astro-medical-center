@@ -1,0 +1,66 @@
+---
+import SpecializationCard from "./SpecializationCard.astro";
+
+type Specialization = {
+  title: string;
+  description: string;
+};
+/* TODO where to store data? check astro doc */
+const specializationsData: Specialization[] = [
+  {
+    title: "Psicologia",
+    description:
+      "La psicologia è la disciplina che studia i processi mentali e il comportamento degli individui.",
+  },
+  {
+    title: "Psichiatria",
+    description:
+      "La psichiatria è la branca della medicina che si occupa della prevenzione, della diagnosi, della cura e della riabilitazione delle malattie mentali.",
+  },
+  {
+    title: "Dietetica e nutrizione",
+    description:
+      "La dietetica è la scienza che studia l'alimentazione in rapporto alle esigenze dell'organismo umano.",
+  },
+  {
+    title: "Urologia",
+    description:
+      "L'urologia è la branca della medicina che si occupa delle patologie dell'apparato urinario e dell'apparato genitale maschile.",
+  },
+  {
+    title: "Ortopedia",
+    description:
+      "L'ortopedia è la branca della medicina che si occupa delle patologie dell'apparato locomotore.",
+  },
+  {
+    title: "Oculista",
+    description:
+      "L'oculistica è la branca della medicina che si occupa delle patologie dell'occhio.",
+  },
+];
+---
+
+<section id="specializations" class="bg-secondary py-20">
+  <div class="w-[90%] m-auto text-white flex flex-col gap-4 pb-8">
+    <h2 class="text-primary font-bold font-serif text-2xl">
+      AREE SPECIALISTICHE
+    </h2>
+    <h3 class="mb-4 text-2xl font-sans font-bold">Cosa stai cercando?</h3>
+    <p>
+      Qui trovi tutte le nostre specializzazioni con i rispettivi medici di
+      riferimento
+    </p>
+  </div>
+  <div
+    class="w-[90%] gap-8 m-auto flex flex-col justify-between flex-wrap lg:gap-4 lg:flex-row"
+  >
+    {
+      specializationsData.map((specialization) => (
+        <SpecializationCard
+          title={specialization.title}
+          description={specialization.description}
+        />
+      ))
+    }
+  </div>
+</section>

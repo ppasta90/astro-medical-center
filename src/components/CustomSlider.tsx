@@ -37,7 +37,7 @@ const images = [
 
 
 const settings = {
-  dots: true,
+  dots: false,
   infinite: true,
   speed: 200,
   autoplay: true,
