@@ -1,0 +1,36 @@
+---
+import Accordion from "./Accordion.astro";
+
+const faqs = [
+  {
+    question: "Come posso prenotare una visita?",
+    answer:
+      "Puoi prenotare una visita tramite il nostro sito, oppure chiamando il numero 331222675",
+  },
+  {
+    question: "Come posso pagare una visita?",
+    answer:
+      "Puoi pagare una visita tramite il nostro sito, oppure chiamando il numero 331222675",
+  },
+  {
+    question: "Come posso sapere il nome dei dottori disponibili?",
+    answer:
+      "Puoi sapere il nome dei dottori disponibili tramite il nostro sito, oppure chiamando il numero 331222675",
+  },
+];
+---
+
+<section id="faqs" class="bg-secondary flex flex-col relative py-20">
+  <div class="flex flex-col justify-between w-[90%] m-auto gap-2 text-white">
+    <h2 class="text-primary font-bold font-serif text-2xl">FAQ</h2>
+    <h3 class="mb-4 text-2xl font-sans font-bold">Hai qualche dubbio?</h3>
+    <p>Qui trovi tutte le nostre risposte alle domande più frequenti</p>
+    <div class="text-secondary flex flex-col gap-4 mt-4">
+      {
+        faqs.map((faq) => (
+          <Accordion question={faq.question} answer={faq.answer} />
+        ))
+      }
+    </div>
+  </div>
+</section>

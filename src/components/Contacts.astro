@@ -1,0 +1,35 @@
+---
+import { FaMailBulk, FaPhone } from "react-icons/fa";
+---
+
+<section id="contacts" class="bg-lightGreen flex flex-col relative py-20">
+  <div class="flex flex-col justify-between w-[90%] m-auto gap-2">
+    <h2 class="text-primary font-bold font-serif text-2xl">Contatti</h2>
+    <h3 class="mb-4 text-2xl font-sans font-bold">
+      Hai bisogno di informazioni o vuoi prenotare?
+    </h3>
+
+    <a
+      aria-label="Scrivici una mail"
+      href="mailto: info@centromedicoagliana.it"
+      target="_blank"
+      class="flex gap-2"
+    >
+      <div class="flex items-center gap-1 text-secondary">
+        <FaMailBulk size={20} style={{ color: "var(--secondary)" }} />
+      </div>
+      <span>info@centromedicoagliana.it</span>
+    </a>
+
+    <a
+      aria-label="Chiama il numero 0574027087"
+      href="tel: 0574027087"
+      class="flex gap-2"
+    >
+      <div class="flex items-center gap-1 text-secondary">
+        <FaPhone size={20} style={{ color: "var(--secondary)" }} />
+      </div>
+      <span>0574 027087</span>
+    </a>
+  </div>
+</section>
