@@ -1,10 +1,14 @@
 ---
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { MdOpenInNew } from "react-icons/md";
-
-const locationUrl =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2874.793570456051!2d11.01097547535706!3d43.901541971091454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132af51c952e35ff%3A0x9f40d897e8d92b8e!2sVia%20Michelangelo%20Buonarroti%2C%203%2C%2051031%20Agliana%20PT!5e0!3m2!1sit!2sit!4v1700825573878!5m2!1sit!2sit";
 ---
+
+<script>
+  const locationUrl =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2874.793570456051!2d11.01097547535706!3d43.901541971091454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132af51c952e35ff%3A0x9f40d897e8d92b8e!2sVia%20Michelangelo%20Buonarroti%2C%203%2C%2051031%20Agliana%20PT!5e0!3m2!1sit!2sit!4v1700825573878!5m2!1sit!2sit";
+  const button = document.getElementById("goToMap");
+  button?.addEventListener("click", () => window.open(locationUrl, "_blank"));
+</script>
 
 <section id="where" class="flex flex-col relative py-20">
   <div
@@ -18,7 +22,7 @@ const locationUrl =
       </h3>
       <div class="flex items-center gap-1 text-secondary">
         <button class="bg-opacity-0 border-none grid place-content-center">
-          <FaMapMarkerAlt size={20} style={{ color: "var(--secondary)" }} />
+          <FaMapMarkerAlt size={20} />
         </button>
         <p>
           Via Michelagelo Buonarroti angolo via Selvaggia Vergiolesi, s.n.c.,
@@ -27,10 +31,10 @@ const locationUrl =
       </div>
       <div class="flex items-center gap-1 text-secondary">
         <button
-          onclick={() => window.open(locationUrl)}
+          id="goToMap"
           class="bg-opacity-0 border-none grid place-content-center cursor-pointer"
         >
-          <MdOpenInNew size={20} style={{ color: "var(--secondary)" }} />
+          <MdOpenInNew size={20} />
         </button>
         <p>Come raggiungerci</p>
       </div>
@@ -39,7 +43,7 @@ const locationUrl =
       <iframe
         class="border-none"
         title="mappa"
-        src={locationUrl}
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2874.793570456051!2d11.01097547535706!3d43.901541971091454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132af51c952e35ff%3A0x9f40d897e8d92b8e!2sVia%20Michelangelo%20Buonarroti%2C%203%2C%2051031%20Agliana%20PT!5e0!3m2!1sit!2sit!4v1700825573878!5m2!1sit!2sit"
         width="100%"
         height="450"
         loading="lazy"></iframe>

@@ -44,7 +44,7 @@ const settings = {
   autoplaySpeed: 3000,
   arrows: false,
   adaptiveHeight: true,
-  slidesToShow: 3,
+  slidesToShow: 1,
   fade: true,
   pauseOnHover: false,
 };

@@ -15,7 +15,7 @@ const Header = ()  => {
   const toggleDrawer = () => isDrawerMenuOpen.set(!$isMenuOpen)
 
   return (
-    <header className="h-[72px] flex items-center justify-between bg-lightGreen text-secondary">
+    <header className="h-[72px] font-serif flex items-center justify-between bg-lightGreen text-secondary">
         <div className="flex items-center justify-between mx-4 w-full">
           <img src={logo.src} />
 

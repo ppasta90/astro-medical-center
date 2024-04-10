@@ -1,0 +1,66 @@
+---
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FiFacebook } from "react-icons/fi";
+import logo from "../images/logo.svg";
+---
+
+<footer class="bg-lightGreen py-8">
+  <div class="flex justify-between w-[90%] m-auto gap-4">
+    <div class="flex flex-col gap-4">
+      <a aria-label="logo Centro Medico Agliana" href="/" class="mb-8">
+        <img src={logo.src} alt="Centro Medico Agliana Logo" />
+      </a>
+      <div class="flex flex-col gap-4 text-secondary">
+        <p>©2023 Centro Medico Agliana</p>
+        <p>Partita IVA: 01393880479</p>
+        <a
+          aria-label="Scrivici una mail pec"
+          href="mailto: centromedicoagliana@pec.it"
+        >
+          PEC: centromedicoagliana@pec.it
+        </a>
+      </div>
+    </div>
+    <div>
+      <div
+        class="flex flex-col gap-4 font-[1.2rem] text-secondary justify-between h-full"
+      >
+        <div id="socials-icons" class="flex gap-4">
+          <a
+            aria-label="Facebook"
+            href="https://www.facebook.com/studiomedicoagliana"
+            target="_blank"
+          >
+            <FiFacebook size={25} />
+          </a>
+          <a
+            aria-label="Instagram"
+            href="https://www.instagram.com/centro-medico-agliana/"
+            target="_blank"
+          >
+            <FaInstagram size={25} />
+          </a>
+          <a
+            aria-label="Linkedin"
+            href="https://www.linkedin.com/company/centro-medico-agliana/"
+            target="_blank"
+          >
+            <FaLinkedin size={25} />
+          </a>
+        </div>
+
+        <div id="policies" class="flex flex-col gap-4">
+          <a aria-label="Privacy Policy" href="/privacy-policy">
+            Privacy Policy
+          </a>
+          <a aria-label="Cookie Policy" href="/cookie-policy">
+            Cookie Policy
+          </a>
+          <a aria-label="Termini e condizioni" href="/termini-e-condizioni">
+            Termini e condizioni
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
