@@ -2,7 +2,7 @@
 import Drawer from "react-modern-drawer";
 import 'react-modern-drawer/dist/index.css'
 import DrawerMenu from "./DrawerContent";
-import {FaHamburger} from 'react-icons/fa'
+import {GiHamburgerMenu} from 'react-icons/gi'
 
 import { isDrawerMenuOpen } from "../stores/drawerMenuStore";
 import { useStore } from "@nanostores/react";
@@ -16,13 +16,13 @@ const Header = ()  => {
 
   return (
     <header className="h-[72px] font-serif flex items-center justify-between bg-lightGreen text-secondary">
-        <div className="flex items-center justify-between mx-4 w-full">
+        <div className="flex items-center justify-between w-full mx-8">
           <img src={logo.src} />
 
           {/* MOBILE */}
             <div className="lg:hidden">
               <button onClick={toggleDrawer}>
-                <FaHamburger />
+                <GiHamburgerMenu size="1.5rem" />
               </button>
               <Drawer
                 open={$isMenuOpen}
@@ -37,30 +37,30 @@ const Header = ()  => {
           {/* DESKTOP */}
             <div className="hidden lg:block">
               <nav>
-                <ul className="list-none flex gap-5">
+                <ul className="list-none flex gap-5 text-xl">
                   <li>
                     <a
                       aria-label="Vai alla sezione specialisti"
-                      href="#specializations"
+                      href="#specialisti"
                     >
                       SPECIALISTI
                     </a>
                   </li>
                   <li>
-                    <a aria-label="Vai alla sezione dove siamo " href="#where">
+                    <a aria-label="Vai alla sezione dove siamo " href="#dove-siamo">
                       DOVE SIAMO
                     </a>
                   </li>
                   <li>
                     <a
                       aria-label="Vai alla sezione contatti "
-                      href="#contacts"
+                      href="#contatti"
                     >
                       CONTATTI
                     </a>
                   </li>
                   <li>
-                    <a aria-label="Vai alla sezione faq " href="#faqs">
+                    <a aria-label="Vai alla sezione faq " href="#faq">
                       FAQ
                     </a>
                   </li>
