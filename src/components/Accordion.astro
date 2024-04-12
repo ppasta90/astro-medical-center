@@ -29,13 +29,14 @@ const { question, answer } = Astro.props;
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", () => {
     const accordionItems = document.querySelectorAll(".accordion-item");
 
     accordionItems.forEach((item) => {
-      item.addEventListener("click", function () {
-        this.classList.toggle("active");
-        const content = this.nextElementSibling;
+      item.addEventListener("click", () => {
+        const element = item as HTMLElement;
+        element.classList.toggle("active");
+        const content = item.nextElementSibling as HTMLElement;
         if (content.style.display === "block") {
           content.style.display = "none";
         } else {
