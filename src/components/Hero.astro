@@ -1,35 +1,22 @@
 ---
 import { FiArrowDownCircle } from "react-icons/fi";
-import Button from "./Button.astro";
 ---
 
-<section class="text-white text-center">
+<section class="text-white text-center bg-primaryLight py-20">
   <div
-    class="flex flex-col justify-center items-center py-12 bg-lightGreen text-secondary"
+    class="flex flex-col justify-center items-center bg-primary-light text-secondary"
   >
     <h1 class="font-serif text-secondary text-customClamp mb-4">
       CENTRO MEDICO AGLIANA
     </h1>
     <h2
-      class="font-dmsans max-w-[90%] lg:max-w-[70%] text-xl mb-12 lg:mb-8 text-secondary font-bold"
+      class="font-dmsans max-w-[90%] lg:max-w-[70%] text-xl mb-10 lg:mb-8 text-darkBlue"
     >
       Siamo uno studio privato che ospita professionisti operanti in varie
       discipline mediche
     </h2>
-    <div
-      class="mb-8 lg:mb-4 rounded-lg cursor-pointer font-semibold py-[10px] px-4 border-none bg-primary text-white"
-    >
+    <div class="green-cta">
       <a href="tel:0574027087"> CHIAMA ORA! </a>
-    </div>
-    <div class="">
-      <a
-        class="cursor-pointer flex items-center gap-2 font-bold"
-        aria-label="scopri le specializzazioni"
-        href="#specialisti"
-      >
-        <FiArrowDownCircle size={20} style={{ color: "var(--secondary)" }} />
-        <span>Scopri le specializzazioni</span>
-      </a>
     </div>
   </div>
 </section>

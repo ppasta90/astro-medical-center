@@ -13,17 +13,17 @@
   </body>
 </html>
 <style is:global>
-  :root {
-    --main-title: #212529;
-    --primary: #6bd697;
-    --background: #cef1dc;
-    --secondary: #21137f; /* alternative #13347f */
-    --primary-text: #21137f;
-    --secondary-bg: white;
-    --secondary-text: black;
-    --focus-color: lightblue;
-  }
   html {
     font-family: "DM Sans", sans-serif;
+  }
+  .green-cta {
+    @apply xl:min-w-[180px] rounded-3xl cursor-pointer font-semibold py-[10px] px-4 border-none bg-primary text-white;
+  }
+  .blue-cta {
+    @apply xl:min-w-[180px] rounded-3xl cursor-pointer font-semibold py-[10px] px-4 border-none bg-secondary text-white;
+  }
+
+  .white-cta {
+    @apply xl:min-w-[180px] rounded-3xl border-2 border-secondary cursor-pointer font-semibold py-[10px] px-4 bg-white text-secondary;
   }
 </style>
