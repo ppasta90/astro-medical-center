@@ -1,10 +1,20 @@
 /** @type {import('tailwindcss').Config} */
+
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
+
 export default {
+  darkMode: ["class"],
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  prefix: "",
   theme: {
-    extend: {},
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     colors: {
       primary: "#2e9370",
       primaryLight: "#bce5d7",
@@ -15,6 +25,7 @@ export default {
       darkBlue: "#1b1937",
       lightGrey: " #f2f2f3",
       grey: "#d1d1d7",
+      lightViolet: "#f5f5ff",
       ...colors,
     },
     fontFamily: {
@@ -25,6 +36,22 @@ export default {
       ...defaultTheme.fontSize,
       customClamp: "clamp(1.8rem, 7vw, 5rem)",
     },
+    extend: {
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };

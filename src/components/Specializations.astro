@@ -1,5 +1,7 @@
 ---
-import SpecializationCard from "./SpecializationCard.astro";
+import Card from "./Card";
+import CustomDialog from "./ui/CustomDialog";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog"
 
 type Specialization = {
   title: string;
@@ -43,22 +45,16 @@ const specializationsData: Specialization[] = [
 <section id="specialisti" class="bg-secondary py-20">
   <div class="w-[90%] m-auto text-white flex flex-col gap-4 pb-8">
     <h2 class="text-primary font-bold font-serif text-2xl">Gli specialisti</h2>
-    <h3 class="mb-4 text-2xl font-sans font-bold">Cosa stai cercando?</h3>
+    <h3 class="mb-4 text-2xl font-sans font-bold">Chi stai cercando?</h3>
     <p>
       Qui trovi tutte le nostre specializzazioni con i rispettivi medici di
       riferimento
     </p>
   </div>
   <div
-    class="w-[90%] gap-8 m-auto flex flex-col justify-between flex-wrap lg:gap-4 lg:flex-row"
+    class="w-[90%] gap-8 m-auto grid grid-cols-3 justify-between flex-wrap lg:gap-4 lg:flex-row"
   >
-    {
-      specializationsData.map((specialization) => (
-        <SpecializationCard
-          title={specialization.title}
-          description={specialization.description}
-        />
-      ))
-    }
+    {specializationsData.map((specialization) => <Card client:load />)}
+
   </div>
 </section>

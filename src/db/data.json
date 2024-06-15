@@ -1,0 +1,185 @@
+[
+  {
+    "nome": "Tommaso",
+    "cognome": "Amadori",
+    "bio": "Tommaso ha conseguito la laurea con lode in Medicina e Chirurgia presso l'Università degli studi di Firenze nel 2017. Successivamente, nel 2023, ha completato la specializzazione con lode in Radiodiagnostica presso l'Università degli studi di Firenze. Durante il percorso professionale, ha acquisito e perfezionato l'esperienza senologica presso il reparto di senologia diretto dal Dott. Nori presso Careggi. Nel 2023, ha conseguito il Diploma Europeo in Radiologia (EDiR). Si è attivamente impegnato nella realizzazione di corsi su tecniche senologiche avanzate, come la Contrast Enhanced Mammography e la Crioablazione al seno. Inoltre, è membro di società radiologiche italiane ed internazionali, tra cui SIRM, ESR, EUSOBI e RSNA.",
+    "specializzazione": "senologo",
+    "servizi": ["visita senologica", "ecografia mammaria"]
+  },
+  {
+    "nome": "Anna Maria",
+    "cognome": "Anichini",
+    "bio": "Annamaria si è laureata in Scienze Biologiche e successivamente ha conseguito la Laurea in Biologia, curriculum biosanitario, con il massimo dei voti e lode presso l’Università degli Studi di Firenze ed ha ottenuto l’abilitazione all’esercizio alla professione di Biologo con l’iscrizione all’Ordine sez. A. Effettua controlli e consulenze nutrizionali a pazienti sani o con patologie accertate legate all’alimentazione, ed elabora piani alimentari personalizzati al fine di correggere lo stile di vita e migliorare la salute del paziente. Il suo obiettivo è insegnare ad avere un stile di vita sano ed equilibrato partendo dalla tavola. E’ mamma di due bambini e da quando sono nati ha sentito la necessità di specializzarsi in nutrizione pediatrica per stare accanto alle famiglie e accompagnarle in questo percorso così bello e allo stesso tempo così delicato, che è l’alimentazione nei primi anni di vita del bambino. Attualmente si sta specializzando in nutrizione pediatrica non prescrittiva.",
+    "specializzazione": "nutrizionista",
+    "servizi": [
+      "diabete e insulino resistenza",
+      "insufficienza renale e iperuricemia",
+      "dislipidemie e ipertensione",
+      "patologie gastrointestinali",
+      "gravidanza e allattamento",
+      "alimentazione pediatrica",
+      "educazione alimentare familiare",
+      "educazione alimentare nello sportivo"
+    ]
+  },
+  {
+    "nome": "Alessia",
+    "cognome": "Romani",
+    "bio": "Alessia ha conseguito il titolo di Specialista in Endocrinologia e Malattie del Metabolismo presso l’Università degli Studi di Firenze nel 2023. Durante il suo percorso di formazione, si è dedicata alla diabetologia e all’obesiologia, alle patologie tiroidee, ipofisarie e surrenaliche, all’andrologia e all’endocrinologia femminile, nonché alle malattie del metabolismo osseo. Attualmente sta proseguendo l’attività clinica e di ricerca come Assegnista di Ricerca presso l’Università degli Studi di Firenze sulla tematica dell’incongruenza di genere e della terapia ormonale di affermazione di genere.",
+    "specializzazione": "endocrinologa, androloga",
+    "servizi": [
+      "patologie tiroidee",
+      "patologie ipofisarie e surrenaliche",
+      "endocrinologia femminile",
+      "malattie del metabolismo osseo",
+      "diabete",
+      "obesità",
+      "andrologia",
+      "ecografia tiroidea"
+    ]
+  },
+  {
+    "nome": "Linda",
+    "cognome": "Prosperi",
+    "bio": "Linda si è laureata in Scienze Biologiche presso l'Università di Firenze e successivamente si è specializzata in Scienze della Nutrizione Umana. La sua attività professionale consiste nello sviluppare piani nutrizionali personalizzati per condizioni patologiche e fisiologiche. Oltre alla gestione clinica, si occupa della perdita di peso in casi di sovrappeso ed obesità grave, nonché dell'aumento di peso. Il suo approccio di lavoro si basa sull'accoglienza e la comprensione del paziente dal punto di vista emotivo, sull'analisi dello stato nutrizionale e sull'applicazione del protocollo dietetico più efficace e sostenibile in base alla patologia del paziente. Tra i protocolli che applica, rientra anche la dieta Chetogenica.",
+    "specializzazione": "nutrizionista",
+    "servizi": [
+      "piani nutrizionali personalizzati",
+      "diabete",
+      "dislipidemie",
+      "ipertensione",
+      "malattia da reflusso gastroesofageo",
+      "malattie infiammatorie croniche intestinali",
+      "malattie autoimmuni",
+      "insulino resistenza",
+      "insufficienza renale",
+      "iperuricemia"
+    ]
+  },
+  {
+    "nome": "Sandra",
+    "cognome": "Pellegrino",
+    "bio": "Laureata in Podologia con il massimo dei voti presso l’Università degli Studi di Firenze nel 2013 presentando la tesi sul piede diabetico; successivamente ha conseguito il Master I livello in Biomeccanica applicata alla terapia ortesica podologica presso la stessa università nel 2015. Inoltre ha seguito il corso di perfezionamento universitario in Rieducazione funzionale, terapia fisica e manuale in podologia nel 2019. Dal 2014 ad oggi ha partecipato a diversi corsi di aggiornamento professionale su materie riguardanti la rieducazione ungueale per trattare le onicocriptosi (unghia incarnita), patologie dermatologiche, fabbricazione di ortesi digitali in silicone, aggiornamento sul piede pediatrico ecc… La Dott.ssa è una professionista sanitaria dell’area della riabilitazione e specializzata per la cura del piede; si occupa del piede dal bambino all’anziano, si occupa del piede doloroso a partire dalle problematiche cutanee come callosità, tilomi, duroni, unghia incarnita, fino a trattare e prescrivere ortesi plantari per patologie e deformità come alluce valgo, metatarsalgie, tallodinie, fascite ecc..",
+    "specializzazione": "podologa",
+    "servizi": [
+      "visita podologica",
+      "esame baropodometrico",
+      "ortesi plantari con scansione 3D",
+      "fabbricazione ortesi digitali su misura in silicone",
+      "trattamenti podologici per problematiche di unghia incarnita",
+      "verruche opercheratosi (callosità)",
+      "onicomicosi",
+      "distrofie ungueali",
+      "rieducazione ungueale non invasiva",
+      "prevenzione e cura del piede diabetico",
+      "piede reumatico",
+      "piede geriatrico",
+      "medicazioni per lesioni del piede"
+    ]
+  },
+  {
+    "nome": "Marianna",
+    "cognome": "Lini",
+    "bio": "Marianna si è laureata con lode in Ostetricia presso l'Università degli Studi di Firenze. La sua assistenza è dedicata all'accompagnamento della donna in ogni fase della sua vita fertile, dal menarca alla menopausa, e al neonato nel suo primo anno di vita. Ha deciso di svolgere la sua attività sul territorio, per applicare i principi della continuità dell'assistenza ed essere vicina alle donne, alle madri in gravidanza e, soprattutto, nelle delicate fasi del dopo parto.",
+    "specializzazione": "ostetrica",
+    "servizi": [
+      "consulenze preconcezionali",
+      "consulenze in gravidanza",
+      "assistenza in puerperio",
+      "assistenza all'allattamento materno",
+      "assistenza alla cura del neonato",
+      "sonno sicuro e svezzamento",
+      "consulenze su contraccezione",
+      "salute mestruale",
+      "prevenzione oncologica"
+    ]
+  },
+  {
+    "nome": "Giulia",
+    "cognome": "Bortot",
+    "bio": "Giulia è un medico chirurgo, laureato presso l'Università di Ferrara con il massimo dei voti e lode, ha conseguito nel 2022 la specializzazione in Urologia con lode presso l'Università degli Studi di Firenze. Si occupa di patologia urologica benigna, maligna, plastico-ricostruttiva e neuro-urologica del paziente (maschio e femmina), dalla diagnosi prenatale all'età adulta. Dal 2019, si è interessato anche all'Urologia Pediatrica e Cure Transizionali presso l'ospedale pediatrico AOU Meyer. Madre di due bambini, parla fluentemente italiano, spagnolo e inglese.",
+    "specializzazione": "urologa",
+    "servizi": [
+      "patologia urologica malformativa",
+      "patologia urologica",
+      "infezione delle vie urinarie/cistite",
+      "calcoli urinari",
+      "andrologia",
+      "disfunzione erettile",
+      "urologia pediatrica",
+      "enuresi",
+      "chirurgia urologica"
+    ]
+  },
+  {
+    "nome": "Ilaria",
+    "cognome": "Scandagli",
+    "bio": "Ilaria è un medico dermatologo laureato con il massimo dei voti presso l'Università di Firenze. Ha successivamente completato la specializzazione in Dermatologia e Venereologia con lode nel 2023 presso la stessa istituzione. Durante il suo percorso si è principalmente dedicata allo studio e al trattamento delle alopecie e delle patologie infiammatorie, come l'idrosadenite suppurativa e la psoriasi. Manifesta un particolare interesse anche per la dermatologia pediatrica e la diagnostica non invasiva.",
+    "specializzazione": "dermatologa",
+    "servizi": [
+      "visita dermatologica",
+      "visita dermatologica pediatrica",
+      "visita tricologica",
+      "esame micologico diretto e colturale",
+      "mappatura nevi in epiluminescenza",
+      "asportazione nevi",
+      "asportazione fibromi penduli",
+      "asportazione cheratosi seborroiche",
+      "asportazione lesioni benigne mediante diatermocoagulazione",
+      "trattamento di verruche virali",
+      "trattamento di condilomi",
+      "peeling estetico",
+      "laser CO2"
+    ]
+  },
+  {
+    "nome": "Laura",
+    "cognome": "Becarelli",
+    "bio": "Laura consegue la Laurea in Osteopatia presso la Kingston University London nel 2020 dopo aver ottenuto il diploma italiano presso ICOM College Firenze. Lavora come docente presso Malta Educational College. Frequenta corsi in ambito cranio sacrale e pediatrico. Lavora presso lo studio dentistico Becarelli dove tratta problematiche occlusali.",
+    "specializzazione": "osteopata",
+    "servizi": [
+      "osteopatia pediatrica",
+      "osteopatia e gravidanza",
+      "osteopatia e dismenorrea",
+      "osteopatia e bocca",
+      "osteopatia e vista",
+      "terapia cranio sacrale"
+    ]
+  },
+  {
+    "nome": "Francesca",
+    "cognome": "Mastrorosato",
+    "bio": "Francesca si è laureata in Scienze Biologiche e successivamente ha conseguito la laurea magistrale in Biologia della salute curriculum Nutrizionale presso l’Università Alma Mater Studiorum di Bologna. Infine ha ottenuto l’abilitazione all’esercizio della professione di Biologo con l’iscrizione all’Ordine sez. A. Elabora piani alimentari altamente personalizzati in condizione patologiche e fisiologiche, stabilendo gli obiettivi insieme al paziente e tenendo conto delle personali preferenze alimentari, dello stile di vita e dello stato di salute. Il suo obiettivo è aiutare la persona a seguire uno stile di vita che favorisca il suo benessere fisico e mentale, ad ogni incontro con attenzione ed empatia aiuta i suoi pazienti a trovare l’equilibrio a tavola, ponendo attenzione al legame che c’è tra cibo ed emozioni.",
+    "specializzazione": "nutrizionista",
+    "servizi": [
+      "Sottopeso",
+      "Sovrappeso e obesità",
+      "Intolleranze alimentari e allergie",
+      "Menopausa e osteoporosi",
+      "Alimentazione per sportivi non agonistici",
+      "Patologie cardiovascolari",
+      "Patologie metaboliche",
+      "Patologie gastrointestinali",
+      "Patologie renali",
+      "Alimentazione in età pediatrica",
+      "Alimentazione in gravidanza",
+      "Alimentazione in allattamento",
+      "Alimentazione vegetariana",
+      "Alimentazione per neoplasie"
+    ]
+  },
+  {
+    "nome": "Emanuele",
+    "cognome": "Ruggeri",
+    "bio": "Laureato in Medicina e Chirurgia presso la facoltà La Sapienza di Roma, ho ottenuto la specializzazione in psichiatria presso L'Università degli Studi di Firenze. Ho conseguito il diploma di Psicoterapeuta Cognitivo Comportamentale presso il CTCC di Firenze. Attualmente ricopre la posizione di medico psichiatra presso la Syracuse University in Florence, continuando a dedicarsi alla ricerca accademica in Italia ed all'estero.",
+    "specializzazione": "psichiatra",
+    "servizi": [
+      "disturbi dell'umore",
+      "disturbi di personalità",
+      "abuso di sostanze",
+      "cefalea",
+      "disturbi del sonno",
+      "disturbi dell'alimentazione"
+    ]
+  }
+]
