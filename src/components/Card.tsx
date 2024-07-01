@@ -1,8 +1,25 @@
 import React from "react";
 import { LuPlusCircle } from "react-icons/lu";
 import CustomDialog from "./ui/CustomDialog";
+import { capitalizeFirstLetter } from "@/lib/utils";
 
-const Card = () => {
+type CardProps = {
+  name: string;
+  surname: string;
+  bio: string;
+  image: string;
+  specialization: string;
+  services: string[];
+  
+};
+const Card = ({
+  name,
+  surname,
+  bio,
+  image,
+  specialization,
+  services,
+}: CardProps)  => {
   const [section, setSection] = React.useState<"prestazioni" | "esperienze">(
     "prestazioni"
   );
@@ -20,10 +37,10 @@ const Card = () => {
         alt=""
       />
       <h2 className="text-center text-2xl mt-4 text-darkBlue font-bold">
-        Podologa
+        {specialization}
       </h2>
       <h3 className="text-center text-xl mt-2 text-darkBlue">
-        Dott.ssa Sandra Pellegrino
+        {name} {surname}
       </h3>
       <div className="flex justify-center mt-4">
         <button className="blue-cta">CHIAMA ORA</button>
@@ -46,14 +63,9 @@ const Card = () => {
         {section === "prestazioni" && (
           <div className="p-4 rounded-lg">
             <ul className="list-disc ml-4 mt-2 text-darkBlue">
-              <li>Visita podologica</li>
-              <li>Esame baropodometrico</li>
-              <li>Ortesi plantari con scansione 3D</li>
-              <li>Fabbricazione ortesi plantari su misura in silicone</li>
-              <li>
-                Trattamenti podologici per problematiche di unghie incarnite,
-                verruche, ipercheratosi, onicomicosi, distrofie ungueali...
-              </li>
+              {services.map((service, index) => (
+                <li key={index}>{service}</li>
+              ))}
             </ul>
             <CustomDialog
               title="Titolo"
@@ -70,9 +82,7 @@ const Card = () => {
         {section === "esperienze" && (
           <div className="p-4 rounded-lg">
             <ul className="list-disc ml-4 mt-2 text-darkBlue">
-              <li>Laurea in blalba</li>
-              <li>Tirocinio di qua</li>
-              <li>Esperienza de la</li>
+              {bio}
             </ul>
             <CustomDialog
               title="Titolo"

@@ -1,45 +1,6 @@
 ---
 import Card from "./Card";
-import CustomDialog from "./ui/CustomDialog";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog"
-
-type Specialization = {
-  title: string;
-  description: string;
-};
-/* TODO where to store data? check astro doc */
-const specializationsData: Specialization[] = [
-  {
-    title: "Psicologia",
-    description:
-      "La psicologia è la disciplina che studia i processi mentali e il comportamento degli individui.",
-  },
-  {
-    title: "Psichiatria",
-    description:
-      "La psichiatria è la branca della medicina che si occupa della prevenzione, della diagnosi, della cura e della riabilitazione delle malattie mentali.",
-  },
-  {
-    title: "Dietetica e nutrizione",
-    description:
-      "La dietetica è la scienza che studia l'alimentazione in rapporto alle esigenze dell'organismo umano.",
-  },
-  {
-    title: "Urologia",
-    description:
-      "L'urologia è la branca della medicina che si occupa delle patologie dell'apparato urinario e dell'apparato genitale maschile.",
-  },
-  {
-    title: "Ortopedia",
-    description:
-      "L'ortopedia è la branca della medicina che si occupa delle patologie dell'apparato locomotore.",
-  },
-  {
-    title: "Oculista",
-    description:
-      "L'oculistica è la branca della medicina che si occupa delle patologie dell'occhio.",
-  },
-];
+import specializationsData from '../db/data.json';
 ---
 
 <section id="specialisti" class="bg-secondary py-20">
@@ -54,7 +15,13 @@ const specializationsData: Specialization[] = [
   <div
     class="w-[90%] gap-8 m-auto grid grid-cols-3 justify-between flex-wrap lg:gap-4 lg:flex-row"
   >
-    {specializationsData.map((specialization) => <Card client:load />)}
+    {specializationsData.map((specialization) => <Card specialization={specialization.specialization}
+      name={specialization.name}
+      image={specialization.name}
+      bio={specialization.bio}
+      services={specialization.services}
+      surname={specialization.surname}
+      client:load />)}
 
   </div>
 </section>
