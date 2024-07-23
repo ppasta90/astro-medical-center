@@ -30,7 +30,7 @@ const Card = ({
     "text-secondary px-6 h-12 text-left w-1/2 text-lg bg-lightGrey rounded-tr-lg";
 
   return (
-    <div className="py-16 px-8 rounded-lg w-full max-w-xl bg-lightViolet">
+    <div className="p-8 rounded-2xl w-full bg-lightViolet">
       <img
         src="https://picsum.photos/200/300"
         className="rounded-full h-24 w-24 mx-auto"
@@ -45,7 +45,7 @@ const Card = ({
       <div className="flex justify-center mt-4">
         <button className="blue-cta">CHIAMA ORA</button>
       </div>
-      <div className="inline-flex w-full mt-4 ">
+      <div className="inline-flex w-full mt-8 pt-4 pr-4">
         <button
           className={section === "prestazioni" ? activeTab : inactiveTab}
           onClick={() => setSection("prestazioni")}
