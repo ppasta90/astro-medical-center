@@ -15,3 +15,11 @@ html {
 .white-cta {
   @apply xl:min-w-[180px] rounded-3xl border-2 border-secondary cursor-pointer font-semibold py-[10px] px-4 bg-white text-secondary;
 }
+
+.section-title {
+  @apply text-primary font-serif text-4xl;
+}
+
+.section-subtitle {
+  @apply font-sans text-2xl font-bold;
+}

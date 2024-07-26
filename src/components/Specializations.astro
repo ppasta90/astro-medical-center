@@ -1,12 +1,20 @@
 ---
 import Card from "./Card";
-import specializationsData from '../db/data.json';
+import specializationsData from "../db/data.json";
+import shuffle from 'lodash.shuffle'
 ---
+
+<script>
+  const showAllButton = document?.getElementById("show-all");
+showAllButton?.addEventListener("click", () => {
+  window.location.href = "/specializzazioni";
+});
+</script>
 
 <section id="specialisti" class="bg-secondary py-20">
   <div class="w-[90%] m-auto text-white flex flex-col gap-4 pb-8">
-    <h2 class="text-primary font-bold font-serif text-2xl">Gli specialisti</h2>
-    <h3 class="mb-4 text-2xl font-sans font-bold">Chi stai cercando?</h3>
+    <h2 class="section-title mb-4">Gli specialisti</h2>
+    <h3 class="section-subtitle">Chi stai cercando?</h3>
     <p>
       Qui trovi tutte le nostre specializzazioni con i rispettivi medici di
       riferimento
@@ -15,13 +23,26 @@ import specializationsData from '../db/data.json';
   <div
     class="w-[90%] gap-8 m-auto grid grid-cols-2 justify-between flex-wrap lg:gap-8 lg:flex-row"
   >
-    {specializationsData.map((specialization) => <Card specialization={specialization.specialization}
-      name={specialization.name}
-      image={specialization.name}
-      bio={specialization.bio}
-      services={specialization.services}
-      surname={specialization.surname}
-      client:load />)}
-
+    {
+      specializationsData
+        .filter((_, idx) => idx < 2)
+        
+        .map((specialization) => (
+          <Card
+            specialization={specialization.specialization}
+            name={specialization.name}
+            image={specialization.name}
+            bio={specialization.bio}
+            services={specialization.services}
+            surname={specialization.surname}
+            client:load
+          />
+        ))
+    }
+  </div>
+  <div 
+    class="flex flex-col justify-center items-center bg-primary-light pt-8"
+  >
+    <button id="show-all" class="green-cta"> Vedi tutti </button>
   </div>
 </section>

@@ -71,10 +71,10 @@ const Card = ({
               title="Titolo"
               description="blablablablablabla"
               triggerComponent={
-                <button className="mt-3 text-secondary font-bold hover:underline inline-flex items-center gap-1">
+                <span className="mt-3 text-secondary font-bold hover:underline inline-flex items-center gap-1">
                   <LuPlusCircle size={24} />
                   Mostra tutte le prestazioni
-                </button>
+                </span>
               }
             />
           </div>
@@ -88,10 +88,10 @@ const Card = ({
               title="Titolo"
               description="blablablablablabla"
               triggerComponent={
-                <button className="mt-3 text-secondary font-bold hover:underline inline-flex items-center gap-1">
+                <span className="mt-3 text-secondary font-bold hover:underline inline-flex items-center gap-1">
                   <LuPlusCircle size={24} />
                   Mostra tutte le esperienze
-                </button>
+                </span>
               }
             />
           </div>
