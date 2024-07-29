@@ -4,7 +4,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 type CustomDialogProps = {
     title: string;
     triggerComponent: React.ReactNode;
-    description: string;
+    description: React.ReactNode;
 };
 
 const CustomDialog: React.FC<CustomDialogProps> = ({ title, triggerComponent, description }) => {
