@@ -1,20 +1,14 @@
 ---
-const title = "SPECIALIZZAZIONI"
+import Layout from "../layouts/Layout.astro";
+import RenderCardsList from "@/components/RenderCardsList";
+const title = "I NOSTRI SPECIALISTI";
 ---
 
-<template>
-    <div>
-        <h1>{{ title }}</h1>
-        <!-- Add your content here -->
+<Layout>
+  <section class="bg-secondary py-20 ">
+    <h1 class="text-primary font-serif text-[80px] text-center pb-6">{title}</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mx-auto gap-8 px-20">
+        <RenderCardsList isMainPage={false} client:load />
     </div>
-</template>
-
-<script>
-export default {
-    // Add your script logic here
-}
-</script>
-
-<style>
-/* Add your styles here */
-</style>
+  </section>
+</Layout>

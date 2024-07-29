@@ -1,3 +1,11 @@
+---
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header";
+import "@/styles/globals.css";
+import "@fontsource-variable/dm-sans";
+import "@fontsource/bebas-neue";
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,7 +16,11 @@
     <meta name="generator" content={Astro.generator} />
     <title>Centro Medico Agliana</title>
   </head>
-  <body>
-    <slot />
-  </body>
+  <main>
+    <body>
+      <Header client:load />
+      <slot />
+      <Footer />
+    </body>
+  </main>
 </html>

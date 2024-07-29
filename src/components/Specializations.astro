@@ -1,6 +1,6 @@
 ---
-import Card from "./Card";
-import specializationsData from "../db/data.json";
+
+import RenderCardsList from "./RenderCardsList";
 ---
 
 <script>
@@ -22,22 +22,7 @@ showAllButton?.addEventListener("click", () => {
   <div
     class="w-[90%] gap-8 m-auto grid grid-cols-1 lg:grid-cols-2 justify-between flex-wrap lg:gap-8 lg:flex-row"
   >
-    {
-      specializationsData
-        .filter((_, idx) => idx < 2)
-        
-        .map((specialization) => (
-          <Card
-            specialization={specialization.specialization}
-            name={specialization.name}
-            image={specialization.name}
-            bio={specialization.bio}
-            services={specialization.services}
-            surname={specialization.surname}
-            client:load
-          />
-        ))
-    }
+    <RenderCardsList client:load/>
   </div>
   <div 
     class="flex flex-col justify-center items-center bg-primary-light pt-8"
