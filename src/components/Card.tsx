@@ -2,7 +2,6 @@ import React from "react";
 import { LuPlusCircle } from "react-icons/lu";
 import CustomDialog from "./ui/CustomDialog";
 import { capitalizeFirstLetter } from "@/lib/utils";
-import { render } from "react-dom";
 
 type CardProps = {
   name: string;
