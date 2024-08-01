@@ -43,7 +43,7 @@ const Card = ({
   };
 
   const renderBio = (bio: string) => {
-    return <div className="ml-4 mt-2 text-darkBlue max-h-[500px] overflow-auto">{bio}</div>;
+    return <div className="mt-2 text-darkBlue max-h-[500px] overflow-auto">{bio}</div>;
   };
 
   return (
@@ -53,8 +53,8 @@ const Card = ({
         className="flex flex-col justify-center text-center text-darkBlue"
       >
         <img
-          src="https://picsum.photos/200/300"
-          className="rounded-full h-24 w-24 mx-auto"
+          src={image}
+          className="rounded-full h-24 w-24 mx-auto object-contain"
           alt=""
         />
         <h2 className="text-2xl mt-4 font-bold">{specialization}</h2>
@@ -101,7 +101,7 @@ const Card = ({
                   title={name + " " + surname + " - Prestazioni"}
                   description={renderServices(services)}
                   triggerComponent={
-                    <span className="text-secondary font-bold hover:underline inline-flex items-center gap-1">
+                    <span className="cursor-pointer text-secondary font-bold hover:underline inline-flex items-center gap-1">
                       <LuPlusCircle size={24} />
                       Mostra tutte le prestazioni
                     </span>
@@ -112,12 +112,12 @@ const Card = ({
           )}
           {section === "esperienze" && (
             <div className="flex flex-col justify-between items-start p-4 rounded-lg  h-[210px]">
-              <div className="ml-4 mt-2 text-darkBlue line-clamp-5">{bio}</div>
+              <div className="mt-2 text-darkBlue line-clamp-5">{bio}</div>
               <CustomDialog
                 title={name + " " + surname + " - Esperienze"}
                 description={renderBio(bio)}
                 triggerComponent={
-                  <span className="text-secondary font-bold hover:underline inline-flex items-center gap-1 ml-2">
+                  <span className="cursor-pointer text-secondary font-bold hover:underline inline-flex items-center gap-1 ml-2">
                     <LuPlusCircle size={24} />
                     Mostra di più
                   </span>

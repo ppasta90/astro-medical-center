@@ -11,7 +11,9 @@ import logo from "../images/logo.svg";
 const Header = () => {
   const $isMenuOpen = useStore(isDrawerMenuOpen);
   const toggleDrawer = () => isDrawerMenuOpen.set(!$isMenuOpen);
-
+  const goToSpecialistsPage = () => {
+    window.location.href = "/specializzazioni";
+  };
   return (
     <header className="relative h-[80px] font-sans mx-8 flex items-center justify-between bg-white text-darkBlue">
       <img className="" src={logo.src} />
@@ -30,7 +32,7 @@ const Header = () => {
       <nav className="hidden lg:flex items-center justify-between absolute top-1/2 left-1/2 -translate-y-2/4 -translate-x-2/4 pr-16 2xl:pr-0">
         <ul className="list-none inline-flex items-center gap-5 text-xl">
           <li>
-            <a aria-label="Vai alla sezione specialisti" href="#specialisti">
+            <a aria-label="Vai alla sezione specialisti" href="/">
               Home
             </a>
           </li>
@@ -52,7 +54,9 @@ const Header = () => {
         </ul>
       </nav>
       <div className="flex gap-6">
-        <button className="white-cta">TROVA LO SPECIALISTA</button>
+        <button onClick={goToSpecialistsPage} className="white-cta">
+          TROVA LO SPECIALISTA
+        </button>
         <button className="blue-cta lg:hidden xl:block">CHIAMA ORA</button>
       </div>
     </header>

@@ -11,7 +11,7 @@ const RenderCardsList = ({ isMainPage = true }: RenderCardsListProps) => {
       .map((specialization, idx) => (
         <Card
           key={idx}
-          image={"https://picsum.photos/200/300"}
+          image={specialization.image}
           bio={specialization.bio}
           name={specialization.name}
           services={specialization.services}

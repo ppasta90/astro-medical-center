@@ -4,6 +4,7 @@
 
 html {
   font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 .green-cta {
   @apply xl:min-w-[180px] rounded-3xl cursor-pointer font-semibold py-[10px] px-4 border-none bg-primary text-white;

@@ -10,11 +10,11 @@ type CustomDialogProps = {
 const CustomDialog: React.FC<CustomDialogProps> = ({ title, triggerComponent, description }) => {
     return (
         <Dialog>
-            <DialogTrigger>{triggerComponent}</DialogTrigger>
+            <DialogTrigger asChild>{triggerComponent}</DialogTrigger>
             <DialogContent>
                 <DialogHeader>
                     <DialogTitle>{title}</DialogTitle>
-                    <DialogDescription>{description}</DialogDescription>
+                    <DialogDescription asChild>{description}</DialogDescription>
                 </DialogHeader>
             </DialogContent>
         </Dialog>
