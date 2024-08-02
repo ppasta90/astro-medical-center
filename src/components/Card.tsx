@@ -88,7 +88,7 @@ const Card = ({
 
         <div className="flex flex-col bg-white px-4 pb-4 flex-grow">
           {section === "prestazioni" && (
-            <div className="flex flex-col justify-between items-start p-4 rounded-lg h-[210px]">
+            <div className="flex flex-col justify-between items-start p-4 rounded-lg h-[210px] overflow-auto">
               <ul className="list-disc ml-4 text-darkBlue pb-5">
                 {services
                   .filter((_, index) => index < 5)
@@ -111,7 +111,7 @@ const Card = ({
             </div>
           )}
           {section === "esperienze" && (
-            <div className="flex flex-col justify-between items-start p-4 rounded-lg  h-[210px]">
+            <div className="flex flex-col justify-between items-start p-4 rounded-lg h-[210px] overflow-auto">
               <div className="mt-2 text-darkBlue line-clamp-5">{bio}</div>
               <CustomDialog
                 title={name + " " + surname + " - Esperienze"}
