@@ -36,6 +36,10 @@ export default {
       ...defaultTheme.fontSize,
       customClamp: "clamp(1.8rem, 7vw, 5rem)",
     },
+    screens: {
+      ...defaultTheme.screens,
+      "smm": "320px",
+    },
     extend: {
       keyframes: {
         "accordion-down": {

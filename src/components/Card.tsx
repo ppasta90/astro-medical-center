@@ -47,7 +47,7 @@ const Card = ({
   };
 
   return (
-    <div className="flex flex-col p-8 rounded-2xl w-full bg-secondaryLight h-[610px]">
+    <div className="flex flex-col smm:p-4 sm:p-8 rounded-2xl w-full bg-secondaryLight h-[610px]">
       <div
         id="card-header"
         className="flex flex-col justify-center text-center text-darkBlue"
