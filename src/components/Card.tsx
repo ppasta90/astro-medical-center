@@ -34,7 +34,7 @@ const Card = ({
 
   const renderServices = (services: string[]) => {
     return (
-      <ul className="list-disc ml-4 text-darkBlue">
+      <ul className="list-disc ml-4 text-darkBlue text-left text-base">
         {services.map((service, index) => (
           <li key={index}>{capitalizeFirstLetter(service)}</li>
         ))}
@@ -43,7 +43,7 @@ const Card = ({
   };
 
   const renderBio = (bio: string) => {
-    return <div className="mt-2 text-darkBlue max-h-[500px] overflow-auto">{bio}</div>;
+    return <div className="text-left mt-2 text-darkBlue max-h-[500px] overflow-auto text-base no-scrollbar">{bio}</div>;
   };
 
   return (
@@ -88,7 +88,7 @@ const Card = ({
 
         <div className="flex flex-col bg-white px-4 pb-4 flex-grow">
           {section === "prestazioni" && (
-            <div className="flex flex-col justify-between items-start p-4 rounded-lg h-[210px] overflow-auto">
+            <div className="flex flex-col justify-between items-start p-4 rounded-lg h-[210px] overflow-auto no-scrollbar">
               <ul className="list-disc ml-4 text-darkBlue pb-5">
                 {services
                   .filter((_, index) => index < 5)
@@ -111,13 +111,13 @@ const Card = ({
             </div>
           )}
           {section === "esperienze" && (
-            <div className="flex flex-col justify-between items-start p-4 rounded-lg h-[210px] overflow-auto">
+            <div className="flex flex-col justify-between items-start p-4 rounded-lg h-[210px] overflow-auto no-scrollbar">
               <div className="mt-2 text-darkBlue line-clamp-5">{bio}</div>
               <CustomDialog
                 title={name + " " + surname + " - Esperienze"}
                 description={renderBio(bio)}
                 triggerComponent={
-                  <span className="cursor-pointer text-secondary font-bold hover:underline inline-flex items-center gap-1 ml-2">
+                  <span className="cursor-pointer text-secondary font-bold hover:underline inline-flex items-center gap-1 ml-1">
                     <LuPlusCircle size={24} />
                     Mostra di più
                   </span>
