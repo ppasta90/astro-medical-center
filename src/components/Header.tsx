@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <header className="relative h-[80px] font-sans mx-8 flex items-center justify-between bg-white text-darkBlue">
-      <img className="" src={logo.src} />
+      <a href="/"><img className="" src={logo.src} /></a>
 
       {/* DESKTOP */}
       <nav className="hidden lg:flex items-center justify-between absolute top-1/2 left-1/2 -translate-y-2/4 -translate-x-2/4 pr-16 2xl:pr-0">
@@ -46,10 +46,10 @@ const Header = () => {
         </ul>
       </nav>
       <div className="hidden lg:flex gap-6">
-        <button onClick={goToSpecialistsPage} className="white-cta">
+        <a href="/specializzazioni" className="white-cta">
           TROVA LO SPECIALISTA
-        </button>
-        <button className="hidden xl:inline-block blue-cta">CHIAMA ORA</button>
+        </a>
+        <a href="tel:0574027087" className="hidden xl:flex blue-cta">CHIAMA ORA</a>
       </div>
       {/* MOBILE */}
       <div className="lg:hidden">

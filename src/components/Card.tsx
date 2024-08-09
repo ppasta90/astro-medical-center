@@ -62,7 +62,7 @@ const Card = ({
           {name} {surname}
         </h3>
         <div className="mt-4">
-          <button className="blue-cta">CHIAMA ORA</button>
+          <a href="tel:0574027087" className="blue-cta ">CHIAMA ORA</a>
         </div>
       </div>
 
