@@ -38,7 +38,7 @@ export default {
     },
     screens: {
       ...defaultTheme.screens,
-      "smm": "320px",
+      smm: "320px",
     },
     extend: {
       keyframes: {

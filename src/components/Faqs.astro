@@ -1,6 +1,5 @@
 ---
-import Accordion from "./Accordion.astro";
-
+import Accordion from "./Accordion.tsx";
 const faqs = [
   {
     question: "Come posso prenotare una visita?",
@@ -26,11 +25,7 @@ const faqs = [
     <h3 class="section-subtitle">Hai qualche dubbio?</h3>
     <p>Qui trovi tutte le nostre risposte alle domande più frequenti</p>
     <div class="text-secondary flex flex-col gap-4 mt-4">
-      {
-        faqs.map((faq) => (
-          <Accordion question={faq.question} answer={faq.answer} />
-        ))
-      }
+      <Accordion client:visible data={faqs} />
     </div>
   </div>
 </section>
