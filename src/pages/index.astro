@@ -13,66 +13,40 @@ import img3 from "../images/ingresso1.webp";
 import img4 from "../images/ingresso2.webp";
 import img5 from "../images/ufficio1.webp";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/autoplay";
-import { Image } from "astro:assets";
-
 // INFO swiper and Image Astro component are here because <Image> component is not supported in tsx CustomSlider component.
 
 const images = [
   {
-    src: img1,
+    src: img1.src,
     title: "Esterno",
-    alt: "Esterno",
+    alt: "esterno",
   },
   {
-    src: img2,
+    src: img2.src,
     title: "Porta esterna",
     alt: "porta esterna",
   },
   {
-    src: img3,
+    src: img3.src,
     title: "Sala d'attesa",
     alt: "sala d'attesa",
   },
   {
-    src: img4,
+    src: img4.src,
     title: "Porte interne",
     alt: "porte interne",
   },
   {
-    src: img5,
+    src: img5.src,
     title: "Studio interno",
     alt: "studio interno",
   },
 ];
-
 ---
 
 <Layout>
   <Hero />
-  <CustomSlider client:load>
-    <Swiper
-      loop
-      modules={[Autoplay]}
-      autoplay={{
-        delay: 3000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      }}
-      slidesPerView={1}
-    >
-      {
-        images.map((image, index) => (
-          <SwiperSlide>
-            <Image src={image.src} alt={image.alt} loading="eager" />
-          </SwiperSlide>
-        ))
-      }
-    </Swiper>
-  </CustomSlider>
+  <CustomSlider client:load images={images} />
   <Specializations />
   <Location />
   <Contacts />
