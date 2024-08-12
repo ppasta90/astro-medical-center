@@ -21,7 +21,7 @@ const Accordion = ({ data }: AccordionProps) => {
     >
       {data.map((item, i) => {
         return (
-          <AccordionItem value={`item-${i.toFixed()}`}>
+          <AccordionItem key={i} value={`item-${i.toFixed()}`}>
             <AccordionTrigger className="text-left text-white data-[state=open]:text-primary font-bold text-lg">
               {item.question}
             </AccordionTrigger>

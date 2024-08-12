@@ -32,10 +32,6 @@ export default {
       serif: ["Bebas Neue", ...defaultTheme.fontFamily.serif],
       sans: ["DM Sans", ...defaultTheme.fontFamily.sans],
     },
-    fontSize: {
-      ...defaultTheme.fontSize,
-      customClamp: "clamp(1.8rem, 7vw, 5rem)",
-    },
     screens: {
       ...defaultTheme.screens,
       smm: "320px",
