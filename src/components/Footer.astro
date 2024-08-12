@@ -2,13 +2,14 @@
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FiFacebook } from "react-icons/fi";
 import logo from "../images/logo.svg";
+import { Image } from "astro:assets";
 ---
 
 <footer class="bg-lightGreen py-8">
   <div class="flex justify-between w-[90%] m-auto gap-4">
     <div class="flex flex-col gap-4">
       <a aria-label="logo Centro Medico Agliana" href="/" class="mb-8">
-        <img src={logo.src} alt="Centro Medico Agliana Logo" loading="lazy" />
+        <Image src={logo} alt="Centro Medico Agliana Logo" loading="lazy" />
       </a>
       <div class="flex flex-col gap-4 text-secondary">
         <p>©2024 Centro Medico Agliana</p>
