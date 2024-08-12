@@ -12,13 +12,9 @@ const Header = () => {
   const $isMenuOpen = useStore(isDrawerMenuOpen);
   const toggleDrawer = () => isDrawerMenuOpen.set(!$isMenuOpen);
 
-  const goToSpecialistsPage = () => {
-    window.location.href = "/specializzazioni";
-  };
-
   return (
     <header className="relative h-[80px] font-sans mx-8 flex items-center justify-between bg-white text-darkBlue">
-      <a href="/"><img className="" src={logo.src} /></a>
+      <a href="/"><img className="" src={logo.src} width={200} height={150} alt="logo centro medico agliana" /></a>
 
       {/* DESKTOP */}
       <nav className="hidden lg:flex items-center justify-between absolute top-1/2 left-1/2 -translate-y-2/4 -translate-x-2/4 pr-16 2xl:pr-0">
