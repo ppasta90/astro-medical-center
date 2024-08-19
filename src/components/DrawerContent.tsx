@@ -1,8 +1,7 @@
-import { AiOutlineClose } from "react-icons/ai";
 import { useState, useEffect } from "react";
 
 const DrawerMenu = ({ toggleDrawer }: { toggleDrawer?: () => void }) => {
-  const [currentLocation, setCurrentLocation] = useState('');
+  const [currentLocation, setCurrentLocation] = useState("");
 
   useEffect(() => {
     setCurrentLocation(window.location.pathname);
@@ -10,12 +9,6 @@ const DrawerMenu = ({ toggleDrawer }: { toggleDrawer?: () => void }) => {
 
   return (
     <div className="h-full bg-primaryLight">
-      {/* <AiOutlineClose
-        className="absolute right-6 top-6"
-        onClick={toggleDrawer}
-        size={50}
-      /> */}
-
       <ul className="text-secondary flex flex-col w-full justify-center items-center h-full text-4xl gap-10 font-serif">
         {currentLocation !== "/" && (
           <li>
@@ -28,7 +21,7 @@ const DrawerMenu = ({ toggleDrawer }: { toggleDrawer?: () => void }) => {
           <a
             aria-label="Vai alla sezione specialisti"
             onClick={toggleDrawer}
-            href="#specialisti"
+            href="/#specialisti"
           >
             SPECIALISTI
           </a>
@@ -37,7 +30,7 @@ const DrawerMenu = ({ toggleDrawer }: { toggleDrawer?: () => void }) => {
           <a
             aria-label="Vai alla sezione dove siamo"
             onClick={toggleDrawer}
-            href="#dove-siamo"
+            href="/#dove-siamo"
           >
             DOVE SIAMO
           </a>
@@ -46,7 +39,7 @@ const DrawerMenu = ({ toggleDrawer }: { toggleDrawer?: () => void }) => {
           <a
             aria-label="Vai alla sezione contatti"
             onClick={toggleDrawer}
-            href="#contatti"
+            href="/#contatti"
           >
             CONTATTI
           </a>
@@ -55,7 +48,7 @@ const DrawerMenu = ({ toggleDrawer }: { toggleDrawer?: () => void }) => {
           <a
             aria-label="Vai alla sezione contatti"
             onClick={toggleDrawer}
-            href="#faq"
+            href="/#faq"
           >
             FAQ
           </a>

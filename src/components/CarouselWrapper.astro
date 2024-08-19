@@ -1,0 +1,45 @@
+---
+import { getImage } from "astro:assets";
+import img1 from "../images/esterno1.webp";
+import img2 from "../images/esterno2.webp";
+import img3 from "../images/ingresso1.webp";
+import img4 from "../images/ingresso2.webp";
+import img5 from "../images/ufficio1.webp";
+import Carousel from "./Carousel";
+
+const optimizedImg1 = await getImage({ src: img1, format: "webp", width: 700, height: 500 });
+const optimizedImg2 = await getImage({ src: img2, format: "webp", width: 700, height: 500 });
+const optimizedImg3 = await getImage({ src: img3, format: "webp", width: 700, height: 500 });
+const optimizedImg4 = await getImage({ src: img4, format: "webp", width: 700, height: 500 });
+const optimizedImg5 = await getImage({ src: img5, format: "webp", width: 700, height: 500 });
+
+const images = [
+  {
+    src: optimizedImg1.src,
+    title: "Esterno",
+    alt: "esterno",
+  },
+  {
+    src: optimizedImg2.src,
+    title: "Porta esterna",
+    alt: "porta esterna",
+  },
+  {
+    src: optimizedImg3.src,
+    title: "Sala d'attesa",
+    alt: "sala d'attesa",
+  },
+  {
+    src: optimizedImg4.src,
+    title: "Porte interne",
+    alt: "porte interne",
+  },
+  {
+    src: optimizedImg5.src,
+    title: "Studio interno",
+    alt: "studio interno",
+  },
+];
+---
+
+<Carousel images={images} client:load />

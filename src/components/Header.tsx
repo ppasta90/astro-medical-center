@@ -25,17 +25,17 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a aria-label="Vai alla sezione dove siamo " href="#dove-siamo">
+            <a aria-label="Vai alla sezione dove siamo " href="/#dove-siamo">
               Dove siamo
             </a>
           </li>
           <li>
-            <a aria-label="Vai alla sezione contatti " href="#contatti">
+            <a aria-label="Vai alla sezione contatti " href="/#contatti">
               Contatti
             </a>
           </li>
           <li>
-            <a aria-label="Vai alla sezione faq " href="#faq">
+            <a aria-label="Vai alla sezione faq " href="/#faq">
               FAQ
             </a>
           </li>
