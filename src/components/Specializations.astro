@@ -9,7 +9,6 @@ showAllButton?.addEventListener("click", () => {
   window.location.href = "/specializzazioni";
 });
 </script>
-
 <section id="specialisti" class="bg-secondary py-20">
   <div class="w-[90%] m-auto text-white flex flex-col gap-4 pb-8">
     <h2 class="section-title mb-4">Gli specialisti</h2>
@@ -22,7 +21,7 @@ showAllButton?.addEventListener("click", () => {
   <div
     class="w-[90%] gap-8 m-auto grid grid-cols-1 xl:grid-cols-2 justify-between flex-wrap lg:gap-8 lg:flex-row"
   >
-    <RenderCardsList client:visible/>
+    <RenderCardsList client:load/>
   </div>
   <div 
     class="flex flex-col justify-center items-center bg-primary-light pt-8"

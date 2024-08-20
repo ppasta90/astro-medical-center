@@ -1,54 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import CustomSlider from "../components/CustomSlider";
 import Hero from "../components/Hero.astro";
 import Specializations from "../components/Specializations.astro";
 import Location from "../components/Location.astro";
 import Contacts from "../components/Contacts.astro";
 import Faqs from "../components/Faqs.astro";
 import CarouselWrapper from "@/components/CarouselWrapper.astro";
-
-/* import img1 from "../images/esterno1.webp";
-import img2 from "../images/esterno2.webp";
-import img3 from "../images/ingresso1.webp";
-import img4 from "../images/ingresso2.webp";
-import img5 from "../images/ufficio1.webp";
-import Carousel from "@/components/Carousel";
-
-// INFO swiper and Image Astro component are here because <Image> component is not supported in tsx CustomSlider component.
-
-const images = [
-  {
-    src: img1.src,
-    title: "Esterno",
-    alt: "esterno",
-  },
-  {
-    src: img2.src,
-    title: "Porta esterna",
-    alt: "porta esterna",
-  },
-  {
-    src: img3.src,
-    title: "Sala d'attesa",
-    alt: "sala d'attesa",
-  },
-  {
-    src: img4.src,
-    title: "Porte interne",
-    alt: "porte interne",
-  },
-  {
-    src: img5.src,
-    title: "Studio interno",
-    alt: "studio interno",
-  },
-]; */
 ---
 
 <Layout>
   <Hero />
- <!--  <CustomSlider client:load images={images} /> -->
   <CarouselWrapper/>
   <Specializations />
   <Location />

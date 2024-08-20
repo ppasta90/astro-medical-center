@@ -54,8 +54,11 @@ const Card = ({
       >
         <img
           src={image}
-          className="rounded-full h-24 w-24 mx-auto object-contain"
-          alt=""
+          className="rounded-full mx-auto object-contain"
+          alt="foto del medico specialista"
+          width={96}
+          height={96}
+          loading="lazy"
         />
         <h2 className="text-2xl mt-4 font-bold">{specialization}</h2>
         <h3 className="text-xl mt-2">

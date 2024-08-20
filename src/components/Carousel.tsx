@@ -29,7 +29,7 @@ const CustomCarousel = ({ images }: { images: Image }) => {
               src={image.src}
               alt={image.alt}
               loading="lazy"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover"
             />
           </CarouselItem>
         ))}
