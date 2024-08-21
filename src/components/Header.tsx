@@ -13,7 +13,7 @@ const Header = () => {
   const toggleDrawer = () => isDrawerMenuOpen.set(!$isMenuOpen);
 
   return (
-    <header className="relative h-[80px] font-sans mx-8 flex items-center justify-between bg-white text-darkBlue">
+    <header className="fixed w-full z-50 h-[80px] font-sans px-8 m-0 flex items-center justify-between bg-white text-darkBlue">
       <a href="/"><img className="" src={logo.src} width={200} height={150} alt="logo centro medico agliana" /></a>
 
       {/* DESKTOP */}
