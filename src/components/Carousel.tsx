@@ -7,19 +7,18 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-type Image =  {
+type Image = {
   src: string;
   title: string;
   alt: string;
 }[];
 
-
 const CustomCarousel = ({ images }: { images: Image }) => {
   return (
     <Carousel
-      plugins={[Autoplay({ delay: 2000 })]}
+      plugins={[Autoplay({ delay: 4000 })]}
       opts={{
-        loop: true,
+        loop: true
       }}
     >
       <CarouselContent>

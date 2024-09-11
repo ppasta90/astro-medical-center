@@ -10,24 +10,6 @@
   },
   {
     "id": 2,
-    "name": "Anna Maria",
-    "surname": "Anichini",
-    "image": "doctors-images/anichini.webp",
-    "bio": "Annamaria si è laureata in Scienze Biologiche e successivamente ha conseguito la Laurea in Biologia, curriculum biosanitario, con il massimo dei voti e lode presso l’Università degli Studi di Firenze ed ha ottenuto l’abilitazione all’esercizio alla professione di Biologo con l’iscrizione all’Ordine sez. A. Effettua controlli e consulenze nutrizionali a pazienti sani o con patologie accertate legate all’alimentazione, ed elabora piani alimentari personalizzati al fine di correggere lo stile di vita e migliorare la salute del paziente. Il suo obiettivo è insegnare ad avere un stile di vita sano ed equilibrato partendo dalla tavola. E’ mamma di due bambini e da quando sono nati ha sentito la necessità di specializzarsi in nutrizione pediatrica per stare accanto alle famiglie e accompagnarle in questo percorso così bello e allo stesso tempo così delicato, che è l’alimentazione nei primi anni di vita del bambino. Attualmente si sta specializzando in nutrizione pediatrica non prescrittiva.Annamaria si è laureata in Scienze Biologiche e successivamente ha conseguito la Laurea in Biologia, curriculum biosanitario, con il massimo dei voti e lode presso l’Università degli Studi di Firenze ed ha ottenuto l’abilitazione all’esercizio alla professione di Biologo con l’iscrizione all’Ordine sez. A. Effettua controlli e consulenze nutrizionali a pazienti sani o con patologie accertate legate all’alimentazione, ed elabora piani alimentari personalizzati al fine di correggere lo stile di vita e migliorare la salute del paziente. Il suo obiettivo è insegnare ad avere un stile di vita sano ed equilibrato partendo dalla tavola. E’ mamma di due bambini e da quando sono nati ha sentito la necessità di specializzarsi in nutrizione pediatrica per stare accanto alle famiglie e accompagnarle in questo percorso così bello e allo stesso tempo così delicato, che è l’alimentazione nei primi anni di vita del bambino. Attualmente si sta specializzando in nutrizione pediatrica non prescrittiva.",
-    "specialization": "Nutrizionista",
-    "services": [
-      "diabete e insulino resistenza",
-      "insufficienza renale e iperuricemia",
-      "dislipidemie e ipertensione",
-      "patologie gastrointestinali",
-      "gravidanza e allattamento",
-      "alimentazione pediatrica",
-      "educazione alimentare familiare",
-      "educazione alimentare nello sportivo"
-    ]
-  },
-  {
-    "id": 3,
     "name": "Alessia",
     "surname": "Romani",
     "image": "doctors-images/romani.webp",
@@ -42,6 +24,24 @@
       "obesità",
       "andrologia",
       "ecografia tiroidea"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Anna Maria",
+    "surname": "Anichini",
+    "image": "doctors-images/anichini.webp",
+    "bio": "Annamaria si è laureata in Scienze Biologiche e successivamente ha conseguito la Laurea in Biologia, curriculum biosanitario, con il massimo dei voti e lode presso l’Università degli Studi di Firenze ed ha ottenuto l’abilitazione all’esercizio alla professione di Biologo con l’iscrizione all’Ordine sez. A. Effettua controlli e consulenze nutrizionali a pazienti sani o con patologie accertate legate all’alimentazione, ed elabora piani alimentari personalizzati al fine di correggere lo stile di vita e migliorare la salute del paziente. Il suo obiettivo è insegnare ad avere un stile di vita sano ed equilibrato partendo dalla tavola. E’ mamma di due bambini e da quando sono nati ha sentito la necessità di specializzarsi in nutrizione pediatrica per stare accanto alle famiglie e accompagnarle in questo percorso così bello e allo stesso tempo così delicato, che è l’alimentazione nei primi anni di vita del bambino. Attualmente si sta specializzando in nutrizione pediatrica non prescrittiva.",
+    "specialization": "Nutrizionista",
+    "services": [
+      "diabete e insulino resistenza",
+      "insufficienza renale e iperuricemia",
+      "dislipidemie e ipertensione",
+      "patologie gastrointestinali",
+      "gravidanza e allattamento",
+      "alimentazione pediatrica",
+      "educazione alimentare familiare",
+      "educazione alimentare nello sportivo"
     ]
   },
   {

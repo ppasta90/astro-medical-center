@@ -12,14 +12,20 @@ import { Image } from "astro:assets";
         <Image src={logo} alt="Centro Medico Agliana Logo" loading="lazy" />
       </a>
       <div class="flex flex-col gap-4 text-secondary">
-        <p>©2024 Centro Medico Agliana</p>
-        <p>Partita IVA: 01393880479</p>
-        <a
-          aria-label="Scrivici una mail pec"
-          href="mailto: centromedicoagliana@pec.it"
-        >
-          PEC: centromedicoagliana@pec.it
-        </a>
+        <div class="text-sm">
+          <p class="font-bold">
+            Centro Medico Agliana SAS di Pastacaldi Paolo & C.
+          </p>
+
+          <p>Partita IVA: 01393880479</p>
+          <p>Numero REA PT - 146792</p>
+          <a
+            aria-label="Scrivici una mail pec"
+            href="mailto: centromedicoagliana@pec.it"
+          >
+            PEC: centromedicoagliana@pec.it
+          </a>
+        </div>
       </div>
     </div>
     <div>
@@ -53,15 +59,12 @@ import { Image } from "astro:assets";
           </a>
         </div>
 
-        <div id="policies" class="flex flex-col gap-4">
+        <div id="policies" class="flex flex-col text-sm">
           <a aria-label="Privacy Policy" href="/privacy-policy">
             Privacy Policy
           </a>
           <a aria-label="Cookie Policy" href="/cookie-policy">
             Cookie Policy
-          </a>
-          <a aria-label="Termini e condizioni" href="/termini-e-condizioni">
-            Termini e condizioni
           </a>
         </div>
       </div>

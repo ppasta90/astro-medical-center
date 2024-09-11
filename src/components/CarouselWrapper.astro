@@ -2,16 +2,62 @@
 import { getImage } from "astro:assets";
 import img1 from "../images/esterno1.webp";
 import img2 from "../images/esterno2.webp";
-import img3 from "../images/ingresso1.webp";
-import img4 from "../images/ingresso2.webp";
-import img5 from "../images/ufficio1.webp";
+import img3 from "../images/esterno3.webp";
+import img4 from "../images/logo.webp";
+import img5 from "../images/ingresso1.webp";
+import img6 from "../images/ingresso2.webp";
+import img7 from "../images/ufficio1.webp";
+import img8 from "../images/ufficio2.webp";
 import Carousel from "./Carousel";
 
-const optimizedImg1 = await getImage({ src: img1, format: "webp", width: 700, height: 500 });
-const optimizedImg2 = await getImage({ src: img2, format: "webp", width: 700, height: 500 });
-const optimizedImg3 = await getImage({ src: img3, format: "webp", width: 700, height: 500 });
-const optimizedImg4 = await getImage({ src: img4, format: "webp", width: 700, height: 500 });
-const optimizedImg5 = await getImage({ src: img5, format: "webp", width: 700, height: 500 });
+const optimizedImg1 = await getImage({
+  src: img1,
+  format: "webp",
+  width: 1500,
+  height: 1000,
+});
+const optimizedImg2 = await getImage({
+  src: img2,
+  format: "webp",
+  width: 1500,
+  height: 1000,
+});
+const optimizedImg3 = await getImage({
+  src: img3,
+  format: "webp",
+  width: 1500,
+  height: 1000,
+});
+const optimizedImg4 = await getImage({
+  src: img4,
+  format: "webp",
+  width: 1500,
+  height: 1000,
+});
+const optimizedImg5 = await getImage({
+  src: img5,
+  format: "webp",
+  width: 1500,
+  height: 1000,
+});
+const optimizedImg6 = await getImage({
+  src: img6,
+  format: "webp",
+  width: 1500,
+  height: 1000,
+});
+const optimizedImg7 = await getImage({
+  src: img7,
+  format: "webp",
+  width: 1500,
+  height: 1000,
+});
+const optimizedImg8 = await getImage({
+  src: img8,
+  format: "webp",
+  width: 1500,
+  height: 1000,
+});
 
 const images = [
   {
@@ -26,18 +72,33 @@ const images = [
   },
   {
     src: optimizedImg3.src,
-    title: "Sala d'attesa",
-    alt: "sala d'attesa",
+    title: "Porta esterna",
+    alt: "Porta esterna",
   },
   {
     src: optimizedImg4.src,
-    title: "Porte interne",
-    alt: "porte interne",
+    title: "logo centro medico",
+    alt: "logo centro medico",
   },
   {
     src: optimizedImg5.src,
-    title: "Studio interno",
-    alt: "studio interno",
+    title: "Ingresso studio",
+    alt: "Ingresso studio",
+  },
+  {
+    src: optimizedImg6.src,
+    title: "Ingresso studio",
+    alt: "Ingresso studio",
+  },
+  {
+    src: optimizedImg7.src,
+    title: "Stanza dettaglio",
+    alt: "Stanza dettaglio",
+  },
+  {
+    src: optimizedImg8.src,
+    title: "Stanza dettaglio",
+    alt: "Stanza dettaglio",
   },
 ];
 ---
