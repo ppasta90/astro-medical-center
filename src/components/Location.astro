@@ -1,6 +1,6 @@
 ---
 import { FaMapMarkerAlt } from "react-icons/fa";
-import { MdOpenInNew } from "react-icons/md";
+import { MdOpenInNew, MdWatch, MdWatchLater } from "react-icons/md";
 ---
 
 <script>
@@ -33,9 +33,14 @@ import { MdOpenInNew } from "react-icons/md";
           <FaMapMarkerAlt size={20} />
         </button>
         <p class="text-lg font-sans">
-          Via Michelagelo Buonarroti, n.c. mancante,
-          Agliana (PT)
+          Via Michelagelo Buonarroti, n.c. mancante, Agliana (PT)
         </p>
+      </div>
+      <div class="flex items-center gap-1">
+        <span>
+          <MdWatchLater size={20} />
+        </span>
+        <p class="text-lg font-sans">Lunedì - Venerdì 15:00 - 19:00</p>
       </div>
       <div class="flex items-center text-secondary font-bold">
         <a
@@ -51,6 +56,7 @@ import { MdOpenInNew } from "react-icons/md";
           <p class="text-lg font-sans">Come raggiungerci</p>
         </a>
       </div>
+      
     </div>
     <div class="w-full lg:w-1/2">
       <iframe
