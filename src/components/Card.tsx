@@ -54,7 +54,7 @@ const Card = ({
       >
         <img
           src={image}
-          className="rounded-full mx-auto w-[96px] h-[96px] object-contain"
+          className="rounded-full mx-auto aspect-square object-contain"
           alt="foto del medico specialista"
           width={96}
           height={96}
