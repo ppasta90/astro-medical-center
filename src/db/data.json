@@ -5,7 +5,7 @@
     "surname": "Amadori",
     "image": "doctors-images/amadori.webp",
     "bio": "Tommaso ha conseguito la laurea con lode in Medicina e Chirurgia presso l'Università degli studi di Firenze nel 2017. Successivamente, nel 2023, ha completato la specialization con lode in Radiodiagnostica presso l'Università degli studi di Firenze. Durante il percorso professionale, ha acquisito e perfezionato l'esperienza senologica presso il reparto di senologia diretto dal Dott. Nori presso Careggi. Nel 2023, ha conseguito il Diploma Europeo in Radiologia (EDiR). Si è attivamente impegnato nella realizzazione di corsi su tecniche senologiche avanzate, come la Contrast Enhanced Mammography e la Crioablazione al seno. Inoltre, è membro di società radiologiche italiane ed internazionali, tra cui SIRM, ESR, EUSOBI e RSNA.",
-    "specialization": "Senologo",
+    "specialization": "Senologia",
     "services": ["visita senologica", "ecografia mammaria"]
   },
   {
@@ -14,7 +14,7 @@
     "surname": "Romani",
     "image": "doctors-images/romani.webp",
     "bio": "Alessia ha conseguito il titolo di Specialista in Endocrinologia e Malattie del Metabolismo presso l’Università degli Studi di Firenze nel 2023. Durante il suo percorso di formazione, si è dedicata alla diabetologia e all’obesiologia, alle patologie tiroidee, ipofisarie e surrenaliche, all’andrologia e all’endocrinologia femminile, nonché alle malattie del metabolismo osseo. Attualmente sta proseguendo l’attività clinica e di ricerca come Assegnista di Ricerca presso l’Università degli Studi di Firenze sulla tematica dell’incongruenza di genere e della terapia ormonale di affermazione di genere.",
-    "specialization": "Endocrinologa",
+    "specialization": "Endocrinologia",
     "services": [
       "patologie tiroidee",
       "patologie ipofisarie e surrenaliche",
@@ -32,7 +32,7 @@
     "surname": "Zago",
     "image": "doctors-images/zago.webp",
     "bio": "Laureato in Medicina e Chirurgia presso l’Università degli Studi di Firenze il 20.10.2015 con 110/110 e lode, Specializzazione in Ortopedia e Traumatologia presso l’Università degli Studi di Firenze ottenendo la massima votazione di 7O/7O e lode in data 09.11.2021. Nel corso dei suoi studi si è perfezionato nel trattamento delle patologie dello sport del ginocchio e nella chirurgia protesica dell’anca con Accesso Anteriore Diretto Mininvasivo presso la IRCCS Sacro Cuore Don Calabria di Negrar (VR) diretta dal Dott. Claudio Zorzi.",
-    "specialization": "Ortopedico",
+    "specialization": "Ortopedia",
     "services": [
       "chirurgia protesica mininvasiva dell’anca e del ginocchio",
       "chirurgia artroscopica",
@@ -48,7 +48,7 @@
     "surname": "Cincotta",
     "image": "doctors-images/cincotta.webp",
     "bio": "Si è laureato in Medicina e chirurgia presso l’università degli studi di Messina. Ha conseguito il titolo di specialista in Ginecologia ed Ostetricia con il massimo dei voti e lode presso L’università degli studi di Firenze AOU CAREGGI ha prestato servizio presso l’ospedale San Jacopo di Pistoia e San Cosma e Damiano di Pescia. Attualmente presta servizio in qualità di dirigente medico specialista presso l’ospedale Santa Maria Annunziata di Bagno a Ripoli (FI).",
-    "specialization": "Ginecologo",
+    "specialization": "Ginecologia",
     "services": [
       "Prevenzione oncologica",
       "Menopausa",
@@ -69,7 +69,7 @@
     "surname": "Bortot",
     "image": "doctors-images/bortot.webp",
     "bio": "Giulia è un medico chirurgo, laureato presso l'Università di Ferrara con il massimo dei voti e lode, ha conseguito nel 2022 la specialization in Urologia con lode presso l'Università degli Studi di Firenze. Si occupa di patologia urologica benigna, maligna, plastico-ricostruttiva e neuro-urologica del paziente (maschio e femmina), dalla diagnosi prenatale all'età adulta. Dal 2019, si è interessato anche all'Urologia Pediatrica e Cure Transizionali presso l'ospedale pediatrico AOU Meyer. Madre di due bambini, parla fluentemente italiano, spagnolo e inglese.",
-    "specialization": "Urologa",
+    "specialization": "Urologia",
     "services": [
       "patologia urologica malformativa",
       "patologia urologica",
@@ -88,7 +88,7 @@
     "surname": "Anichini",
     "image": "doctors-images/anichini.webp",
     "bio": "Annamaria si è laureata in Scienze Biologiche e successivamente ha conseguito la Laurea in Biologia, curriculum biosanitario, con il massimo dei voti e lode presso l’Università degli Studi di Firenze ed ha ottenuto l’abilitazione all’esercizio alla professione di Biologo con l’iscrizione all’Ordine sez. A. Effettua controlli e consulenze nutrizionali a pazienti sani o con patologie accertate legate all’alimentazione, ed elabora piani alimentari personalizzati al fine di correggere lo stile di vita e migliorare la salute del paziente. Il suo obiettivo è insegnare ad avere un stile di vita sano ed equilibrato partendo dalla tavola. E’ mamma di due bambini e da quando sono nati ha sentito la necessità di specializzarsi in nutrizione pediatrica per stare accanto alle famiglie e accompagnarle in questo percorso così bello e allo stesso tempo così delicato, che è l’alimentazione nei primi anni di vita del bambino. Attualmente si sta specializzando in nutrizione pediatrica non prescrittiva.",
-    "specialization": "Nutrizionista",
+    "specialization": "Nutrizione",
     "services": [
       "diabete e insulino resistenza",
       "insufficienza renale e iperuricemia",
@@ -106,7 +106,7 @@
     "surname": "Scandagli",
     "image": "doctors-images/scandagli.webp",
     "bio": "Ilaria è un medico dermatologo laureato con il massimo dei voti presso l'Università di Firenze. Ha successivamente completato la specialization in Dermatologia e Venereologia con lode nel 2023 presso la stessa istituzione. Durante il suo percorso si è principalmente dedicata allo studio e al trattamento delle alopecie e delle patologie infiammatorie, come l'idrosadenite suppurativa e la psoriasi. Manifesta un particolare interesse anche per la dermatologia pediatrica e la diagnostica non invasiva.",
-    "specialization": "Dermatologa",
+    "specialization": "Dermatologia",
     "services": [
       "visita dermatologica",
       "visita dermatologica pediatrica",
@@ -129,7 +129,7 @@
     "surname": "Ruggeri",
     "image": "doctors-images/ruggeri.webp",
     "bio": "Laureato in Medicina e Chirurgia presso la facoltà La Sapienza di Roma, ho ottenuto la specialization in psichiatria presso L'Università degli Studi di Firenze. Ho conseguito il diploma di Psicoterapeuta Cognitivo Comportamentale presso il CTCC di Firenze. Attualmente ricopre la posizione di medico psichiatra presso la Syracuse University in Florence, continuando a dedicarsi alla ricerca accademica in Italia ed all'estero.",
-    "specialization": "Psichiatra",
+    "specialization": "Psichiatria",
     "services": [
       "disturbi dell'umore",
       "disturbi di personalità",
@@ -145,7 +145,7 @@
     "surname": "Prosperi",
     "image": "doctors-images/prosperi.webp",
     "bio": "Linda si è laureata in Scienze Biologiche presso l'Università di Firenze e successivamente si è specializzata in Scienze della Nutrizione Umana. La sua attività professionale consiste nello sviluppare piani nutrizionali personalizzati per condizioni patologiche e fisiologiche. Oltre alla gestione clinica, si occupa della perdita di peso in casi di sovrappeso ed obesità grave, nonché dell'aumento di peso. Il suo approccio di lavoro si basa sull'accoglienza e la comprensione del paziente dal punto di vista emotivo, sull'analisi dello stato nutrizionale e sull'applicazione del protocollo dietetico più efficace e sostenibile in base alla patologia del paziente. Tra i protocolli che applica, rientra anche la dieta Chetogenica.",
-    "specialization": "Nutrizionista",
+    "specialization": "Nutrizione",
     "services": [
       "piani nutrizionali personalizzati",
       "diabete",
@@ -165,7 +165,7 @@
     "surname": "Pellegrino",
     "image": "doctors-images/pellegrino.webp",
     "bio": "Laureata in Podologia con il massimo dei voti presso l’Università degli Studi di Firenze nel 2013 presentando la tesi sul piede diabetico; successivamente ha conseguito il Master I livello in Biomeccanica applicata alla terapia ortesica podologica presso la stessa università nel 2015. Inoltre ha seguito il corso di perfezionamento universitario in Rieducazione funzionale, terapia fisica e manuale in podologia nel 2019. Dal 2014 ad oggi ha partecipato a diversi corsi di aggiornamento professionale su materie riguardanti la rieducazione ungueale per trattare le onicocriptosi (unghia incarnita), patologie dermatologiche, fabbricazione di ortesi digitali in silicone, aggiornamento sul piede pediatrico ecc… La Dott.ssa è una professionista sanitaria dell’area della riabilitazione e specializzata per la cura del piede; si occupa del piede dal bambino all’anziano, si occupa del piede doloroso a partire dalle problematiche cutanee come callosità, tilomi, duroni, unghia incarnita, fino a trattare e prescrivere ortesi plantari per patologie e deformità come alluce valgo, metatarsalgie, tallodinie, fascite ecc..",
-    "specialization": "Podologa",
+    "specialization": "Podologia",
     "services": [
       "visita podologica",
       "esame baropodometrico",
@@ -189,7 +189,7 @@
     "surname": "Becarelli",
     "image": "doctors-images/becarelli.webp",
     "bio": "Laura consegue la Laurea in Osteopatia presso la Kingston University London nel 2020 dopo aver ottenuto il diploma italiano presso ICOM College Firenze. Lavora come docente presso Malta Educational College. Frequenta corsi in ambito cranio sacrale e pediatrico. Lavora presso lo studio dentistico Becarelli dove tratta problematiche occlusali.",
-    "specialization": "Osteopata",
+    "specialization": "Osteopatia",
     "services": [
       "osteopatia pediatrica",
       "osteopatia e gravidanza",
@@ -205,7 +205,7 @@
     "surname": "Mastrorosato",
     "image": "doctors-images/mastrorosato.webp",
     "bio": "Francesca si è laureata in Scienze Biologiche e successivamente ha conseguito la laurea magistrale in Biologia della salute curriculum Nutrizionale presso l’Università Alma Mater Studiorum di Bologna. Infine ha ottenuto l’abilitazione all’esercizio della professione di Biologo con l’iscrizione all’Ordine sez. A. Elabora piani alimentari altamente personalizzati in condizione patologiche e fisiologiche, stabilendo gli obiettivi insieme al paziente e tenendo conto delle personali preferenze alimentari, dello stile di vita e dello stato di salute. Il suo obiettivo è aiutare la persona a seguire uno stile di vita che favorisca il suo benessere fisico e mentale, ad ogni incontro con attenzione ed empatia aiuta i suoi pazienti a trovare l’equilibrio a tavola, ponendo attenzione al legame che c’è tra cibo ed emozioni.",
-    "specialization": "Nutrizionista",
+    "specialization": "Nutrizione",
     "services": [
       "Sottopeso",
       "Sovrappeso e obesità",
@@ -230,7 +230,7 @@
     "surname": "Marangella",
     "image": "doctors-images/marangella.webp",
     "bio": "Laureata in Psicologia, sono psicologa e consulente in sessuologia, iscritta all'albo A degli psicologi della Toscana , alla Fiss( Federazione Italiana Sessuologia Scientifica) e ASI ( Associazione dei sessuologi Italiani) .La mia attività è rivolta a singoli individui o coppie, adolescenti e adulti , offrendo uno spazio di informazione , ascolto , supporto  e riflessione attraverso cui esplorare ed affrontare difficoltà relative alla sfera della sessualità e volte alla prevenzione e promozione del benessere sessuale, ma anche relative a stress,ansia , dipendenza affettiva, percorsi psico educativi , sostegno alla genitorialità.",
-    "specialization": "Psiocologa e sessuologa",
+    "specialization": "Psiocologia e sessuologia",
     "services": [
       "sessualità",
       "stress",
@@ -247,7 +247,7 @@
     "surname": "Cirillo",
     "image": "doctors-images/cirillo.webp",
     "bio": "Jessica è una massaggiatrice professionista e massoterapista olistica disciplinata ai sensi della legge N.4/2013. Diplomata presso l’Accademia Massfullness situata a Milano. Jessica è specializzata nel massaggio decontratturante, utile per sciogliere ed eliminare tensioni e contratture muscolari, causate da stress,posture sbagliate, rigidità muscolare, cefalee e dolori alla cervicale. E' specializzata anche nei massaggi drenanti tonificanti, che aiutano a diminuire visibilmente il ristagno di liquidi in eccesso. Da sempre appassionata al mondo del benessere e nel volerlo trasmetterlo attraverso la più antica e naturale delle tecniche di manipolazione a fine terapeutico ed estetico",
-    "specialization": "Massofisioterapista",
+    "specialization": "Massofisioterapia",
     "services": [
       "massaggio di base",
       "massaggio decontratturante",
@@ -263,7 +263,7 @@
     "surname": "Lini",
     "image": "doctors-images/lini.webp",
     "bio": "Marianna si è laureata con lode in Ostetricia presso l'Università degli Studi di Firenze. La sua assistenza è dedicata all'accompagnamento della donna in ogni fase della sua vita fertile, dal menarca alla menopausa, e al neonato nel suo primo anno di vita. Ha deciso di svolgere la sua attività sul territorio, per applicare i principi della continuità dell'assistenza ed essere vicina alle donne, alle madri in gravidanza e, soprattutto, nelle delicate fasi del dopo parto.",
-    "specialization": "Ostetrica",
+    "specialization": "Ostetricia",
     "services": [
       "consulenze preconcezionali",
       "consulenze in gravidanza",
@@ -274,6 +274,21 @@
       "consulenze su contraccezione",
       "salute mestruale",
       "prevenzione oncologica"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Daniele",
+    "surname": "Della Latta",
+    "image": "doctors-images/dellalatta.webp",
+    "bio": "Nel 2022, ha ottenuto la Laurea in Podologia presso l'Università di Pisa con votazione finale di 110 e lode. Attualmente è iscritto all'Albo professionale dei Podologi n° 177 tenuto dall'Ordine dei TSRM-PSTRP delle Province di Firenze, Arezzo, Prato, Pistoia, Lucca e Massa-Carrara. Collabora con il Laboratorio di ortesi plantari Podolab S.r.L. È in continuo aggiornamento: nel 2023/24 ha partecipato al Corso internazionale di alta formazione nella clinica del piede e nelle lesioni cutanee: Piede Diabetico e Biomeccanica (Podiatric School, 2023/2024). I servizi offerti comprendono una prima Valutazione Funzionale Podologica volta ad analizzare la problematica posta in esame dal paziente.",
+    "specialization": "Podologia",
+    "services": [
+      "trattamento podologico",
+      "medicazioni ulcere",
+      "ortesi",
+      "plantare ortopedico",
+      "esame baropodometrico"
     ]
   }
 ]

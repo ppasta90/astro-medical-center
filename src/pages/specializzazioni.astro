@@ -14,10 +14,6 @@ const title = "I NOSTRI SPECIALISTI";
       professionisti qualificati e competenti, pronti a rispondere a tutte le
       tue esigenze.
     </h2>
-    <div
-      class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 mx-auto gap-8 px-6 md:px-20"
-    >
-      <RenderCardsList isMainPage={false} client:load />
-    </div>
+    <RenderCardsList isMainPage={false} client:load />
   </section>
 </Layout>
