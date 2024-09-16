@@ -6,7 +6,8 @@
     "image": "doctors-images/amadori.webp",
     "bio": "Tommaso ha conseguito la laurea con lode in Medicina e Chirurgia presso l'Università degli studi di Firenze nel 2017. Successivamente, nel 2023, ha completato la specialization con lode in Radiodiagnostica presso l'Università degli studi di Firenze. Durante il percorso professionale, ha acquisito e perfezionato l'esperienza senologica presso il reparto di senologia diretto dal Dott. Nori presso Careggi. Nel 2023, ha conseguito il Diploma Europeo in Radiologia (EDiR). Si è attivamente impegnato nella realizzazione di corsi su tecniche senologiche avanzate, come la Contrast Enhanced Mammography e la Crioablazione al seno. Inoltre, è membro di società radiologiche italiane ed internazionali, tra cui SIRM, ESR, EUSOBI e RSNA.",
     "specialization": "Senologia",
-    "services": ["visita senologica", "ecografia mammaria"]
+    "services": ["visita senologica", "ecografia mammaria"],
+    "link": "https://www.doctolib.it/senologo/agliana/tommaso-amadori?pid=practice-586757"
   },
   {
     "id": 2,
@@ -24,7 +25,8 @@
       "obesità",
       "andrologia",
       "ecografia tiroidea"
-    ]
+    ],
+    "link": "https://www.doctolib.it/endocrinologo/pistoia/alessia-romani-pistoia?pid=practice-586757"
   },
   {
     "id": 3,
@@ -40,7 +42,9 @@
       "trattamento delle patologie del menisco e della cartilagine",
       "chirurgia per instabilità e lussazioni di rotula",
       "applicazione della medicina rigenerativa nell'artrosi iniziale e nelle patologie tendinee e legamentose dello sportivo"
-    ]
+    ],
+    "link": "https://www.doctolib.it/ortopedico-traumatologo/agliana/manuel-zago-8f128c3a-1363-4f3a-a09b-73872c3a4641?pid=practice-586757"
+
   },
   {
     "id": 4,
@@ -61,7 +65,8 @@
       "Malattie sessualmente trasmissibili",
       "Consulenza preconcezionale",
       "Ecografia ostetrica e ginecologica"
-    ]
+    ],
+    "link": "https://www.doctolib.it/ginecologo-ostetrico/firenze/roberto-cincotta?pid=practice-586757"
   },
   {
     "id": 5,
@@ -80,7 +85,8 @@
       "urologia pediatrica",
       "enuresi",
       "chirurgia urologica"
-    ]
+    ],
+    "link": "https://www.doctolib.it/urologo/agliana/giulia-bortot?pid=practice-586757"
   },
   {
     "id": 6,
@@ -98,7 +104,8 @@
       "alimentazione pediatrica",
       "educazione alimentare familiare",
       "educazione alimentare nello sportivo"
-    ]
+    ],
+    "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/anna-maria-anichini?pid=practice-586757"
   },
   {
     "id": 7,
@@ -121,7 +128,8 @@
       "trattamento di condilomi",
       "peeling estetico",
       "laser CO2"
-    ]
+    ],
+    "link": "https://www.doctolib.it/dermatologo-venereologo/pistoia/ilaria-scandagli?pid=practice-586757"
   },
   {
     "id": 8,
@@ -137,7 +145,8 @@
       "cefalea",
       "disturbi del sonno",
       "disturbi dell'alimentazione"
-    ]
+    ],
+    "link": "https://www.doctolib.it/psichiatra/agliana/emanuele-ruggeri?pid=practice-586757"
   },
   {
     "id": 9,
@@ -157,7 +166,8 @@
       "insulino resistenza",
       "insufficienza renale",
       "iperuricemia"
-    ]
+    ],
+    "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/linda-prosperi?pid=practice-586757"
   },
   {
     "id": 10,
@@ -180,7 +190,8 @@
       "piede reumatico",
       "piede geriatrico",
       "medicazioni per lesioni del piede"
-    ]
+    ],
+    "link": "https://www.doctolib.it/podologo/agliana/alessandra-pellegrino-agliana?pid=practice-586757"
   },
 
   {
@@ -197,7 +208,8 @@
       "osteopatia e bocca",
       "osteopatia e vista",
       "terapia cranio sacrale"
-    ]
+    ],
+    "link": "https://www.doctolib.it/osteopata/agliana/laura-becarelli?pid=practice-586757"
   },
   {
     "id": 12,
@@ -221,7 +233,8 @@
       "Alimentazione in allattamento",
       "Alimentazione vegetariana",
       "Alimentazione per neoplasie"
-    ]
+    ],
+    "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/francesca-mastrorosato-agliana?pid=practice-586757"
   },
 
   {
@@ -239,7 +252,8 @@
       "percorsi psico educativi",
       "sostegno alla genitorialità",
       "terapia di coppia"
-    ]
+    ],
+    "link": "https://www.doctolib.it/psicologo/agliana/dalila-marangella?pid=practice-586757"
   },
   {
     "id": 14,
@@ -255,7 +269,8 @@
       "linfodrenaggio vodder",
       "massaggio anticeullite tonificante",
       "massaggio californiano relax"
-    ]
+    ],
+    "link": ""
   },
   {
     "id": 15,
@@ -274,7 +289,8 @@
       "consulenze su contraccezione",
       "salute mestruale",
       "prevenzione oncologica"
-    ]
+    ],
+    "link": "https://www.doctolib.it/ostetrico/campi-bisenzio/marianna-lini?pid=practice-586757"
   },
   {
     "id": 16,
@@ -289,6 +305,7 @@
       "ortesi",
       "plantare ortopedico",
       "esame baropodometrico"
-    ]
+    ],
+    "link": "https://www.doctolib.it/podologo/camaiore/daniele-della-latta?pid=practice-586757"
   }
 ]

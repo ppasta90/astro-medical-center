@@ -10,6 +10,7 @@ type CardProps = {
   image: string;
   specialization: string;
   services: string[];
+  link?: string;
 };
 const Card = ({
   name,
@@ -18,6 +19,7 @@ const Card = ({
   image,
   specialization,
   services,
+  link,
 }: CardProps) => {
   const [section, setSection] = React.useState<"prestazioni" | "esperienze">(
     "prestazioni"
@@ -32,20 +34,6 @@ const Card = ({
     "hidden md:block sm:w-full text-secondary px-6 h-12 text-left w-1/2 text-lg bg-lightGrey" +
     inactiveTab;
 
-  const renderServices = (services: string[]) => {
-    return (
-      <ul className="list-disc ml-4 text-darkBlue text-left text-base">
-        {services.map((service, index) => (
-          <li key={index}>{capitalizeFirstLetter(service)}</li>
-        ))}
-      </ul>
-    );
-  };
-
-  const renderBio = (bio: string) => {
-    return <div className="text-left mt-2 text-darkBlue max-h-[500px] overflow-auto text-base no-scrollbar">{bio}</div>;
-  };
-
   return (
     <div className="flex flex-col smm:p-4 sm:p-8 rounded-2xl w-full bg-secondaryLight h-[610px]">
       <div
@@ -55,7 +43,7 @@ const Card = ({
         <img
           src={image}
           className="rounded-full mx-auto aspect-square object-contain"
-          alt="foto del medico specialista"
+          alt={`foto del medico specialista ${name} ${surname}`}
           width={96}
           height={96}
           loading="lazy"
@@ -65,7 +53,19 @@ const Card = ({
           {name} {surname}
         </h3>
         <div className="mt-4">
-          <a href="tel:0574027087" className="blue-cta ">CHIAMA ORA</a>
+          <a href="tel:0574027087" className="blue-cta ">
+            CHIAMA ORA
+          </a>
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+              className="white-cta ml-2"
+            >
+              PRENOTA ONLINE
+            </a>
+          )}
         </div>
       </div>
 
@@ -102,7 +102,9 @@ const Card = ({
               {services.length > 5 && (
                 <CustomDialog
                   title={name + " " + surname + " - Prestazioni"}
-                  description={renderServices(services)}
+                  description={
+                    <ServicesList services={services} showAll={true} />
+                  }
                   triggerComponent={
                     <span className="cursor-pointer text-secondary font-bold hover:underline inline-flex items-center gap-1">
                       <LuPlusCircle size={24} />
@@ -118,7 +120,11 @@ const Card = ({
               <div className="mt-2 text-darkBlue line-clamp-5">{bio}</div>
               <CustomDialog
                 title={name + " " + surname + " - Esperienze"}
-                description={renderBio(bio)}
+                description={
+                  <div className="text-left mt-2 text-darkBlue max-h-[500px] overflow-auto text-base no-scrollbar">
+                    {bio}
+                  </div>
+                }
                 triggerComponent={
                   <span className="cursor-pointer text-secondary font-bold hover:underline inline-flex items-center gap-1 ml-1">
                     <LuPlusCircle size={24} />
@@ -131,6 +137,27 @@ const Card = ({
         </div>
       </div>
     </div>
+  );
+};
+
+const ServicesList = ({
+  services,
+  maxVisible = 5,
+  showAll = false,
+}: {
+  services: string[];
+  maxVisible?: number;
+  showAll?: boolean;
+}) => {
+  // Limita la visualizzazione a 'maxVisible' se showAll è false
+  const visibleServices = showAll ? services : services.slice(0, maxVisible);
+
+  return (
+    <ul className="list-disc ml-4 text-darkBlue text-left text-base">
+      {visibleServices.map((service, index) => (
+        <li key={index}>{capitalizeFirstLetter(service)}</li>
+      ))}
+    </ul>
   );
 };
 

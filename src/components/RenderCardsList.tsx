@@ -43,7 +43,7 @@ const RenderCardsList = ({ isMainPage = true }: RenderCardsListProps) => {
           <select
             id="specialization-select"
             onChange={handleSpecializationChange}
-            className="px-4 py-2 border rounded-md text-black"
+            className="px-4 py-2 border rounded-md text-black font-serif"
           >
             <option value="">Mostra tutte le specializzazioni</option>
             {Array.from(
@@ -77,6 +77,7 @@ const RenderCardsList = ({ isMainPage = true }: RenderCardsListProps) => {
               services={specialization.services}
               surname={specialization.surname}
               specialization={specialization.specialization}
+              link={specialization.link}
             />
           ))}
       </div>
