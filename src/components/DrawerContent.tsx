@@ -21,7 +21,7 @@ const DrawerMenu = ({ toggleDrawer }: { toggleDrawer?: () => void }) => {
           <a
             aria-label="Vai alla sezione specialisti"
             onClick={toggleDrawer}
-            href="/#specialisti"
+            href="/specializzazioni"
           >
             SPECIALISTI
           </a>
