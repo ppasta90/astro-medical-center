@@ -4,18 +4,33 @@ import Header from "@/components/Header";
 import "@/styles/globals.css";
 import "@fontsource-variable/dm-sans";
 import "@fontsource/bebas-neue";
-const {pathname} = Astro.url
-
+const { pathname } = Astro.url;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta
+      name="description"
+      content="Studi medici con sede ad Agliana, specializzati in ginecologia, ortopedia, dermatologia, psicologia, osteopatia, senologia, urologia, podologia."
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Centro Medico Agliana" />
+    <meta
+      name="keywords"
+      content="centro medico agliana, ginecologia, ortopedia, dermatologia, psicologia, osteopatia, senologia, urologia, podologia"
+    />
+    <meta property="og:title" content="Il mio sito web" />
+    <meta
+      property="og:description"
+      content="Studi medici con sede ad Agliana, specializzati in ginecologia, ortopedia, dermatologia, psicologia, osteopatia, senologia, urologia, podologia."
+    />
+    <meta property="og:url" content="https://centromedicoagliana.it" />
+    <meta property="og:type" content="website" />
     <title>Centro Medico Agliana</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -24,10 +39,11 @@ const {pathname} = Astro.url
   </head>
   <main style="overflow-y: hidden;">
     <body>
-      <Header client:load pathname={pathname}/>
+      <Header client:load pathname={pathname} />
       <slot />
       <Footer />
     </body>
   </main>
+
 
 </html>
