@@ -6,14 +6,22 @@ import { Image } from "astro:assets";
 ---
 
 <script>
-  window.addEventListener("scroll", () => {
+  function updateBookingButtonPosition() {
     const bookingButton = document.getElementById("booking-button");
     const footer = document.querySelector("footer");
+    const widgetText = document.getElementById("widget-text");
+    const isDesktop = window.innerWidth > 768;
 
-    if (!footer || !bookingButton) return;
+    if (!isDesktop && widgetText) {
+      widgetText.textContent = "";
+    }
+
+    if (!isDesktop || !footer || !bookingButton) return;
 
     const footerRect = footer.getBoundingClientRect();
     const windowHeight = window.innerHeight;
+
+    if (widgetText) widgetText.textContent = "Prenota online con";
 
     if (footerRect.top < windowHeight) {
       bookingButton.style.bottom = `${windowHeight - footerRect.top - 240}px`;
@@ -22,7 +30,11 @@ import { Image } from "astro:assets";
       bookingButton.style.bottom = "16px";
       bookingButton.style.right = "32px";
     }
-  });
+  }
+
+  window.addEventListener("scroll", updateBookingButtonPosition);
+  window.addEventListener("resize", updateBookingButtonPosition);
+  document.addEventListener("DOMContentLoaded", updateBookingButtonPosition);
 </script>
 
 <footer class="bg-lightGreen py-8">
@@ -89,7 +101,7 @@ import { Image } from "astro:assets";
             target="_blank"
             id="booking-button"
           >
-            Prenota un appuntamento online
+            <span id="widget-text">Prenota un appuntamento online</span>
             <img
               style="height:19px;vertical-align:middle;width:auto"
               src="https://pro.doctolib.it/external_button/doctolib-white-transparent.png"
