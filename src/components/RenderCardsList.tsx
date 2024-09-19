@@ -32,13 +32,13 @@ const RenderCardsList = ({ isMainPage = true }: RenderCardsListProps) => {
   return (
     <div className={classname}>
       {!isMainPage && (
-        <div className="flex justify-center sm:justify-start mb-6">
+        <div className="flex flex-col justify-center sm:justify-start mb-6 w-fit gap-2">
           <label
             htmlFor="specialization-select"
-            className="sr-only text-white"
+            className="text-white font-sans text-lg"
             aria-describedby="specialization-select"
           >
-            Seleziona una specializzazione
+            Filtra per specializzazione:
           </label>
           <select
             id="specialization-select"

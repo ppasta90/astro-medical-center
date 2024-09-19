@@ -5,6 +5,26 @@ import logo from "../images/logo.svg";
 import { Image } from "astro:assets";
 ---
 
+<script>
+  window.addEventListener("scroll", () => {
+    const bookingButton = document.getElementById("booking-button");
+    const footer = document.querySelector("footer");
+
+    if (!footer || !bookingButton) return;
+
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (footerRect.top < windowHeight) {
+      bookingButton.style.bottom = `${windowHeight - footerRect.top - 240}px`;
+      bookingButton.style.right = "64px";
+    } else {
+      bookingButton.style.bottom = "16px";
+      bookingButton.style.right = "32px";
+    }
+  });
+</script>
+
 <footer class="bg-lightGreen py-8">
   <div class="flex flex-col md:flex-row justify-between w-[90%] m-auto gap-4">
     <div class="flex flex-col gap-4">
@@ -31,9 +51,7 @@ import { Image } from "astro:assets";
         <p>Via Michelagelo Buonarroti, n.c. mancante, Agliana (PT)</p>
         <p>0574 02 70 87</p>
         <p>info@centromedicoagliana.it</p>
-        <p >
-          Lunedì - Venerdì 15:00 - 19:00
-        </p>
+        <p>Lunedì - Venerdì 15:00 - 19:00</p>
       </div>
     </div>
     <div>
@@ -65,6 +83,19 @@ import { Image } from "astro:assets";
           >
             <FaLinkedin size={25} />
           </a>
+          <a
+            href="https://www.doctolib.it/centro-medico/agliana/centro-medico-agliana-sas-di-pastacaldi-paolo-c/booking?utm_campaign=website-button&utm_source=centro-medico-agliana-sas-di-pastacaldi-paolo-c-website-button&utm_medium=referral&utm_content=withoutpreview-blue-floating-bottom-right&utm_term=centro-medico-agliana-sas-di-pastacaldi-paolo-c"
+            style="display:flex;text-align:center;background-color:#107ACA;color:#ffffff;font-size:14px;overflow:hidden;font-family:Roboto, sans-serif;box-sizing:border-box;align-items:center;padding:0 24px;z-index:1000;height:48px;text-decoration:none;position:fixed;bottom:16px;right:32px;border-bottom-left-radius:none;border-bottom-right-radius:none;border-top-left-radius:4px;border-top-right-radius:4px;border-radius:24px"
+            target="_blank"
+            id="booking-button"
+          >
+            Prenota un appuntamento online
+            <img
+              style="height:19px;vertical-align:middle;width:auto"
+              src="https://pro.doctolib.it/external_button/doctolib-white-transparent.png"
+              alt="Doctolib"
+            /></a
+          >
         </div>
 
         <div id="policies" class="flex flex-col text-sm">
