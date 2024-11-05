@@ -43,11 +43,13 @@ const RenderCardsList = ({ isMainPage = true }: RenderCardsListProps) => {
           <select
             id="specialization-select"
             onChange={handleSpecializationChange}
-            className="px-4 py-2 border rounded-md text-black font-serif"
+            className="px-4 py-2 border rounded-md text-black font-serif text-lg"
           >
             <option value="">Mostra tutte le specializzazioni</option>
             {Array.from(
-              new Set(specializationsData.map((s) => s.specialization))
+              new Set(specializationsData
+                .sort((a, b) => a.specialization.localeCompare(b.specialization))
+                .map((s) => s.specialization))
             ).map((specialization, idx) => (
               <option key={idx} value={specialization}>
                 {specialization}
@@ -68,6 +70,7 @@ const RenderCardsList = ({ isMainPage = true }: RenderCardsListProps) => {
               ? specialization.specialization === specializationFilter
               : specialization
           )
+          .sort((a, b) => a.specialization.localeCompare(b.specialization))
           .map((specialization, idx) => (
             <Card
               key={idx}

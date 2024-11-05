@@ -6,7 +6,10 @@
     "image": "doctors-images/amadori.webp",
     "bio": "Tommaso ha conseguito la laurea con lode in Medicina e Chirurgia presso l'Università degli studi di Firenze nel 2017. Successivamente, nel 2023, ha completato la specialization con lode in Radiodiagnostica presso l'Università degli studi di Firenze. Durante il percorso professionale, ha acquisito e perfezionato l'esperienza senologica presso il reparto di senologia diretto dal Dott. Nori presso Careggi. Nel 2023, ha conseguito il Diploma Europeo in Radiologia (EDiR). Si è attivamente impegnato nella realizzazione di corsi su tecniche senologiche avanzate, come la Contrast Enhanced Mammography e la Crioablazione al seno. Inoltre, è membro di società radiologiche italiane ed internazionali, tra cui SIRM, ESR, EUSOBI e RSNA.",
     "specialization": "Senologia",
-    "services": ["visita senologica", "ecografia mammaria"],
+    "services": [
+      "visita senologica",
+      "ecografia mammaria"
+    ],
     "link": "https://www.doctolib.it/senologo/agliana/tommaso-amadori?pid=practice-586757"
   },
   {
@@ -44,7 +47,6 @@
       "applicazione della medicina rigenerativa nell'artrosi iniziale e nelle patologie tendinee e legamentose dello sportivo"
     ],
     "link": "https://www.doctolib.it/ortopedico-traumatologo/agliana/manuel-zago-8f128c3a-1363-4f3a-a09b-73872c3a4641?pid=practice-586757"
-
   },
   {
     "id": 4,
@@ -193,13 +195,12 @@
     ],
     "link": "https://www.doctolib.it/podologo/agliana/alessandra-pellegrino-agliana?pid=practice-586757"
   },
-
   {
     "id": 11,
-    "name": "Laura",
-    "surname": "Becarelli",
-    "image": "doctors-images/becarelli.webp",
-    "bio": "Laura consegue la Laurea in Osteopatia presso la Kingston University London nel 2020 dopo aver ottenuto il diploma italiano presso ICOM College Firenze. Lavora come docente presso Malta Educational College. Frequenta corsi in ambito cranio sacrale e pediatrico. Lavora presso lo studio dentistico Becarelli dove tratta problematiche occlusali.",
+    "name": "Elisabetta",
+    "surname": "De Pascalis",
+    "image": "doctors-images/depascalis.webp",
+    "bio": "Inizia il suo percorso all’età di 14 anni con trattamenti di medicina tradizionale cinese, nello specifico Shiatsu e riflessologia plantare, per poi proseguire durante gli anni con diversi corsi di massoterapia per massaggi base, decontratturanti, linfodrenaggio e rilassanti. Nel 2021 decide di approfondire i suoi studi in ambito terapeutico a Milano, all’Accademia Terapie Manuali, dove si diploma in Massoterapia MCB (potendo così lavorare anche sotto prescrizione medica, utilizzando tecniche sanitarie riabilitative e preventive) e in Osteopatia BFD (specializzata in biomeccanica funzionale dinamica). Prosegue perfezionando i suoi studi in Osteopatia alla Fisiomedic Academy, laureandosi nel 2024.",
     "specialization": "Osteopatia",
     "services": [
       "osteopatia pediatrica",
@@ -209,7 +210,7 @@
       "osteopatia e vista",
       "terapia cranio sacrale"
     ],
-    "link": "https://www.doctolib.it/osteopata/agliana/laura-becarelli?pid=practice-586757"
+    "link": "https://www.doctolib.it/osteopata/agliana/elisabetta-de-pascalis?pid=practice-586757"
   },
   {
     "id": 12,
@@ -236,7 +237,6 @@
     ],
     "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/francesca-mastrorosato-agliana?pid=practice-586757"
   },
-
   {
     "id": 13,
     "name": "Dalila",
@@ -307,5 +307,25 @@
       "esame baropodometrico"
     ],
     "link": "https://www.doctolib.it/podologo/camaiore/daniele-della-latta?pid=practice-586757"
+  },
+  {
+    "id": 17,
+    "name": "Iacopo",
+    "surname": "Franchini",
+    "image": "doctors-images/franchini.webp",
+    "bio": "Laureato in Medicina e Chirurgia presso l'Università degli Studi di Firenze, il Dott. Franchini si è poi specializzato in Oftalmologia presso la stessa università. Negli anni di specializzazione ha acquisito le sue competenze cliniche e diagnostiche e sviluppato capacità chirurgiche sotto la direzione del Prof. Stanislao Rizzo. Ha appreso ed approfondito le tecniche di Chirurgia della Cataratta e Chirurgia Refrattiva. Dopo la specializzazione ha dedicato un anno alla ricerca nell'ambito delle Patologie Retiniche di interesse medico, con particolare riferimento allo sviluppo di nuovi farmaci intravitreali e all'individuazione di nuovi possibili regimi di trattamento della Degenerazione Maculare legata all'età. Lavora attualmente presso l'Azienda Ospedaliera Careggi come Dirigente Medico Ospedaliero, concentrando la sua attività nell'ambito della Chirurgia Oftalmica del Segmento Anteriore, con particolare riferimento alla Chirurgia della Cataratta, Refrattiva e del Glaucoma ed incrementando le proprie competenze diagnostiche e di chirurgia mininvasiva del Glaucoma. Svolge inoltre regolarmente interventi in ambito di Chirurgia Vitreoretinica. Sta attualmente proseguendo e concentrando la sua attività di ricerca sulla ridefinizione delle linee guida della chirurgia oftalmica in ambito di antisepsi, trattamento farmacologico perioperatorio della cataratta e terapia post-chirurgica antibiotica.",
+    "specialization": "Oculistica",
+    "services": [],
+    "link": "https://www.doctolib.it/oftalmologo/agliana/iacopo-franchini?pid=practice-586757"
+  },
+  {
+    "id": 18,
+    "name": "Laura",
+    "surname": "Giannini",
+    "image": "doctors-images/giannini.webp",
+    "bio": "La Dott.ssa Laura Giannini è una psicologa laureata presso l'Università di Firenze e iscritta all'Albo degli Psicologi della Toscana (n. 10076). Frequenta attualmente la Scuola di Specializzazione in Psicoterapia Breve Strategica del prof. Giorgio Nardone. Questo approccio terapeutico si distingue per interventi mirati e orientati alla soluzione, volti a ottenere cambiamenti concreti e rapidi, lavorando sui meccanismi che mantengono il disagio psicologico. Si occupa di bambini, adolescenti e adulti, affrontando tematiche legate all'ansia, ai disturbi dell'umore, alle difficoltà comportamentali e relazionali, offrendo anche supporto nelle fasi di transizione della vita. Il suo obiettivo è aiutare le persone a sviluppare le risorse interiori per migliorare il loro benessere psicologico, adottando un approccio empatico e non giudicante.",
+    "specialization": "Psicologia",
+    "services": [],
+    "link": ""
   }
 ]
