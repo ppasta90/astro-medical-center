@@ -35,9 +35,9 @@ const Card = ({
           height={96}
           loading="lazy"
         />
-        <h2 className="text-2xl mt-4 font-bold">{specialization}</h2>
+        <h2 className="text-2xl mt-4 font-bold">{name} {surname}</h2>
         <h3 className="text-xl mt-2">
-          {name} {surname}
+        {specialization}
         </h3>
         <div className="mt-4">
           <a href="tel:0574027087" className="blue-cta ">
