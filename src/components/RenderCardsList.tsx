@@ -1,13 +1,13 @@
 import Card from "./Card";
 import specializationsData from "../db/data.json";
-import { useState } from "react";
+import { useState, useMemo, memo } from "react";
 import useMediaQuery from "@/lib/useMediaQuery";
 
 type RenderCardsListProps = {
   isMainPage?: boolean;
 };
 
-const RenderCardsList = ({ isMainPage = true }: RenderCardsListProps) => {
+const RenderCardsList = memo(({ isMainPage = true }: RenderCardsListProps) => {
   const [specializationFilter, setSpecializationFilter] = useState<
     string | null
   >(null);
@@ -24,24 +24,25 @@ const RenderCardsList = ({ isMainPage = true }: RenderCardsListProps) => {
 
   const showThreeSpecializations = useMediaQuery("(min-width: 1530px)");
 
-  const showedSpecializations =
-    isMainPage && !showThreeSpecializations
-      ? 2 :
-      3
+  const showedSpecializations = useMemo(() =>
+    isMainPage && !showThreeSpecializations ? 2 : 3,
+    [isMainPage, showThreeSpecializations]
+  );
 
   return (
     <div className={classname}>
       {!isMainPage && (
         <div className="flex flex-col justify-center sm:justify-start mb-6 w-fit gap-2">
           <label
+            id="specialization-label"
             htmlFor="specialization-select"
             className="text-white font-sans text-lg"
-            aria-describedby="specialization-select"
           >
             Filtra per specializzazione:
           </label>
           <select
             id="specialization-select"
+            aria-labelledby="specialization-label"
             onChange={handleSpecializationChange}
             className="px-4 py-2 border rounded-md text-black font-serif text-lg"
           >
@@ -86,6 +87,6 @@ const RenderCardsList = ({ isMainPage = true }: RenderCardsListProps) => {
       </div>
     </div>
   );
-};
+});
 
 export default RenderCardsList;
