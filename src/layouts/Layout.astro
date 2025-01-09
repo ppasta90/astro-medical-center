@@ -54,13 +54,11 @@ const { pathname } = Astro.url;
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
   </head>
+  <body>
   <main style="overflow-y: hidden;">
-    <body>
       <Header client:load pathname={pathname} />
       <slot />
       <Footer />
-    </body>
-  </main>
-
-
+    </main>
+  </body>
 </html>
