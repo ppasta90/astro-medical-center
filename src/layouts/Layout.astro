@@ -58,7 +58,7 @@ const { pathname } = Astro.url;
     <link rel="canonical" href="https://centromedicoagliana.it/404" />
   </head>
   <body>
-  <main style="overflow-y: hidden;">
+    <main style="overflow-y: hidden;">
       <Header client:load pathname={pathname} />
       <slot />
       <Footer />
