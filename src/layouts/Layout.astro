@@ -93,7 +93,7 @@ const { pathname } = Astro.url;
     <!-- End Meta Pixel Code -->
   </head>
   <body>
-  <main style="overflow-y: hidden;">
+    <main style="overflow-y: hidden;">
       <Header client:load pathname={pathname} />
       <slot />
       <Footer />
