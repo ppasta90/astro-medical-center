@@ -92,13 +92,11 @@ const { pathname } = Astro.url;
     >
     <!-- End Meta Pixel Code -->
   </head>
+  <body>
   <main style="overflow-y: hidden;">
-    <body>
       <Header client:load pathname={pathname} />
       <slot />
       <Footer />
-    </body>
-  </main>
-
-
+    </main>
+  </body>
 </html>
