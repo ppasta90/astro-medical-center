@@ -1,16 +1,13 @@
 [
   {
-    "id": 1,
-    "name": "Tommaso",
-    "surname": "Amadori",
-    "image": "doctors-images/amadori.webp",
-    "bio": "Tommaso ha conseguito la laurea con lode in Medicina e Chirurgia presso l'Università degli studi di Firenze nel 2017. Successivamente, nel 2023, ha completato la specialization con lode in Radiodiagnostica presso l'Università degli studi di Firenze. Durante il percorso professionale, ha acquisito e perfezionato l'esperienza senologica presso il reparto di senologia diretto dal Dott. Nori presso Careggi. Nel 2023, ha conseguito il Diploma Europeo in Radiologia (EDiR). Si è attivamente impegnato nella realizzazione di corsi su tecniche senologiche avanzate, come la Contrast Enhanced Mammography e la Crioablazione al seno. Inoltre, è membro di società radiologiche italiane ed internazionali, tra cui SIRM, ESR, EUSOBI e RSNA.",
-    "specialization": "Senologia",
-    "services": [
-      "visita senologica",
-      "ecografia mammaria"
-    ],
-    "link": "https://www.doctolib.it/senologo/agliana/tommaso-amadori?pid=practice-586757"
+    "id": 11,
+    "name": "Iacopo",
+    "surname": "Franchini",
+    "image": "doctors-images/franchini.webp",
+    "bio": "Laureato in Medicina e Chirurgia presso l'Università degli Studi di Firenze, il Dott. Franchini si è poi specializzato in Oftalmologia presso la stessa università. Negli anni di specializzazione ha acquisito le sue competenze cliniche e diagnostiche e sviluppato capacità chirurgiche sotto la direzione del Prof. Stanislao Rizzo. Ha appreso ed approfondito le tecniche di Chirurgia della Cataratta e Chirurgia Refrattiva. Dopo la specializzazione ha dedicato un anno alla ricerca nell'ambito delle Patologie Retiniche di interesse medico, con particolare riferimento allo sviluppo di nuovi farmaci intravitreali e all'individuazione di nuovi possibili regimi di trattamento della Degenerazione Maculare legata all'età. Lavora attualmente presso l'Azienda Ospedaliera Careggi come Dirigente Medico Ospedaliero, concentrando la sua attività nell'ambito della Chirurgia Oftalmica del Segmento Anteriore, con particolare riferimento alla Chirurgia della Cataratta, Refrattiva e del Glaucoma ed incrementando le proprie competenze diagnostiche e di chirurgia mininvasiva del Glaucoma. Svolge inoltre regolarmente interventi in ambito di Chirurgia Vitreoretinica. Sta attualmente proseguendo e concentrando la sua attività di ricerca sulla ridefinizione delle linee guida della chirurgia oftalmica in ambito di antisepsi, trattamento farmacologico perioperatorio della cataratta e terapia post-chirurgica antibiotica.",
+    "specialization": "Oculistica",
+    "services": [],
+    "link": "https://www.doctolib.it/oftalmologo/agliana/iacopo-franchini?pid=practice-586757"
   },
   {
     "id": 2,
@@ -33,20 +30,23 @@
   },
   {
     "id": 3,
-    "name": "Manuel",
-    "surname": "Zago",
-    "image": "doctors-images/zago.webp",
-    "bio": "Laureato in Medicina e Chirurgia presso l’Università degli Studi di Firenze il 20.10.2015 con 110/110 e lode, Specializzazione in Ortopedia e Traumatologia presso l’Università degli Studi di Firenze ottenendo la massima votazione di 7O/7O e lode in data 09.11.2021. Nel corso dei suoi studi si è perfezionato nel trattamento delle patologie dello sport del ginocchio e nella chirurgia protesica dell’anca con Accesso Anteriore Diretto Mininvasivo presso la IRCCS Sacro Cuore Don Calabria di Negrar (VR) diretta dal Dott. Claudio Zorzi.",
-    "specialization": "Ortopedia",
+    "name": "Giacomo",
+    "surname": "Noti",
+    "image": "doctors-images/noti.webp",
+    "bio": "Medico Ginecologo, laureato in Medicina e Chirurgia presso l’Università degli Studi di Pisa con votazione 110/110 e Lode e successivamente specializzato in Ginecologia e Ostetricia presso l’Azienda Ospedaliera Universitaria Pisana con Lode. Attualmente Dirigente Medico presso l’U.O. Ginecologia e Ostetricia dell’Ospedale Santo Stefano di Prato.",
+    "specialization": "Ginecologia",
     "services": [
-      "chirurgia protesica mininvasiva dell’anca e del ginocchio",
-      "chirurgia artroscopica",
-      "ricostruzioni dei legamenti del ginocchio",
-      "trattamento delle patologie del menisco e della cartilagine",
-      "chirurgia per instabilità e lussazioni di rotula",
-      "applicazione della medicina rigenerativa nell'artrosi iniziale e nelle patologie tendinee e legamentose dello sportivo"
+      "Ginecologia oncologica",
+      "Patologia ginecologica benigna",
+      "Endometriosi",
+      "Fibromatosi uterina",
+      "Malattia infiammatoria pelvica",
+      "Sanguinamenti uterini anomali",
+      "Contraccezione",
+      "Menopausa",
+      "Chirurgia ginecologica,"
     ],
-    "link": "https://www.doctolib.it/ortopedico-traumatologo/agliana/manuel-zago-8f128c3a-1363-4f3a-a09b-73872c3a4641?pid=practice-586757"
+    "link": "https://www.doctolib.it/ginecologo-ostetrico/agliana/giacomo-noti?pid=practice-586757"
   },
   {
     "id": 4,
@@ -310,13 +310,13 @@
   },
   {
     "id": 17,
-    "name": "Iacopo",
-    "surname": "Franchini",
-    "image": "doctors-images/franchini.webp",
-    "bio": "Laureato in Medicina e Chirurgia presso l'Università degli Studi di Firenze, il Dott. Franchini si è poi specializzato in Oftalmologia presso la stessa università. Negli anni di specializzazione ha acquisito le sue competenze cliniche e diagnostiche e sviluppato capacità chirurgiche sotto la direzione del Prof. Stanislao Rizzo. Ha appreso ed approfondito le tecniche di Chirurgia della Cataratta e Chirurgia Refrattiva. Dopo la specializzazione ha dedicato un anno alla ricerca nell'ambito delle Patologie Retiniche di interesse medico, con particolare riferimento allo sviluppo di nuovi farmaci intravitreali e all'individuazione di nuovi possibili regimi di trattamento della Degenerazione Maculare legata all'età. Lavora attualmente presso l'Azienda Ospedaliera Careggi come Dirigente Medico Ospedaliero, concentrando la sua attività nell'ambito della Chirurgia Oftalmica del Segmento Anteriore, con particolare riferimento alla Chirurgia della Cataratta, Refrattiva e del Glaucoma ed incrementando le proprie competenze diagnostiche e di chirurgia mininvasiva del Glaucoma. Svolge inoltre regolarmente interventi in ambito di Chirurgia Vitreoretinica. Sta attualmente proseguendo e concentrando la sua attività di ricerca sulla ridefinizione delle linee guida della chirurgia oftalmica in ambito di antisepsi, trattamento farmacologico perioperatorio della cataratta e terapia post-chirurgica antibiotica.",
-    "specialization": "Oculistica",
-    "services": [],
-    "link": "https://www.doctolib.it/oftalmologo/agliana/iacopo-franchini?pid=practice-586757"
+    "name": "Tommaso",
+    "surname": "Amadori",
+    "image": "doctors-images/amadori.webp",
+    "bio": "Tommaso ha conseguito la laurea con lode in Medicina e Chirurgia presso l'Università degli studi di Firenze nel 2017. Successivamente, nel 2023, ha completato la specialization con lode in Radiodiagnostica presso l'Università degli studi di Firenze. Durante il percorso professionale, ha acquisito e perfezionato l'esperienza senologica presso il reparto di senologia diretto dal Dott. Nori presso Careggi. Nel 2023, ha conseguito il Diploma Europeo in Radiologia (EDiR). Si è attivamente impegnato nella realizzazione di corsi su tecniche senologiche avanzate, come la Contrast Enhanced Mammography e la Crioablazione al seno. Inoltre, è membro di società radiologiche italiane ed internazionali, tra cui SIRM, ESR, EUSOBI e RSNA.",
+    "specialization": "Senologia",
+    "services": ["visita senologica", "ecografia mammaria"],
+    "link": "https://www.doctolib.it/senologo/agliana/tommaso-amadori?pid=practice-586757"
   },
   {
     "id": 18,
