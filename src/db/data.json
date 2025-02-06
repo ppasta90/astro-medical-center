@@ -1,6 +1,6 @@
 [
   {
-    "id": 11,
+    "id": 1,
     "name": "Iacopo",
     "surname": "Franchini",
     "image": "doctors-images/franchini.webp",
@@ -197,20 +197,22 @@
   },
   {
     "id": 11,
-    "name": "Elisabetta",
-    "surname": "De Pascalis",
-    "image": "doctors-images/depascalis.webp",
-    "bio": "Inizia il suo percorso all’età di 14 anni con trattamenti di medicina tradizionale cinese, nello specifico Shiatsu e riflessologia plantare, per poi proseguire durante gli anni con diversi corsi di massoterapia per massaggi base, decontratturanti, linfodrenaggio e rilassanti. Nel 2021 decide di approfondire i suoi studi in ambito terapeutico a Milano, all’Accademia Terapie Manuali, dove si diploma in Massoterapia MCB (potendo così lavorare anche sotto prescrizione medica, utilizzando tecniche sanitarie riabilitative e preventive) e in Osteopatia BFD (specializzata in biomeccanica funzionale dinamica). Prosegue perfezionando i suoi studi in Osteopatia alla Fisiomedic Academy, laureandosi nel 2024.",
-    "specialization": "Osteopatia",
+    "name": "Sandro",
+    "surname": "Pastacaldi",
+    "image": "doctors-images/pastacaldi.webp",
+    "bio": "Laureato in Medicina e Chirurgia presso l’Università degli Studi di Firenze con votazione di 110/110 con lode frequenta poi la scuola di formazione in Medicina Generale con diploma conseguito nel 2017. Dopo alcuni anni di lavoro sul territorio nell’attività di continuità assistenziale e sostituzioni di medici di medicina generale (periodo in cui consegue il diploma della Scuola di Ecografia di base SIUMB) viene ammesso alla scuola di specializzazione in Radiodiagnostica presso l’Azienda Ospedaliero Universitaria di Careggi (Firenze). Successivamente consegue il diploma di specializzazione con votazione di 70/70 e lode. Attualmente lavora come radiologo libero professionista.",
+    "specialization": "Ecografia",
     "services": [
-      "osteopatia pediatrica",
-      "osteopatia e gravidanza",
-      "osteopatia e dismenorrea",
-      "osteopatia e bocca",
-      "osteopatia e vista",
-      "terapia cranio sacrale"
+      "Ecografia addome",
+      "Ecografia tiroide",
+      "Ecografia testicolare",
+      "Ecografia ghiandole salivari",
+      "Ecografia prostatica transtettale",
+      "Ecografia muscolo scheletrica",
+      "Ecografia linfonodi",
+      "Ecografia cute e sottocute"
     ],
-    "link": "https://www.doctolib.it/osteopata/agliana/elisabetta-de-pascalis?pid=practice-586757"
+    "link": "https://www.doctolib.it/ecografo/agliana/sandro-pastacaldi?pid=practice-586757"
   },
   {
     "id": 12,
