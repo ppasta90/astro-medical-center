@@ -7,7 +7,7 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://centromedicoagliana.it",
+  site: "https://www.centromedicoagliana.it",
   integrations: [tailwind({
     applyBaseStyles: false
   }), react(), sitemap(), partytown()]
