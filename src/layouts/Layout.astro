@@ -5,11 +5,32 @@ import "@/styles/globals.css";
 import "@fontsource-variable/dm-sans";
 import "@fontsource/bebas-neue";
 const { pathname } = Astro.url;
+
+// Extend the Window interface to include dataLayer
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZSYEEGY2J7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      /* @ts-ignore */
+      gtag("js", new Date());
+      /* @ts-ignore */
+      gtag("config", "G-ZSYEEGY2J7");
+    </script>
+    <!-- GTM script -->
     <script>
       (function (w: any, d: Document, s: string, l: string, i: string) {
         w[l] = w[l] || [];
@@ -105,20 +126,21 @@ const { pathname } = Astro.url;
     <!-- End Meta Pixel Code -->
   </head>
   <body>
-  <main style="overflow-y: hidden;">
-    <body>
-      <!-- Google Tag Manager (noscript) -->
-      <noscript
-        ><iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-MKWXQ487"
-          height="0"
-          width="0"
-          style="display:none;visibility:hidden"></iframe></noscript
-      >
-      <!-- End Google Tag Manager (noscript) -->
-      <Header client:load pathname={pathname} />
-      <slot />
-      <Footer />
-    </body>
-  </main>
+    <main style="overflow-y: hidden;">
+      <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript
+          ><iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MKWXQ487"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"></iframe></noscript
+        >
+        <!-- End Google Tag Manager (noscript) -->
+        <Header client:load pathname={pathname} />
+        <slot />
+        <Footer />
+      </body>
+    </main>
+  </body>
 </html>
