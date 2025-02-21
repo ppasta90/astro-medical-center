@@ -10,6 +10,18 @@ const { pathname } = Astro.url;
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      (function (w: any, d: Document, s: string, l: string, i: string) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s) as HTMLScriptElement,
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        if (f.parentNode) f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MKWXQ487");
+    </script>
     <link rel="sitemap" href="/sitemap-index.xml" />
     <script type="text/javascript">
       var _iub = _iub || [];
@@ -94,11 +106,18 @@ const { pathname } = Astro.url;
   </head>
   <main style="overflow-y: hidden;">
     <body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript
+        ><iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-MKWXQ487"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden"></iframe></noscript
+      >
+      <!-- End Google Tag Manager (noscript) -->
       <Header client:load pathname={pathname} />
       <slot />
       <Footer />
     </body>
   </main>
-
-
 </html>
