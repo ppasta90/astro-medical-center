@@ -18,7 +18,10 @@ const titles: { [key: string]: string } = {
 };
 const title = titles[pathname as string] || "Centro Medico Agliana";
 
-const canonical = pathname === "/" ? "https://www.centromedicoagliana.it" : `https://www.centromedicoagliana.it${pathname}`;
+const canonical =
+  pathname === "/"
+    ? "https://www.centromedicoagliana.it"
+    : `https://www.centromedicoagliana.it${pathname}`;
 ---
 
 <!doctype html>
@@ -97,20 +100,18 @@ const canonical = pathname === "/" ? "https://www.centromedicoagliana.it" : `htt
   </head>
   <body>
     <main style="overflow-y: hidden;">
-      <body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript
-          ><iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-MKWXQ487"
-            height="0"
-            width="0"
-            style="display:none;visibility:hidden"></iframe></noscript
-        >
-        <!-- End Google Tag Manager (noscript) -->
-        <Header client:load pathname={pathname} />
-        <slot />
-        <Footer />
-      </body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript
+        ><iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-MKWXQ487"
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden"></iframe></noscript
+      >
+      <!-- End Google Tag Manager (noscript) -->
+      <Header client:load pathname={pathname} />
+      <slot />
+      <Footer />
     </main>
   </body>
 </html>
