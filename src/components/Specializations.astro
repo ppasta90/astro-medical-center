@@ -1,13 +1,20 @@
 ---
-
 import RenderCardsList from "./RenderCardsList";
 ---
 
 <script>
+  declare global {
+    function gtag(...args: any[]): void;
+  }
+
   const showAllButton = document?.getElementById("show-all");
-showAllButton?.addEventListener("click", () => {
-  window.location.href = "/specializzazioni";
-});
+  showAllButton?.addEventListener("click", () => {
+    gtag("event", "show_all_specialists", {
+      event_category: "engagement",
+      event_label: "View All Specialists"
+    });
+    window.location.href = "/specializzazioni";
+  });
 </script>
 <section id="specialisti" class="bg-secondary py-20">
   <div class="w-[90%] m-auto text-white flex flex-col gap-4 pb-8">
