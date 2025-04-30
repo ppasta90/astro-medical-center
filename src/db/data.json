@@ -14,7 +14,7 @@
     "name": "Alessia",
     "surname": "Romani",
     "image": "doctors-images/romani.webp",
-    "bio": "Alessia ha conseguito il titolo di Specialista in Endocrinologia e Malattie del Metabolismo presso l’Università degli Studi di Firenze nel 2023. Durante il suo percorso di formazione, si è dedicata alla diabetologia e all’obesiologia, alle patologie tiroidee, ipofisarie e surrenaliche, all’andrologia e all’endocrinologia femminile, nonché alle malattie del metabolismo osseo. Attualmente sta proseguendo l’attività clinica e di ricerca come Assegnista di Ricerca presso l’Università degli Studi di Firenze sulla tematica dell’incongruenza di genere e della terapia ormonale di affermazione di genere.",
+    "bio": "Alessia ha conseguito il titolo di Specialista in Endocrinologia e Malattie del Metabolismo presso l'Università degli Studi di Firenze nel 2023. Durante il suo percorso di formazione, si è dedicata alla diabetologia e all'obesiologia, alle patologie tiroidee, ipofisarie e surrenaliche, all'andrologia e all'endocrinologia femminile, nonché alle malattie del metabolismo osseo. Attualmente sta proseguendo l'attività clinica e di ricerca come Assegnista di Ricerca presso l'Università degli Studi di Firenze sulla tematica dell'incongruenza di genere e della terapia ormonale di affermazione di genere.",
     "specialization": "Endocrinologia",
     "services": [
       "patologie tiroidee",
@@ -33,7 +33,7 @@
     "name": "Giacomo",
     "surname": "Noti",
     "image": "doctors-images/noti.webp",
-    "bio": "Medico Ginecologo, laureato in Medicina e Chirurgia presso l’Università degli Studi di Pisa con votazione 110/110 e Lode e successivamente specializzato in Ginecologia e Ostetricia presso l’Azienda Ospedaliera Universitaria Pisana con Lode. Attualmente Dirigente Medico presso l’U.O. Ginecologia e Ostetricia dell’Ospedale Santo Stefano di Prato.",
+    "bio": "Medico Ginecologo, laureato in Medicina e Chirurgia presso l'Università degli Studi di Pisa con votazione 110/110 e Lode e successivamente specializzato in Ginecologia e Ostetricia presso l'Azienda Ospedaliera Universitaria Pisana con Lode. Attualmente Dirigente Medico presso l'U.O. Ginecologia e Ostetricia dell'Ospedale Santo Stefano di Prato.",
     "specialization": "Ginecologia",
     "services": [
       "Ginecologia oncologica",
@@ -53,7 +53,7 @@
     "name": "Roberto",
     "surname": "Cincotta",
     "image": "doctors-images/cincotta.webp",
-    "bio": "Si è laureato in Medicina e chirurgia presso l’università degli studi di Messina. Ha conseguito il titolo di specialista in Ginecologia ed Ostetricia con il massimo dei voti e lode presso L’università degli studi di Firenze AOU CAREGGI ha prestato servizio presso l’ospedale San Jacopo di Pistoia e San Cosma e Damiano di Pescia. Attualmente presta servizio in qualità di dirigente medico specialista presso l’ospedale Santa Maria Annunziata di Bagno a Ripoli (FI).",
+    "bio": "Si è laureato in Medicina e chirurgia presso l'università degli studi di Messina. Ha conseguito il titolo di specialista in Ginecologia ed Ostetricia con il massimo dei voti e lode presso L'università degli studi di Firenze AOU CAREGGI ha prestato servizio presso l'ospedale San Jacopo di Pistoia e San Cosma e Damiano di Pescia. Attualmente presta servizio in qualità di dirigente medico specialista presso l'ospedale Santa Maria Annunziata di Bagno a Ripoli (FI).",
     "specialization": "Ginecologia",
     "services": [
       "Prevenzione oncologica",
@@ -95,7 +95,7 @@
     "name": "Anna Maria",
     "surname": "Anichini",
     "image": "doctors-images/anichini.webp",
-    "bio": "Annamaria si è laureata in Scienze Biologiche e successivamente ha conseguito la Laurea in Biologia, curriculum biosanitario, con il massimo dei voti e lode presso l’Università degli Studi di Firenze ed ha ottenuto l’abilitazione all’esercizio alla professione di Biologo con l’iscrizione all’Ordine sez. A. Effettua controlli e consulenze nutrizionali a pazienti sani o con patologie accertate legate all’alimentazione, ed elabora piani alimentari personalizzati al fine di correggere lo stile di vita e migliorare la salute del paziente. Il suo obiettivo è insegnare ad avere un stile di vita sano ed equilibrato partendo dalla tavola. E’ mamma di due bambini e da quando sono nati ha sentito la necessità di specializzarsi in nutrizione pediatrica per stare accanto alle famiglie e accompagnarle in questo percorso così bello e allo stesso tempo così delicato, che è l’alimentazione nei primi anni di vita del bambino. Attualmente si sta specializzando in nutrizione pediatrica non prescrittiva.",
+    "bio": "Annamaria si è laureata in Scienze Biologiche e successivamente ha conseguito la Laurea in Biologia, curriculum biosanitario, con il massimo dei voti e lode presso l'Università degli Studi di Firenze ed ha ottenuto l'abilitazione all'esercizio alla professione di Biologo con l'iscrizione all'Ordine sez. A. Effettua controlli e consulenze nutrizionali a pazienti sani o con patologie accertate legate all'alimentazione, ed elabora piani alimentari personalizzati al fine di correggere lo stile di vita e migliorare la salute del paziente. Il suo obiettivo è insegnare ad avere un stile di vita sano ed equilibrato partendo dalla tavola. E' mamma di due bambini e da quando sono nati ha sentito la necessità di specializzarsi in nutrizione pediatrica per stare accanto alle famiglie e accompagnarle in questo percorso così bello e allo stesso tempo così delicato, che è l'alimentazione nei primi anni di vita del bambino. Attualmente si sta specializzando in nutrizione pediatrica non prescrittiva.",
     "specialization": "Nutrizione",
     "services": [
       "diabete e insulino resistenza",
@@ -176,7 +176,7 @@
     "name": "Sandra",
     "surname": "Pellegrino",
     "image": "doctors-images/pellegrino.webp",
-    "bio": "Laureata in Podologia con il massimo dei voti presso l’Università degli Studi di Firenze nel 2013 presentando la tesi sul piede diabetico; successivamente ha conseguito il Master I livello in Biomeccanica applicata alla terapia ortesica podologica presso la stessa università nel 2015. Inoltre ha seguito il corso di perfezionamento universitario in Rieducazione funzionale, terapia fisica e manuale in podologia nel 2019. Dal 2014 ad oggi ha partecipato a diversi corsi di aggiornamento professionale su materie riguardanti la rieducazione ungueale per trattare le onicocriptosi (unghia incarnita), patologie dermatologiche, fabbricazione di ortesi digitali in silicone, aggiornamento sul piede pediatrico ecc… La Dott.ssa è una professionista sanitaria dell’area della riabilitazione e specializzata per la cura del piede; si occupa del piede dal bambino all’anziano, si occupa del piede doloroso a partire dalle problematiche cutanee come callosità, tilomi, duroni, unghia incarnita, fino a trattare e prescrivere ortesi plantari per patologie e deformità come alluce valgo, metatarsalgie, tallodinie, fascite ecc..",
+    "bio": "Laureata in Podologia con il massimo dei voti presso l'Università degli Studi di Firenze nel 2013 presentando la tesi sul piede diabetico; successivamente ha conseguito il Master I livello in Biomeccanica applicata alla terapia ortesica podologica presso la stessa università nel 2015. Inoltre ha seguito il corso di perfezionamento universitario in Rieducazione funzionale, terapia fisica e manuale in podologia nel 2019. Dal 2014 ad oggi ha partecipato a diversi corsi di aggiornamento professionale su materie riguardanti la rieducazione ungueale per trattare le onicocriptosi (unghia incarnita), patologie dermatologiche, fabbricazione di ortesi digitali in silicone, aggiornamento sul piede pediatrico ecc… La Dott.ssa è una professionista sanitaria dell'area della riabilitazione e specializzata per la cura del piede; si occupa del piede dal bambino all'anziano, si occupa del piede doloroso a partire dalle problematiche cutanee come callosità, tilomi, duroni, unghia incarnita, fino a trattare e prescrivere ortesi plantari per patologie e deformità come alluce valgo, metatarsalgie, tallodinie, fascite ecc..",
     "specialization": "Podologia",
     "services": [
       "visita podologica",
@@ -200,7 +200,7 @@
     "name": "Sandro",
     "surname": "Pastacaldi",
     "image": "doctors-images/pastacaldi.webp",
-    "bio": "Laureato in Medicina e Chirurgia presso l’Università degli Studi di Firenze con votazione di 110/110 con lode frequenta poi la scuola di formazione in Medicina Generale con diploma conseguito nel 2017. Dopo alcuni anni di lavoro sul territorio nell’attività di continuità assistenziale e sostituzioni di medici di medicina generale (periodo in cui consegue il diploma della Scuola di Ecografia di base SIUMB) viene ammesso alla scuola di specializzazione in Radiodiagnostica presso l’Azienda Ospedaliero Universitaria di Careggi (Firenze). Successivamente consegue il diploma di specializzazione con votazione di 70/70 e lode. Attualmente lavora come radiologo libero professionista.",
+    "bio": "Laureato in Medicina e Chirurgia presso l'Università degli Studi di Firenze con votazione di 110/110 con lode frequenta poi la scuola di formazione in Medicina Generale con diploma conseguito nel 2017. Dopo alcuni anni di lavoro sul territorio nell'attività di continuità assistenziale e sostituzioni di medici di medicina generale (periodo in cui consegue il diploma della Scuola di Ecografia di base SIUMB) viene ammesso alla scuola di specializzazione in Radiodiagnostica presso l'Azienda Ospedaliero Universitaria di Careggi (Firenze). Successivamente consegue il diploma di specializzazione con votazione di 70/70 e lode. Attualmente lavora come radiologo libero professionista.",
     "specialization": "Ecografia",
     "services": [
       "Ecografia addome",
@@ -219,7 +219,7 @@
     "name": "Francesca",
     "surname": "Mastrorosato",
     "image": "doctors-images/mastrorosato.webp",
-    "bio": "Francesca si è laureata in Scienze Biologiche e successivamente ha conseguito la laurea magistrale in Biologia della salute curriculum Nutrizionale presso l’Università Alma Mater Studiorum di Bologna. Infine ha ottenuto l’abilitazione all’esercizio della professione di Biologo con l’iscrizione all’Ordine sez. A. Elabora piani alimentari altamente personalizzati in condizione patologiche e fisiologiche, stabilendo gli obiettivi insieme al paziente e tenendo conto delle personali preferenze alimentari, dello stile di vita e dello stato di salute. Il suo obiettivo è aiutare la persona a seguire uno stile di vita che favorisca il suo benessere fisico e mentale, ad ogni incontro con attenzione ed empatia aiuta i suoi pazienti a trovare l’equilibrio a tavola, ponendo attenzione al legame che c’è tra cibo ed emozioni.",
+    "bio": "Francesca si è laureata in Scienze Biologiche e successivamente ha conseguito la laurea magistrale in Biologia della salute curriculum Nutrizionale presso l'Università Alma Mater Studiorum di Bologna. Infine ha ottenuto l'abilitazione all'esercizio della professione di Biologo con l'iscrizione all'Ordine sez. A. Elabora piani alimentari altamente personalizzati in condizione patologiche e fisiologiche, stabilendo gli obiettivi insieme al paziente e tenendo conto delle personali preferenze alimentari, dello stile di vita e dello stato di salute. Il suo obiettivo è aiutare la persona a seguire uno stile di vita che favorisca il suo benessere fisico e mentale, ad ogni incontro con attenzione ed empatia aiuta i suoi pazienti a trovare l'equilibrio a tavola, ponendo attenzione al legame che c'è tra cibo ed emozioni.",
     "specialization": "Nutrizione",
     "services": [
       "Sottopeso",
@@ -262,7 +262,7 @@
     "name": "Jessica",
     "surname": "Cirillo",
     "image": "doctors-images/cirillo.webp",
-    "bio": "Jessica è una massaggiatrice professionista e massoterapista olistica disciplinata ai sensi della legge N.4/2013. Diplomata presso l’Accademia Massfullness situata a Milano. Jessica è specializzata nel massaggio decontratturante, utile per sciogliere ed eliminare tensioni e contratture muscolari, causate da stress,posture sbagliate, rigidità muscolare, cefalee e dolori alla cervicale. E' specializzata anche nei massaggi drenanti tonificanti, che aiutano a diminuire visibilmente il ristagno di liquidi in eccesso. Da sempre appassionata al mondo del benessere e nel volerlo trasmetterlo attraverso la più antica e naturale delle tecniche di manipolazione a fine terapeutico ed estetico",
+    "bio": "Jessica è una massaggiatrice professionista e massoterapista olistica disciplinata ai sensi della legge N.4/2013. Diplomata presso l'Accademia Massfullness situata a Milano. Jessica è specializzata nel massaggio decontratturante, utile per sciogliere ed eliminare tensioni e contratture muscolari, causate da stress,posture sbagliate, rigidità muscolare, cefalee e dolori alla cervicale. E' specializzata anche nei massaggi drenanti tonificanti, che aiutano a diminuire visibilmente il ristagno di liquidi in eccesso. Da sempre appassionata al mondo del benessere e nel volerlo trasmetterlo attraverso la più antica e naturale delle tecniche di manipolazione a fine terapeutico ed estetico",
     "specialization": "Massofisioterapia",
     "services": [
       "massaggio di base",
@@ -328,6 +328,58 @@
     "bio": "La Dott.ssa Laura Giannini è una psicologa laureata presso l'Università di Firenze e iscritta all'Albo degli Psicologi della Toscana (n. 10076). Frequenta attualmente la Scuola di Specializzazione in Psicoterapia Breve Strategica del prof. Giorgio Nardone. Questo approccio terapeutico si distingue per interventi mirati e orientati alla soluzione, volti a ottenere cambiamenti concreti e rapidi, lavorando sui meccanismi che mantengono il disagio psicologico. Si occupa di bambini, adolescenti e adulti, affrontando tematiche legate all'ansia, ai disturbi dell'umore, alle difficoltà comportamentali e relazionali, offrendo anche supporto nelle fasi di transizione della vita. Il suo obiettivo è aiutare le persone a sviluppare le risorse interiori per migliorare il loro benessere psicologico, adottando un approccio empatico e non giudicante.",
     "specialization": "Psicologia",
     "services": [],
-    "link": ""
+    "link": "https://www.doctolib.it/psicologo/agliana/laura-giannini?pid=practice-586757"
+  },
+  {
+    "id": 19,
+    "name": "Ilenia",
+    "surname": "Faleri",
+    "image": "doctors-images/faleri.webp",
+    "bio": "Ilenia si è laureata nella facoltà di Dietistica presso l'Università degli Studi di Firenze, con il massimo dei voti e lode e ottenendo l'abilitazione da parte dell'albo professionale dei Dietisti. È amante dello sport, in particolare della palestra e del bodybuilding, per cui ha deciso di intraprendere un percorso incentrato sulla nutrizione sportiva. A giugno infatti concluderà la scuola SANIS, specializzandosi in Nutrizione ed Integrazione nello Sport. Inoltre, è studentessa della facoltà magistrale di facoltà di Scienze della Nutrizione Umana. Ilenia effettua consulenze dietetico-nutrizionali elaborando piani personalizzati in base alle esigenze personali, sia in condizioni fisiologiche che patologiche accertate. Il suo obiettivo è far sentire ogni persona compresa e motivata, andando incontro alle preferenze e necessità della persona e creando una vera e propria 'collaborazione' tra professionista e paziente. Pianifica interventi di educazione alimentare secondo il modello di Dieta Mediterranea, promuovendo uno stile di vita sano e mettendo in luce le 'false credenze' sull'alimentazione.",
+    "specialization": "Dietistica",
+    "services": [
+      "educazione alimentare per adulti e bambini",
+      "nutrizione sportiva ed integrazione",
+      "sovrappeso e obesità",
+      "sindrome metabolica, dislipidemie e ipertensione",
+      "diabete",
+      "malattia da reflusso gastroesofageo",
+      "celiachia e intolleranze alimentari",
+      "dieta vegetariana e vegana"
+    ],
+    "link": "https://www.doctolib.it/dietista/agliana/ilenia-faleri?pid=practice-586757"
+  },
+  {
+    "id": 20,
+    "name": "Serena",
+    "surname": "Romiti",
+    "image": "doctors-images/romiti.webp",
+    "bio": "Psicologa iscritta all'Ordine degli Psicologi della Toscana (n°10465), Serena si occupa di supporto psicologico rivolto a giovani adulti e adulti, con un approccio che mette al centro i vissuti emotivi, relazionali e corporei della persona che accompagnano i momenti di vulnerabilità e cambiamento. Ha maturato una solida esperienza accademica e clinica nell'ambito della psicologia della salute, della genitorialità e delle transizioni evolutive. Questo percorso le ha permesso di approfondire in modo specialistico il legame tra benessere psicologico e condizioni complesse come la malattia cronica, l'infertilità o le fasi delicate della crescita personale. Questa base teorico-pratica la guida ogni giorno nella costruzione di interventi individuali e di coppia su misura, fondati su evidenze scientifiche ma anche profondamente umani, che aiutano le persone a ritrovare un equilibrio, dare senso alle esperienze e promuovere benessere e consapevolezza. Crede in una psicologia che sa integrarsi con altre discipline per offrire un sostegno davvero completo. Per questo collabora attivamente con altri professionisti sanitari, in particolare nell'ambito delle malattie croniche e della salute della donna, per costruire insieme percorsi integrati di cura.",
+    "specialization": "Psicologia",
+    "services": [
+      "Supporto psicologico in caso di malattie croniche e dolore cronico",
+      "Supporto psicologico individuale e di coppia in percorsi di infertilità, Procreazione Medicalmente Assistita (PMA) e gravidanza complessa",
+      "Accompagnamento e sostegno psicologico alla genitorialità, individuale e di coppia, nelle diverse fasi evolutive",
+      "Supporto alla crescita personale e identitaria nei giovani adulti, nei momenti di scelta, crisi o trasformazione",
+      "Supporto psicologico per i giovani adulti nelle difficoltà relazionali e affettive, nella coppia, in famiglia o nei contesti sociali e lavorativi"
+    ],
+    "link": "https://www.doctolib.it/psicologo/agliana/serena-romiti?pid=practice-586757"
+  },
+  {
+    "id": 21,
+    "name": "Luigi",
+    "surname": "Sicignano",
+    "image": "doctors-images/sicignano.webp",
+    "bio": "Il Dott. Luigi Sicignano è Psicologo specializzando al secondo anno in psicoterapia cognitivo-comportamentale presso la scuola Studi Cognitivi di Firenze. Si è laureato in Psicologia cognitiva applicata presso l'Università degli Studi di Padova nel 2019 e successivamente ha effettuato un anno di formazione presso lo studio Gallimberti a Padova trattando pazienti con dipendenze. A inizio 2024 ha conseguito l'abilitazione all'utilizzo della Video Game Therapy e ha collaborato con l'associazione Gabriele Borgogni come psicologo dell'emergenza. Attualmente lavora come libero professionista da circa 2 anni in uno studio in condivisione con altri professionisti, con cui si è instaurata una proficua collaborazione. Da inizio marzo 2025 lavora presso l'Istituto Comprensivo Compagni-Carducci di Firenze come psicologo dello sportello d'ascolto per la prevenzione della dispersione scolastica.",
+    "specialization": "Psicologia",
+    "services": [
+      "ansia",
+      "attacchi di panico",
+      "depressione",
+      "stress",
+      "stress lavoro correlato",
+      "analisi e orientamento personale"
+    ],
+    "link": "https://www.doctolib.it/psicologo/agliana/luigi-sicignano?pid=practice-586757"
   }
 ]
