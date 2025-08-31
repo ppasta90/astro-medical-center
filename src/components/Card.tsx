@@ -1,7 +1,7 @@
 import React from "react";
 import { LuPlusCircle } from "react-icons/lu";
 import CustomDialog from "./ui/CustomDialog";
-import { capitalizeFirstLetter } from "@/lib/utils";
+import { capitalizeFirstLetter, generateDoctorSlug } from "@/lib/utils";
 
 type CardProps = {
   name: string;
@@ -69,20 +69,28 @@ const Card = ({
         <div className="flex flex-col bg-white px-4 pb-4 flex-grow">
           <div className="flex flex-col justify-between items-start p-4 rounded-lg h-[210px] overflow-auto no-scrollbar">
             <div className="mt-2 text-darkBlue line-clamp-5">{bio}</div>
-            <CustomDialog
-              title={name + " " + surname + " - Esperienze"}
-              description={
-                <div className="text-left mt-2 text-darkBlue max-h-[500px] overflow-auto text-base no-scrollbar">
-                  {bio}
-                </div>
-              }
-              triggerComponent={
-                <span className="cursor-pointer text-secondary font-bold hover:underline inline-flex items-center gap-1 ml-1">
-                  <LuPlusCircle size={24} />
-                  Mostra di più
-                </span>
-              }
-            />
+            <div className="flex gap-4 items-center">
+              <CustomDialog
+                title={name + " " + surname + " - Esperienze"}
+                description={
+                  <div className="text-left mt-2 text-darkBlue max-h-[500px] overflow-auto text-base no-scrollbar">
+                    {bio}
+                  </div>
+                }
+                triggerComponent={
+                  <span className="cursor-pointer text-secondary font-bold hover:underline inline-flex items-center gap-1 ml-1">
+                    <LuPlusCircle size={24} />
+                    Mostra di più
+                  </span>
+                }
+              />
+              <a
+                href={`/${generateDoctorSlug(surname, specialization)}`}
+                className="cursor-pointer text-secondary font-bold hover:underline inline-flex items-center gap-1"
+              >
+                Dettagli
+              </a>
+            </div>
           </div>
         </div>
       </div>

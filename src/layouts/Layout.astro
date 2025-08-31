@@ -16,7 +16,12 @@ const titles: { [key: string]: string } = {
   "/": "Studi medici specialistici ad Agliana",
   "/specializzazioni": "I nostri specialisti - Centro Medico Agliana",
 };
-const title = titles[pathname as string] || "Centro Medico Agliana";
+
+let title = titles[pathname as string];
+if (!title && pathname !== "/" && pathname !== "/specializzazioni") {
+  title = "Centro Medico Agliana - Dettagli Specialista";
+}
+title = title || "Centro Medico Agliana";
 
 const canonical =
   pathname === "/"

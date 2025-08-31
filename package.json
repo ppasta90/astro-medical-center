@@ -24,7 +24,7 @@
     "@radix-ui/react-slot": "^1.1.0",
     "@types/react": "^18.2.73",
     "@types/react-dom": "^18.2.23",
-    "astro": "^4.5.12",
+    "astro": "^5.13.5",
     "autoprefixer": "^10.4.19",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
