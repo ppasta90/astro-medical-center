@@ -1,6 +1,4 @@
 import React from "react";
-import { LuPlusCircle } from "react-icons/lu";
-import CustomDialog from "./ui/CustomDialog";
 import { capitalizeFirstLetter, generateDoctorSlug } from "@/lib/utils";
 
 type CardProps = {
@@ -29,7 +27,7 @@ const Card = ({
       >
         <img
           src={image}
-          className="rounded-full mx-auto aspect-square object-contain"
+          className="rounded-full mx-auto aspect-square object-cover"
           alt={`foto del medico specialista ${name} ${surname}`}
           width={96}
           height={96}
@@ -69,28 +67,12 @@ const Card = ({
         <div className="flex flex-col bg-white px-4 pb-4 flex-grow">
           <div className="flex flex-col justify-between items-start p-4 rounded-lg h-[210px] overflow-auto no-scrollbar">
             <div className="mt-2 text-darkBlue line-clamp-5">{bio}</div>
-            <div className="flex gap-4 items-center">
-              <CustomDialog
-                title={name + " " + surname + " - Esperienze"}
-                description={
-                  <div className="text-left mt-2 text-darkBlue max-h-[500px] overflow-auto text-base no-scrollbar">
-                    {bio}
-                  </div>
-                }
-                triggerComponent={
-                  <span className="cursor-pointer text-secondary font-bold hover:underline inline-flex items-center gap-1 ml-1">
-                    <LuPlusCircle size={24} />
-                    Mostra di più
-                  </span>
-                }
-              />
-              <a
-                href={`/${generateDoctorSlug(surname, specialization)}`}
-                className="cursor-pointer text-secondary font-bold hover:underline inline-flex items-center gap-1"
-              >
-                Dettagli
-              </a>
-            </div>
+            <a
+              href={`/${generateDoctorSlug(surname, specialization)}`}
+              className="cursor-pointer text-secondary font-bold hover:underline inline-flex items-center gap-1 underline-offset-4 underline"
+            >
+              Mostra di più
+            </a>
           </div>
         </div>
       </div>
