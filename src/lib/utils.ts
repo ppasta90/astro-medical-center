@@ -25,33 +25,28 @@ const specializationToProfession: { [key: string]: { male: string; female: strin
   "Dietistica": { male: "dietista", female: "dietista" },
   "Ecografia": { male: "ecografista", female: "ecografista" },
   "Massofisioterapia": { male: "massofisioterapista", female: "massofisioterapista" },
-  "Psiocologia e sessuologia": { male: "psicologo-sessuologo", female: "psicologa-sessuologa" }
+  "Psiocologia e sessuologia": { male: "psicologo-sessuologo", female: "psicologa-sessuologa" },
+  "Otorinolaringoiatria": { male: "otorino", female: "otorino" }
 };
 
 const detectGender = (name: string): 'male' | 'female' => {
-  // Common Italian female names
   const femaleNames = ['alessia', 'giulia', 'anna', 'ilaria', 'linda', 'sandra', 'francesca', 'dalila', 'jessica', 'marianna', 'laura', 'ilenia', 'serena', 'rachele', 'carlotta'];
-  // Names that end with 'a' are typically female in Italian, except for some exceptions
   const maleExceptions = ['andrea', 'luca', 'nicola', 'mattia'];
 
   const normalizedName = name.toLowerCase().trim();
 
-  // Check if it's a known female name
   if (femaleNames.includes(normalizedName)) {
     return 'female';
   }
 
-  // Check if it's a male exception
   if (maleExceptions.includes(normalizedName)) {
     return 'male';
   }
 
-  // If name ends with 'a' and is not a male exception, it's likely female
   if (normalizedName.endsWith('a')) {
     return 'female';
   }
 
-  // Default to male for other cases
   return 'male';
 };
 

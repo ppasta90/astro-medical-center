@@ -17,6 +17,7 @@ const detectGender = (name: string): 'male' | 'female' => {
 
 const specializationToProfession: { [key: string]: { male: string; female: string } } = {
   "Audiologia": { male: "Audiologo", female: "Audiologa" },
+  "Otorinolaringoiatria": { male: "Otorino", female: "Otorino" },
   "Oculistica": { male: "Oculista", female: "Oculista" },
   "Endocrinologia": { male: "Endocrinologo", female: "Endocrinologa" },
   "Ginecologia": { male: "Ginecologo", female: "Ginecologa" },
@@ -78,11 +79,18 @@ const title = `Dott. ${doctor.name} ${doctor.surname} - ${professionTitle}`;
                 href={doctor.link}
                 target="_blank"
                 rel="noreferrer"
-                class="white-cta"
+                class="green-cta"
               >
                 PRENOTA ONLINE
               </a>
             )}
+            <!-- Mobile only CHIAMA ORA button -->
+            <a
+              href="tel:+390574718506"
+              class="white-cta block sm:hidden"
+            >
+              CHIAMA ORA
+            </a>
           </div>
         </div>
       </div>
