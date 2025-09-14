@@ -68,7 +68,9 @@ const title = `Dott. ${doctor.name} ${doctor.surname} - ${professionTitle}`;
             Dott. {doctor.name} {doctor.surname}
           </h1>
           <h2 class="section-subtitle text-white text-center md:text-left mb-8">{professionTitle}</h2>
-          
+          {doctor.link === "" && (
+            <p class="text-white text-center md:text-left mb-8 underline">Prenotazione online non disponibile, chiamaci per prenotare</p>
+          )}
           <!-- Call to Action Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             {doctor.link && (
