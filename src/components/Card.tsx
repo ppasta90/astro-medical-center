@@ -68,10 +68,10 @@ const Card = ({
           <div className="flex flex-col justify-between items-start p-4 rounded-lg h-[210px] overflow-auto no-scrollbar">
             <div className="mt-2 text-darkBlue line-clamp-5">{bio}</div>
             <a
-              href={`/${generateDoctorSlug(surname, specialization)}`}
+              href={`/${generateDoctorSlug(surname, specialization, name)}`}
               className="cursor-pointer text-secondary font-bold hover:underline inline-flex items-center gap-1 underline-offset-4 underline"
             >
-              Mostra di più
+              Approfondisci
             </a>
           </div>
         </div>

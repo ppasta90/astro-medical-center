@@ -3,15 +3,47 @@ import Layout from "../layouts/Layout.astro";
 import specializationsData from "../db/data.json";
 import { capitalizeFirstLetter, generateDoctorSlug } from "@/lib/utils";
 
+// Detect gender for profession title
+const detectGender = (name: string): 'male' | 'female' => {
+  const femaleNames = ['alessia', 'giulia', 'anna', 'ilaria', 'linda', 'sandra', 'francesca', 'dalila', 'jessica', 'marianna', 'laura', 'ilenia', 'serena'];
+  const maleExceptions = ['andrea', 'luca', 'nicola', 'mattia'];
+  const normalizedName = name.toLowerCase().trim();
+
+  if (femaleNames.includes(normalizedName)) return 'female';
+  if (maleExceptions.includes(normalizedName)) return 'male';
+  if (normalizedName.endsWith('a')) return 'female';
+  return 'male';
+};
+
+const specializationToProfession: { [key: string]: { male: string; female: string } } = {
+  "Oculistica": { male: "Oculista", female: "Oculista" },
+  "Endocrinologia": { male: "Endocrinologo", female: "Endocrinologa" },
+  "Ginecologia": { male: "Ginecologo", female: "Ginecologa" },
+  "Podologia": { male: "Podologo", female: "Podologa" },
+  "Dermatologia": { male: "Dermatologo", female: "Dermatologa" },
+  "Urologia": { male: "Urologo", female: "Urologa" },
+  "Psicologia": { male: "Psicologo", female: "Psicologa" },
+  "Psichiatria": { male: "Psichiatra", female: "Psichiatra" },
+  "Senologia": { male: "Senologo", female: "Senologa" },
+  "Ostetricia": { male: "Ostetrico", female: "Ostetrica" },
+  "Nutrizione": { male: "Nutrizionista", female: "Nutrizionista" },
+  "Dietistica": { male: "Dietista", female: "Dietista" },
+  "Ecografia": { male: "Ecografista", female: "Ecografista" },
+  "Massofisioterapia": { male: "Massofisioterapista", female: "Massofisioterapista" },
+  "Psiocologia e sessuologia": { male: "Psicologo e Sessuologo", female: "Psicologa e Sessuologa" }
+};
+
 export function getStaticPaths() {
   return specializationsData.map((doctor) => ({
-    params: { slug: generateDoctorSlug(doctor.surname, doctor.specialization) },
+    params: { slug: generateDoctorSlug(doctor.surname, doctor.specialization, doctor.name) },
     props: { doctor },
   }));
 }
 
 const { doctor } = Astro.props;
-const title = `Dott. ${doctor.name} ${doctor.surname} - ${doctor.specialization}`;
+const gender = detectGender(doctor.name);
+const professionTitle = specializationToProfession[doctor.specialization]?.[gender] || doctor.specialization;
+const title = `Dott. ${doctor.name} ${doctor.surname} - ${professionTitle}`;
 ---
 
 <Layout>
@@ -34,11 +66,10 @@ const title = `Dott. ${doctor.name} ${doctor.surname} - ${doctor.specialization}
           <h1 class="section-title text-center md:text-left mb-4">
             Dott. {doctor.name} {doctor.surname}
           </h1>
-          <h2 class="section-subtitle text-white text-center md:text-left mb-8">{doctor.specialization}</h2>
+          <h2 class="section-subtitle text-white text-center md:text-left mb-8">{professionTitle}</h2>
           
           <!-- Call to Action Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-           
             {doctor.link && (
               <a
                 href={doctor.link}

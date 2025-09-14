@@ -1,0 +1,169 @@
+---
+import { capitalizeFirstLetter, generateDoctorSlug } from "@/lib/utils";
+
+export interface Props {
+  doctor: {
+    id: number;
+    name: string;
+    surname: string;
+    image: string;
+    bio: string;
+    specialization: string;
+    services: string[];
+    link?: string;
+  };
+}
+
+const { doctor } = Astro.props;
+
+// Detect gender for profession title
+const detectGender = (name: string): 'male' | 'female' => {
+  const femaleNames = ['alessia', 'giulia', 'anna', 'ilaria', 'linda', 'sandra', 'francesca', 'dalila', 'jessica', 'marianna', 'laura', 'ilenia', 'serena'];
+  const maleExceptions = ['andrea', 'luca', 'nicola', 'mattia'];
+  const normalizedName = name.toLowerCase().trim();
+
+  if (femaleNames.includes(normalizedName)) return 'female';
+  if (maleExceptions.includes(normalizedName)) return 'male';
+  if (normalizedName.endsWith('a')) return 'female';
+  return 'male';
+};
+
+const specializationToProfession: { [key: string]: { male: string; female: string } } = {
+  "Oculistica": { male: "Oculista", female: "Oculista" },
+  "Endocrinologia": { male: "Endocrinologo", female: "Endocrinologa" },
+  "Ginecologia": { male: "Ginecologo", female: "Ginecologa" },
+  "Podologia": { male: "Podologo", female: "Podologa" },
+  "Dermatologia": { male: "Dermatologo", female: "Dermatologa" },
+  "Urologia": { male: "Urologo", female: "Urologa" },
+  "Psicologia": { male: "Psicologo", female: "Psicologa" },
+  "Psichiatria": { male: "Psichiatra", female: "Psichiatra" },
+  "Senologia": { male: "Senologo", female: "Senologa" },
+  "Ostetricia": { male: "Ostetrico", female: "Ostetrica" },
+  "Nutrizione": { male: "Nutrizionista", female: "Nutrizionista" },
+  "Dietistica": { male: "Dietista", female: "Dietista" },
+  "Ecografia": { male: "Ecografista", female: "Ecografista" },
+  "Massofisioterapia": { male: "Massofisioterapista", female: "Massofisioterapista" },
+  "Psiocologia e sessuologia": { male: "Psicologo e Sessuologo", female: "Psicologa e Sessuologa" }
+};
+
+const gender = detectGender(doctor.name);
+const professionTitle = specializationToProfession[doctor.specialization]?.[gender] || doctor.specialization;
+---
+
+<div class="min-h-screen bg-lightGrey pt-[80px]">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <!-- Hero Section -->
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
+      <div class="md:flex">
+        <!-- Profile Image -->
+        <div class="md:w-1/3 p-8 flex flex-col items-center justify-center bg-primaryLight">
+          <img
+            src={`/${doctor.image}`}
+            alt={`foto del medico specialista ${doctor.name} ${doctor.surname}`}
+            class="w-64 h-64 rounded-full object-cover shadow-lg"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Basic Info -->
+        <div class="md:w-2/3 p-8 flex flex-col justify-center">
+          <h1 class="text-4xl font-bold text-darkBlue mb-2">
+            Dott. {doctor.name} {doctor.surname}
+          </h1>
+          <h2 class="text-2xl text-primary mb-6">{professionTitle}</h2>
+
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="tel:0574027087"
+              class="blue-cta"
+            >
+              CHIAMA ORA
+            </a>
+            {doctor.link && (
+              <a
+                href={doctor.link}
+                target="_blank"
+                rel="noreferrer"
+                class="white-cta"
+              >
+                PRENOTA ONLINE
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Services -->
+      {doctor.services.length > 0 && (
+        <div class="bg-white rounded-2xl shadow-lg p-8">
+          <h3 class="text-2xl font-bold text-darkBlue mb-6 border-b-2 border-primary pb-2">
+            Servizi Offerti
+          </h3>
+          <ul class="space-y-3">
+            {doctor.services.map((service) => (
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-primary mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-darkBlue">{capitalizeFirstLetter(service)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <!-- Bio -->
+      <div class="bg-white rounded-2xl shadow-lg p-8">
+        <h3 class="text-2xl font-bold text-darkBlue mb-6 border-b-2 border-primary pb-2">
+          Biografia
+        </h3>
+        <div class="text-darkBlue leading-relaxed">
+          {doctor.bio.split('\n').map((paragraph) => (
+            <p class="mb-4 last:mb-0">{paragraph}</p>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="mt-12 bg-primary rounded-2xl shadow-lg p-8 text-center">
+      <h3 class="text-2xl font-bold text-white mb-4">
+        Prenota la tua visita con il Dott. {doctor.name} {doctor.surname}
+      </h3>
+      <p class="text-primaryLight mb-6">
+        Prenota online o chiama direttamente il nostro centro per fissare un appuntamento.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a
+          href="tel:0574027087"
+          class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-primaryLight transition-colors duration-300"
+        >
+          📞 CHIAMA ORA: 0574 027 087
+        </a>
+        {doctor.link && (
+          <a
+            href={doctor.link}
+            target="_blank"
+            rel="noreferrer"
+            class="bg-secondary text-white px-6 py-3 rounded-lg font-bold hover:bg-darkBlue transition-colors duration-300"
+          >
+            🗓️ PRENOTA ONLINE
+          </a>
+        )}
+      </div>
+    </div>
+
+    <!-- Back to specialists -->
+    <div class="mt-8 text-center">
+      <a
+        href="/specializzazioni"
+        class="text-secondary hover:text-primary font-medium hover:underline inline-flex items-center gap-2 underline-offset-4"
+      >
+        ← Torna agli specialisti
+      </a>
+    </div>
+  </div>
+</div>
