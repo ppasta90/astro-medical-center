@@ -5,7 +5,7 @@ import { capitalizeFirstLetter, generateDoctorSlug } from "@/lib/utils";
 
 // Detect gender for profession title
 const detectGender = (name: string): 'male' | 'female' => {
-  const femaleNames = ['alessia', 'giulia', 'anna', 'ilaria', 'linda', 'sandra', 'francesca', 'dalila', 'jessica', 'marianna', 'laura', 'ilenia', 'serena'];
+  const femaleNames = ['alessia', 'giulia', 'anna', 'ilaria', 'linda', 'sandra', 'francesca', 'dalila', 'jessica', 'marianna', 'laura', 'ilenia', 'serena', 'rachele', 'carlotta'];
   const maleExceptions = ['andrea', 'luca', 'nicola', 'mattia'];
   const normalizedName = name.toLowerCase().trim();
 
@@ -16,6 +16,7 @@ const detectGender = (name: string): 'male' | 'female' => {
 };
 
 const specializationToProfession: { [key: string]: { male: string; female: string } } = {
+  "Audiologia": { male: "Audiologo", female: "Audiologa" },
   "Oculistica": { male: "Oculista", female: "Oculista" },
   "Endocrinologia": { male: "Endocrinologo", female: "Endocrinologa" },
   "Ginecologia": { male: "Ginecologo", female: "Ginecologa" },

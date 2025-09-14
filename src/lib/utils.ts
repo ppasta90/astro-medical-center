@@ -10,6 +10,7 @@ export const capitalizeFirstLetter = (string: string) => {
 }
 
 const specializationToProfession: { [key: string]: { male: string; female: string } } = {
+  "Audiologia": { male: "audiologo", female: "audiologa" },
   "Oculistica": { male: "oculista", female: "oculista" },
   "Endocrinologia": { male: "endocrinologo", female: "endocrinologa" },
   "Ginecologia": { male: "ginecologo", female: "ginecologa" },
@@ -29,7 +30,7 @@ const specializationToProfession: { [key: string]: { male: string; female: strin
 
 const detectGender = (name: string): 'male' | 'female' => {
   // Common Italian female names
-  const femaleNames = ['alessia', 'giulia', 'anna', 'ilaria', 'linda', 'sandra', 'francesca', 'dalila', 'jessica', 'marianna', 'laura', 'ilenia', 'serena'];
+  const femaleNames = ['alessia', 'giulia', 'anna', 'ilaria', 'linda', 'sandra', 'francesca', 'dalila', 'jessica', 'marianna', 'laura', 'ilenia', 'serena', 'rachele', 'carlotta'];
   // Names that end with 'a' are typically female in Italian, except for some exceptions
   const maleExceptions = ['andrea', 'luca', 'nicola', 'mattia'];
 
