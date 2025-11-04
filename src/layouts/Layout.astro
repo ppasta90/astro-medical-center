@@ -5,6 +5,8 @@ import "@/styles/globals.css";
 import "@fontsource-variable/dm-sans";
 import "@fontsource/bebas-neue";
 const { pathname } = Astro.url;
+// Optional page-specific description passed from pages
+export let pageDescription: string | undefined;
 
 // Extend the Window interface to include dataLayer
 declare global {
@@ -78,7 +80,10 @@ const canonical =
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Studi medici con sede ad Agliana, specializzati in ginecologia, ortopedia, dermatologia, psicologia, osteopatia, senologia, urologia, podologia."
+      content={
+        pageDescription ??
+        "Studi medici con sede ad Agliana, specializzati in ginecologia, ortopedia, dermatologia, psicologia, osteopatia, senologia, urologia, podologia."
+      }
     />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
