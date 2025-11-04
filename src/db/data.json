@@ -50,28 +50,6 @@
   },
   {
     "id": 4,
-    "name": "Roberto",
-    "surname": "Cincotta",
-    "image": "doctors-images/cincotta.webp",
-    "bio": "Si è laureato in Medicina e chirurgia presso l'università degli studi di Messina. Ha conseguito il titolo di specialista in Ginecologia ed Ostetricia con il massimo dei voti e lode presso L'università degli studi di Firenze AOU CAREGGI ha prestato servizio presso l'ospedale San Jacopo di Pistoia e San Cosma e Damiano di Pescia. Attualmente presta servizio in qualità di dirigente medico specialista presso l'ospedale Santa Maria Annunziata di Bagno a Ripoli (FI).",
-    "specialization": "Ginecologia",
-    "services": [
-      "Prevenzione oncologica",
-      "Menopausa",
-      "Disordini del ciclo mestruale",
-      "Sindrome dell'ovaio policistico",
-      "Disturbi genitourinari",
-      "Endometriosi",
-      "Vulvovaginiti",
-      "Contraccezione",
-      "Malattie sessualmente trasmissibili",
-      "Consulenza preconcezionale",
-      "Ecografia ostetrica e ginecologica"
-    ],
-    "link": "https://www.doctolib.it/ginecologo-ostetrico/firenze/roberto-cincotta?pid=practice-586757"
-  },
-  {
-    "id": 5,
     "name": "Giulia",
     "surname": "Bortot",
     "image": "doctors-images/bortot.webp",
@@ -91,7 +69,7 @@
     "link": "https://www.doctolib.it/urologo/agliana/giulia-bortot?pid=practice-586757"
   },
   {
-    "id": 6,
+    "id": 5,
     "name": "Anna Maria",
     "surname": "Anichini",
     "image": "doctors-images/anichini.webp",
@@ -110,7 +88,7 @@
     "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/anna-maria-anichini?pid=practice-586757"
   },
   {
-    "id": 7,
+    "id": 6,
     "name": "Ilaria",
     "surname": "Scandagli",
     "image": "doctors-images/scandagli.webp",
@@ -134,7 +112,7 @@
     "link": "https://www.doctolib.it/dermatologo-venereologo/pistoia/ilaria-scandagli?pid=practice-586757"
   },
   {
-    "id": 8,
+    "id": 7,
     "name": "Emanuele",
     "surname": "Ruggeri",
     "image": "doctors-images/ruggeri.webp",
@@ -151,7 +129,7 @@
     "link": "https://www.doctolib.it/psichiatra/agliana/emanuele-ruggeri?pid=practice-586757"
   },
   {
-    "id": 9,
+    "id": 8,
     "name": "Linda",
     "surname": "Prosperi",
     "image": "doctors-images/prosperi.webp",
@@ -172,7 +150,7 @@
     "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/linda-prosperi?pid=practice-586757"
   },
   {
-    "id": 10,
+    "id": 9,
     "name": "Sandra",
     "surname": "Pellegrino",
     "image": "doctors-images/pellegrino.webp",
@@ -196,7 +174,7 @@
     "link": "https://www.doctolib.it/podologo/agliana/alessandra-pellegrino-agliana?pid=practice-586757"
   },
   {
-    "id": 11,
+    "id": 10,
     "name": "Sandro",
     "surname": "Pastacaldi",
     "image": "doctors-images/pastacaldi.webp",
@@ -215,7 +193,7 @@
     "link": "https://www.doctolib.it/ecografo/agliana/sandro-pastacaldi?pid=practice-586757"
   },
   {
-    "id": 12,
+    "id": 11,
     "name": "Francesca",
     "surname": "Mastrorosato",
     "image": "doctors-images/mastrorosato.webp",
@@ -240,7 +218,7 @@
     "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/francesca-mastrorosato-agliana?pid=practice-586757"
   },
   {
-    "id": 13,
+    "id": 12,
     "name": "Dalila",
     "surname": "Marangella",
     "image": "doctors-images/marangella.webp",
@@ -258,7 +236,7 @@
     "link": "https://www.doctolib.it/psicologo/agliana/dalila-marangella?pid=practice-586757"
   },
   {
-    "id": 14,
+    "id": 13,
     "name": "Jessica",
     "surname": "Cirillo",
     "image": "doctors-images/cirillo.webp",
@@ -275,7 +253,7 @@
     "link": ""
   },
   {
-    "id": 15,
+    "id": 14,
     "name": "Marianna",
     "surname": "Lini",
     "image": "doctors-images/lini.webp",
@@ -295,7 +273,7 @@
     "link": "https://www.doctolib.it/ostetrico/campi-bisenzio/marianna-lini?pid=practice-586757"
   },
   {
-    "id": 16,
+    "id": 15,
     "name": "Daniele",
     "surname": "Della Latta",
     "image": "doctors-images/dellalatta.webp",
@@ -311,17 +289,7 @@
     "link": "https://www.doctolib.it/podologo/camaiore/daniele-della-latta?pid=practice-586757"
   },
   {
-    "id": 17,
-    "name": "Tommaso",
-    "surname": "Amadori",
-    "image": "doctors-images/amadori.webp",
-    "bio": "Tommaso ha conseguito la laurea con lode in Medicina e Chirurgia presso l'Università degli studi di Firenze nel 2017. Successivamente, nel 2023, ha completato la specialization con lode in Radiodiagnostica presso l'Università degli studi di Firenze. Durante il percorso professionale, ha acquisito e perfezionato l'esperienza senologica presso il reparto di senologia diretto dal Dott. Nori presso Careggi. Nel 2023, ha conseguito il Diploma Europeo in Radiologia (EDiR). Si è attivamente impegnato nella realizzazione di corsi su tecniche senologiche avanzate, come la Contrast Enhanced Mammography e la Crioablazione al seno. Inoltre, è membro di società radiologiche italiane ed internazionali, tra cui SIRM, ESR, EUSOBI e RSNA.",
-    "specialization": "Senologia",
-    "services": ["visita senologica", "ecografia mammaria"],
-    "link": "https://www.doctolib.it/senologo/agliana/tommaso-amadori?pid=practice-586757"
-  },
-  {
-    "id": 18,
+    "id": 16,
     "name": "Laura",
     "surname": "Giannini",
     "image": "doctors-images/giannini.webp",
@@ -331,7 +299,7 @@
     "link": "https://www.doctolib.it/psicologo/agliana/laura-giannini?pid=practice-586757"
   },
   {
-    "id": 19,
+    "id": 17,
     "name": "Ilenia",
     "surname": "Faleri",
     "image": "doctors-images/faleri.webp",
@@ -350,7 +318,7 @@
     "link": "https://www.doctolib.it/dietista/agliana/ilenia-faleri?pid=practice-586757"
   },
   {
-    "id": 20,
+    "id": 18,
     "name": "Serena",
     "surname": "Romiti",
     "image": "doctors-images/romiti.webp",
@@ -366,7 +334,7 @@
     "link": "https://www.doctolib.it/psicologo/agliana/serena-romiti?pid=practice-586757"
   },
   {
-    "id": 21,
+    "id": 19,
     "name": "Luigi",
     "surname": "Sicignano",
     "image": "doctors-images/sicignano.webp",
@@ -383,7 +351,7 @@
     "link": "https://www.doctolib.it/psicologo/agliana/luigi-sicignano?pid=practice-586757"
   },
   {
-    "id": 22,
+    "id": 20,
     "name": "Rachele",
     "surname": "Canelli",
     "image": "doctors-images/canelli.webp",
@@ -399,7 +367,7 @@
     "link": "https://www.doctolib.it/otorinolaringoiatra/viareggio/rachele-canelli?pid=practice-586757"
   },
   {
-    "id": 23,
+    "id": 21,
     "name": "Carlotta",
     "surname": "Coppini",
     "image": "doctors-images/coppini.webp",
