@@ -90,6 +90,9 @@ const canonical =
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Centro Medico Agliana" />
+    {pathname === "/" ? (
+      <meta name="facebook-domain-verification" content="r666v27b4i86vgmhj9t0crylzc84yc" />
+    ) : null}
     <meta
       name="keywords"
       content="centro medico agliana, ginecologia, ortopedia, dermatologia, psicologia, osteopatia, senologia, urologia, podologia"
