@@ -13,6 +13,7 @@ declare global {
   interface Window {
     dataLayer: any[];
   }
+  let dataLayer: any[];
 }
 const titles: { [key: string]: string } = {
   "/": "Centro Medico Agliana - Studi medici specialistici ad Agliana",
@@ -110,6 +111,16 @@ const canonical =
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="canonical" href={canonical} />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16456523599"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      /* @ts-ignore */
+      gtag('js', new Date());
+      /* @ts-ignore */
+      gtag('config', 'AW-16456523599');
+    </script>
   </head>
   <body>
     <main style="overflow-y: hidden;">
