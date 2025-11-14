@@ -45,11 +45,12 @@ export function getStaticPaths() {
 const { doctor } = Astro.props;
 const gender = detectGender(doctor.name);
 const professionTitle = specializationToProfession[doctor.specialization]?.[gender] || doctor.specialization;
+const pageTitle = `Dott. ${doctor.name} ${doctor.surname} - ${professionTitle}`;
 const specializedGender = gender === 'female' ? 'specializzata' : 'specializzato';
 const pageDescription = `Conosci il Dott. ${doctor.name} ${doctor.surname}, ${professionTitle} ${specializedGender} in ${doctor.specialization} presso Centro Medico Agliana. Prenota una visita online o chiama per informazioni.`;
 ---
 
-<Layout pageDescription={pageDescription}>
+<Layout pageDescription={pageDescription} pageTitle={pageTitle}>
   <section class="bg-secondary pt-32 pb-20">
     <!-- Header Section -->
     <div class="w-[90%] m-auto mb-12">

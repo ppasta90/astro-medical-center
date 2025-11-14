@@ -5,8 +5,9 @@ import "@/styles/globals.css";
 import "@fontsource-variable/dm-sans";
 import "@fontsource/bebas-neue";
 const { pathname } = Astro.url;
-// Optional page-specific description passed from pages
+// Optional page-specific description and title passed from pages
 export let pageDescription: string | undefined;
+export let pageTitle: string | undefined;
 
 // Extend the Window interface to include dataLayer
 declare global {
@@ -25,6 +26,9 @@ if (!title && pathname !== "/" && pathname !== "/specializzazioni") {
   title = "Centro Medico Agliana - Dettagli Specialista";
 }
 title = title || "Centro Medico Agliana";
+
+// Use dynamic title if provided, otherwise use the default
+const finalTitle = pageTitle || title;
 
 const canonical =
   pathname === "/"
@@ -92,14 +96,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       name="keywords"
       content="centro medico agliana, ginecologia, ortopedia, dermatologia, psicologia, osteopatia, senologia, urologia, podologia"
     />
-    <meta property="og:title" content="Centro Medico Agliana" />
+    <meta property="og:title" content={finalTitle} />
     <meta
       property="og:description"
-      content="Studi medici con sede ad Agliana, specializzati in ginecologia, ortopedia, dermatologia, psicologia, osteopatia, senologia, urologia, podologia."
+      content={
+        pageDescription ??
+        "Studi medici con sede ad Agliana, specializzati in ginecologia, ortopedia, dermatologia, psicologia, osteopatia, senologia, urologia, podologia."
+      }
     />
     <meta property="og:url" content="https://centromedicoagliana.it" />
     <meta property="og:type" content="website" />
-    <title>{title}</title>
+    <title>{finalTitle}</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
