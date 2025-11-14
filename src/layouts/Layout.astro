@@ -9,6 +9,9 @@ const { pathname } = Astro.url;
 export let pageDescription: string | undefined;
 export let pageTitle: string | undefined;
 
+// GTM Configuration
+const GTM_ID = "GTM-NPF3KJV6";
+
 // Extend the Window interface to include dataLayer
 declare global {
   interface Window {
@@ -30,10 +33,13 @@ title = title || "Centro Medico Agliana";
 // Use dynamic title if provided, otherwise use the default
 const finalTitle = pageTitle || title;
 
+// Normalize pathname for canonical URLs: remove trailing slash(es) for non-root
+const normalizedPathname = pathname === "/" ? "/" : (pathname as string).replace(/\/+$/, "");
 const canonical =
-  pathname === "/"
+  normalizedPathname === "/"
     ? "https://www.centromedicoagliana.it"
-    : `https://www.centromedicoagliana.it${pathname}`;
+    : `https://www.centromedicoagliana.it${normalizedPathname}`;
+
 ---
 
 <!doctype html>
@@ -53,11 +59,13 @@ const canonical =
       gtag("config", "G-ZSYEEGY2J7");
     </script>
     <!-- Google Tag Manager -->
-    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NPF3KJV6');</script>
+    <script is:inline>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NPF3KJV6');
+    </script>
     <!-- End Google Tag Manager -->
     <link rel="sitemap" href="/sitemap-index.xml" />
     <script type="text/javascript">
@@ -142,7 +150,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body>
     <main style="overflow-y: hidden;">
       <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPF3KJV6"
+      <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- End Google Tag Manager (noscript) -->
       <Header client:load pathname={pathname} />
