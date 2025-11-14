@@ -48,19 +48,13 @@ const canonical =
       /* @ts-ignore */
       gtag("config", "G-ZSYEEGY2J7");
     </script>
-    <!-- GTM script -->
-    <script>
-      (function (w: any, d: Document, s: string, l: string, i: string) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s) as HTMLScriptElement,
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        if (f.parentNode) f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-MKWXQ487");
-    </script>
+    <!-- Google Tag Manager -->
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NPF3KJV6');</script>
+    <!-- End Google Tag Manager -->
     <link rel="sitemap" href="/sitemap-index.xml" />
     <script type="text/javascript">
       var _iub = _iub || [];
@@ -141,13 +135,8 @@ const canonical =
   <body>
     <main style="overflow-y: hidden;">
       <!-- Google Tag Manager (noscript) -->
-      <noscript
-        ><iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-MKWXQ487"
-          height="0"
-          width="0"
-          style="display:none;visibility:hidden"></iframe></noscript
-      >
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPF3KJV6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- End Google Tag Manager (noscript) -->
       <Header client:load pathname={pathname} />
       <slot />
