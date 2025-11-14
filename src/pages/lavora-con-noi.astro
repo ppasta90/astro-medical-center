@@ -1,0 +1,90 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { FaMailBulk, FaPhone } from "react-icons/fa";
+import { Image } from "astro:assets";
+import reception from "../images/segreteria.webp";
+---
+
+<Layout>
+  <section class="bg-white py-20 min-h-screen">
+    <div class="w-[90%] mx-auto">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl lg:text-6xl font-bold text-secondary mb-6 font-display">
+          Lavora con noi
+        </h1>
+        <div class="w-20 h-1 bg-primary mx-auto mb-8"></div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+        <Image
+          src={reception}
+          alt="Centro Medico Agliana - Opportunità di lavoro"
+          class="lg:w-[45%] rounded-lg"
+        />
+
+        <div class="flex flex-col gap-6 h-full lg:w-[55%]">
+          <h2 class="text-2xl lg:text-3xl font-bold text-secondary mb-4 font-display">
+            Unisciti al nostro team
+          </h2>
+
+          <div class="space-y-6 text-gray-700 font-sans leading-relaxed">
+            <p>
+              Il <strong>Centro Medico Agliana</strong> è sempre alla ricerca di professionisti qualificati
+              e motivati che condividano la nostra missione di fornire cure mediche di eccellenza
+              ai nostri pazienti.
+            </p>
+
+            <p>
+              Cerchiamo medici specialisti, personale sanitario e amministrativo che vogliano
+              far parte di un ambiente di lavoro stimolante e collaborativo, dove la professionalità
+              e l'attenzione al paziente sono i nostri valori fondamentali.
+            </p>
+
+            <p>
+              Se sei interessato a collaborare con noi, inviaci il tuo curriculum vitae.
+              Saremo lieti di valutare la tua candidatura e di conoscerti meglio.
+            </p>
+          </div>
+
+          <div class="mt-8">
+            <h3 class="text-xl font-bold text-secondary mb-6 font-display">
+              Contattaci per opportunità di collaborazione
+            </h3>
+
+            <div class="space-y-4">
+              <a
+                aria-label="Invia il tuo CV via email"
+                href="mailto:info@centromedicoagliana.it?subject=Candidatura - Lavora con noi"
+                target="_blank"
+                class="flex items-center gap-3 text-gray-700 hover:text-primary transition-colors duration-200"
+              >
+                <span class="flex items-center">
+                  <FaMailBulk size={20} style={{ color: "var(--secondary)" }} />
+                </span>
+                <span>info@centromedicoagliana.it</span>
+              </a>
+
+              <a
+                aria-label="Chiama per informazioni"
+                href="tel:0574027087"
+                class="flex items-center gap-3 text-gray-700 hover:text-primary transition-colors duration-200"
+              >
+                <span class="flex items-center">
+                  <FaPhone size={20} style={{ color: "var(--secondary)" }} />
+                </span>
+                <span>0574 027087</span>
+              </a>
+
+              <div class="mt-6 p-4 bg-primaryLight rounded-lg">
+                <p class="text-sm text-gray-600">
+                  <strong>Orari di contatto:</strong><br>
+                  Dal lunedì al venerdì dalle ore 15:00 alle 19:00
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

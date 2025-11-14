@@ -46,11 +46,18 @@ const DrawerMenu = ({ toggleDrawer }: { toggleDrawer?: () => void }) => {
         </li>
         <li>
           <a
-            aria-label="Vai alla sezione contatti"
-            onClick={toggleDrawer}
-            href="/#faq"
+            aria-label="Chiama il numero 0574027087"
+            onClick={(e) => {
+              e.preventDefault();
+              toggleDrawer?.();
+              if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion === 'function') {
+                (window as any).gtag_report_conversion('tel:0574027087');
+              }
+              window.location.href = 'tel:0574027087';
+            }}
+            href="tel:0574027087"
           >
-            FAQ
+            CHIAMA
           </a>
         </li>
       </ul>

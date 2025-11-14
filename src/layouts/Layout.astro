@@ -121,6 +121,22 @@ const canonical =
       /* @ts-ignore */
       gtag('config', 'AW-16456523599');
     </script>
+    <!-- Event snippet for Contatto conversion page -->
+    <script>
+      function gtag_report_conversion(url: string | undefined) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url as any;
+          }
+        };
+        /* @ts-ignore */
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16456523599/hG7fCL_g-L8bEM--iqc9',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
   </head>
   <body>
     <main style="overflow-y: hidden;">

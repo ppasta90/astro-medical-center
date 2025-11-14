@@ -62,7 +62,11 @@ const Header = ({ pathname }: { pathname: string }) => {
             TROVA LO SPECIALISTA
           </a>
         )}
-        <a href="tel:0574027087" className="hidden xl:flex blue-cta">
+        <a href="tel:0574027087" onClick={() => {
+          if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion === 'function') {
+            (window as any).gtag_report_conversion('tel:0574027087');
+          }
+        }} className="hidden xl:flex blue-cta">
           CHIAMA ORA
         </a>
       </div>
