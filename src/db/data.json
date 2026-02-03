@@ -381,5 +381,20 @@
       "psicoterapia psicoanalitica"
     ],
     "link": "https://www.doctolib.it/psicologo/agliana/carlotta-coppini?pid=practice-586757"
+  },
+  {
+    "id": 22,
+    "name": "Francesca",
+    "surname": "Maestrini",
+    "image": "doctors-images/maestrini.webp",
+    "bio": "Ha conseguito la Laurea Triennale e Magistrale in Scienze Motorie e delle Attività Preventive e Adattate e successivamente la Laurea Triennale in Fisioterapia presso l’Università degli Studi di Firenze. Durante il suo percorso accademico si è specializzata nella rieducazione posturale in età evolutiva e nel recupero funzionale, sviluppando un approccio integrato che unisce competenze motorie e fisioterapiche. Grazie alla sua formazione, accompagna la persona in tutte le fasi del percorso riabilitativo — dalla fase acuta del dolore fino al pieno ritorno alle attività quotidiane o sportive — con l’obiettivo di promuovere il benessere globale e la prevenzione delle recidive.",
+    "specialization": "Fisioterapia",
+    "services": [
+      "Valutazione posturale e funzionale (bambino, adolescente, adulto)",
+      "Percorsi riabilitativi basati su esercizio terapeutico",
+      "Trattamento delle problematiche del rachide (scoliosi, mal di schiena)",
+      "Programmi personalizzati di riatletizzazione e di mantenimento"
+    ],
+    "link": "https://www.doctolib.it/fisioterapista/agliana/francesca-maestrini?pid=practice-586757"
   }
 ]

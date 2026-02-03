@@ -9,29 +9,26 @@ import RenderCardsList from "./RenderCardsList";
 
   const showAllButton = document?.getElementById("show-all");
   showAllButton?.addEventListener("click", () => {
-    gtag("event", "show_all_specialists", {
-      event_category: "engagement",
-      event_label: "View All Specialists"
-    });
-    window.location.href = "/specializzazioni";
+    if (typeof gtag === "function") {
+      gtag("event", "show_all_specialists", {
+        event_category: "engagement",
+        event_label: "View All Specialists",
+      });
+    }
   });
 </script>
 <section id="specialisti" class="bg-secondary py-20">
   <div class="w-[90%] m-auto text-white flex flex-col gap-4 pb-8">
     <h2 class="section-title mb-4">Gli specialisti</h2>
     <h3 class="section-subtitle">Chi stai cercando?</h3>
-    <p>
-      Qui trovi i nominativi dei nostri specialisti.
-    </p>
+    <p>Qui trovi i nominativi dei nostri specialisti.</p>
   </div>
   <div
     class="w-[90%] gap-8 m-auto grid grid-cols-1 justify-between flex-wrap lg:gap-8 lg:flex-row"
   >
-    <RenderCardsList client:load/>
+    <RenderCardsList client:load />
   </div>
-  <div 
-    class="flex flex-col justify-center items-center bg-primary-light pt-8"
-  >
-    <button id="show-all" class="green-cta"> Vedi tutti </button>
+  <div class="flex flex-col justify-center items-center bg-primary-light pt-8">
+    <a href="/specializzazioni" id="show-all" class="green-cta"> Vedi tutti </a>
   </div>
 </section>

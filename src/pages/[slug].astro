@@ -4,49 +4,83 @@ import specializationsData from "../db/data.json";
 import { capitalizeFirstLetter, generateDoctorSlug } from "@/lib/utils";
 
 // Detect gender for profession title
-const detectGender = (name: string): 'male' | 'female' => {
-  const femaleNames = ['alessia', 'giulia', 'anna', 'ilaria', 'linda', 'sandra', 'francesca', 'dalila', 'jessica', 'marianna', 'laura', 'ilenia', 'serena', 'rachele', 'carlotta'];
-  const maleExceptions = ['andrea', 'luca', 'nicola', 'mattia'];
+const detectGender = (name: string): "male" | "female" => {
+  const femaleNames = [
+    "alessia",
+    "giulia",
+    "anna",
+    "ilaria",
+    "linda",
+    "sandra",
+    "francesca",
+    "dalila",
+    "jessica",
+    "marianna",
+    "laura",
+    "ilenia",
+    "serena",
+    "rachele",
+    "carlotta",
+  ];
+  const maleExceptions = ["andrea", "luca", "nicola", "mattia"];
   const normalizedName = name.toLowerCase().trim();
 
-  if (femaleNames.includes(normalizedName)) return 'female';
-  if (maleExceptions.includes(normalizedName)) return 'male';
-  if (normalizedName.endsWith('a')) return 'female';
-  return 'male';
+  if (femaleNames.includes(normalizedName)) return "female";
+  if (maleExceptions.includes(normalizedName)) return "male";
+  if (normalizedName.endsWith("a")) return "female";
+  return "male";
 };
 
-const specializationToProfession: { [key: string]: { male: string; female: string } } = {
-  "Audiologia": { male: "Audiologo", female: "Audiologa" },
-  "Otorinolaringoiatria": { male: "Otorino", female: "Otorino" },
-  "Oculistica": { male: "Oculista", female: "Oculista" },
-  "Endocrinologia": { male: "Endocrinologo", female: "Endocrinologa" },
-  "Ginecologia": { male: "Ginecologo", female: "Ginecologa" },
-  "Podologia": { male: "Podologo", female: "Podologa" },
-  "Dermatologia": { male: "Dermatologo", female: "Dermatologa" },
-  "Urologia": { male: "Urologo", female: "Urologa" },
-  "Psicologia": { male: "Psicologo", female: "Psicologa" },
-  "Psichiatria": { male: "Psichiatra", female: "Psichiatra" },
-  "Senologia": { male: "Senologo", female: "Senologa" },
-  "Ostetricia": { male: "Ostetrico", female: "Ostetrica" },
-  "Nutrizione": { male: "Nutrizionista", female: "Nutrizionista" },
-  "Dietistica": { male: "Dietista", female: "Dietista" },
-  "Ecografia": { male: "Ecografista", female: "Ecografista" },
-  "Massofisioterapia": { male: "Massofisioterapista", female: "Massofisioterapista" },
-  "Psiocologia e sessuologia": { male: "Psicologo e Sessuologo", female: "Psicologa e Sessuologa" }
+const specializationToProfession: {
+  [key: string]: { male: string; female: string };
+} = {
+  Audiologia: { male: "Audiologo", female: "Audiologa" },
+  Otorinolaringoiatria: { male: "Otorino", female: "Otorino" },
+  Oculistica: { male: "Oculista", female: "Oculista" },
+  Endocrinologia: { male: "Endocrinologo", female: "Endocrinologa" },
+  Ginecologia: { male: "Ginecologo", female: "Ginecologa" },
+  Podologia: { male: "Podologo", female: "Podologa" },
+  Dermatologia: { male: "Dermatologo", female: "Dermatologa" },
+  Urologia: { male: "Urologo", female: "Urologa" },
+  Psicologia: { male: "Psicologo", female: "Psicologa" },
+  Psichiatria: { male: "Psichiatra", female: "Psichiatra" },
+  Senologia: { male: "Senologo", female: "Senologa" },
+  Ostetricia: { male: "Ostetrico", female: "Ostetrica" },
+  Nutrizione: { male: "Nutrizionista", female: "Nutrizionista" },
+  Dietistica: { male: "Dietista", female: "Dietista" },
+  Ecografia: { male: "Ecografista", female: "Ecografista" },
+  Massofisioterapia: {
+    male: "Massofisioterapista",
+    female: "Massofisioterapista",
+  },
+  "Psiocologia e sessuologia": {
+    male: "Psicologo e Sessuologo",
+    female: "Psicologa e Sessuologa",
+  },
+  Fisioterapia: { male: "Fisioterapista", female: "Fisioterapista" },
 };
 
 export function getStaticPaths() {
   return specializationsData.map((doctor) => ({
-    params: { slug: generateDoctorSlug(doctor.surname, doctor.specialization, doctor.name) },
+    params: {
+      slug: generateDoctorSlug(
+        doctor.surname,
+        doctor.specialization,
+        doctor.name,
+      ),
+    },
     props: { doctor },
   }));
 }
 
 const { doctor } = Astro.props;
 const gender = detectGender(doctor.name);
-const professionTitle = specializationToProfession[doctor.specialization]?.[gender] || doctor.specialization;
+const professionTitle =
+  specializationToProfession[doctor.specialization]?.[gender] ||
+  doctor.specialization;
 const pageTitle = `Dott. ${doctor.name} ${doctor.surname} - ${professionTitle}`;
-const specializedGender = gender === 'female' ? 'specializzata' : 'specializzato';
+const specializedGender =
+  gender === "female" ? "specializzata" : "specializzato";
 const pageDescription = `Conosci il Dott. ${doctor.name} ${doctor.surname}, ${professionTitle} ${specializedGender} in ${doctor.specialization} presso Centro Medico Agliana. Prenota una visita online o chiama per informazioni.`;
 ---
 
@@ -64,28 +98,39 @@ const pageDescription = `Conosci il Dott. ${doctor.name} ${doctor.surname}, ${pr
             loading="lazy"
           />
         </div>
-        
+
         <!-- Info Right -->
         <div class="flex-grow text-center md:text-left">
           <h1 class="section-title text-center md:text-left mb-4">
-            Dott. {doctor.name} {doctor.surname}
+            Dott. {doctor.name}
+            {doctor.surname}
           </h1>
-          <h2 class="section-subtitle text-white text-center md:text-left mb-8">{professionTitle}</h2>
-          {doctor.link === "" && (
-            <p class="text-white text-center md:text-left mb-8 underline">Prenotazione online non disponibile, chiamaci per prenotare</p>
-          )}
+          <h2 class="section-subtitle text-white text-center md:text-left mb-8">
+            {professionTitle}
+          </h2>
+          {
+            doctor.link === "" && (
+              <p class="text-white text-center md:text-left mb-8 underline">
+                Prenotazione online non disponibile, chiamaci per prenotare
+              </p>
+            )
+          }
           <!-- Call to Action Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            {doctor.link && (
-              <a
-                href={doctor.link}
-                target="_blank"
-                rel="noreferrer"
-                class="green-cta"
-              >
-                PRENOTA ONLINE
-              </a>
-            )}
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+          >
+            {
+              doctor.link && (
+                <a
+                  href={doctor.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="green-cta"
+                >
+                  PRENOTA ONLINE
+                </a>
+              )
+            }
             <!-- Mobile only CHIAMA ORA button -->
             <a
               href="tel:+390574718506"
@@ -105,23 +150,27 @@ const pageDescription = `Conosci il Dott. ${doctor.name} ${doctor.surname}, ${pr
       <div class="mb-12">
         <h3 class="section-title mb-6">Esperienze</h3>
         <div class="bg-secondaryLight rounded-lg p-8">
-          <p class="text-darkBlue leading-relaxed whitespace-pre-line text-lg">{doctor.bio}</p>
+          <p class="text-darkBlue leading-relaxed whitespace-pre-line text-lg">
+            {doctor.bio}
+          </p>
         </div>
       </div>
 
       <!-- Services Section -->
-      {doctor.services && doctor.services.length > 0 && (
-        <div class="mb-12">
-          <h3 class="section-title mb-6">Servizi</h3>
-          <div class="bg-secondaryLight rounded-lg p-8">
-            <ul class="list-disc list-inside text-darkBlue space-y-3 text-lg">
-              {doctor.services.map((service) => (
-                <li>{capitalizeFirstLetter(service)}</li>
-              ))}
-            </ul>
+      {
+        doctor.services && doctor.services.length > 0 && (
+          <div class="mb-12">
+            <h3 class="section-title mb-6">Servizi</h3>
+            <div class="bg-secondaryLight rounded-lg p-8">
+              <ul class="list-disc list-inside text-darkBlue space-y-3 text-lg">
+                {doctor.services.map((service) => (
+                  <li>{capitalizeFirstLetter(service)}</li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
-      )}
+        )
+      }
 
       <!-- Navigation -->
       <div class="text-center mt-16">

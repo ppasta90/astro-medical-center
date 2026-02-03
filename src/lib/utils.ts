@@ -26,7 +26,8 @@ const specializationToProfession: { [key: string]: { male: string; female: strin
   "Ecografia": { male: "ecografista", female: "ecografista" },
   "Massofisioterapia": { male: "massofisioterapista", female: "massofisioterapista" },
   "Psiocologia e sessuologia": { male: "psicologo-sessuologo", female: "psicologa-sessuologa" },
-  "Otorinolaringoiatria": { male: "otorino", female: "otorino" }
+  "Otorinolaringoiatria": { male: "otorino", female: "otorino" },
+  "Fisioterapia": { male: "fisioterapista", female: "fisioterapista" }
 };
 
 const detectGender = (name: string): 'male' | 'female' => {
