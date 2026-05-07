@@ -396,5 +396,49 @@
       "Programmi personalizzati di riatletizzazione e di mantenimento"
     ],
     "link": "https://www.doctolib.it/fisioterapista/agliana/francesca-maestrini?pid=practice-586757"
+  },
+  {
+    "id": 23,
+    "name": "Irene",
+    "surname": "Giovannuzzi",
+    "image": "doctors-images/giovannuzzi.webp",
+    "bio": "Si è laureata in Medicina e Chirurgia e si è successivamente specializzata in Psichiatria presso l’Università di Pisa, conseguendo il titolo con votazione 110/110 e lode.\n\nNel corso della sua esperienza professionale ha maturato competenze sia in ambito clinico che forense, lavorando prima presso la Clinica universitaria Psichiatrica di Pisa, poi presso la REMS-D di Volterra e successivamente in una comunità terapeutica dedicata a pazienti autori di reato. Ha infine svolto attività clinica presso la UFCSMA Valdinievole, operando sia nel Centro di Salute Mentale di Montecatini Terme sia nel Servizio Psichiatrico di Diagnosi e Cura (SPDC) dell’Ospedale Cosma e Damiano di Pescia.\n\nHa inoltre conseguito un Master di II livello in Psicopatologia Forense e Criminologia presso l’Università degli Studi di Firenze, approfondendo l’integrazione tra psichiatria clinica e ambito giuridico.\n\nAttualmente svolge attività libero-professionale, occupandosi di psichiatria dell’adulto e dell’anziano.\n\nCrede profondamente in un approccio multidisciplinare alla patologia psichiatrica, fondato sull’ascolto, sul rispetto e sulla collaborazione con il paziente. Offre uno spazio sicuro e accogliente, in cui ogni persona possa sentirsi compresa, raccontarsi liberamente e intraprendere un percorso di cura personalizzato.",
+    "specialization": "Psichiatria",
+    "services": [
+      "disturbi dell’umore",
+      "disturbi d’ansia e attacchi di panico",
+      "disturbi del neurosviluppo (autismo, ADHD)",
+      "disturbo ossessivo-compulsivo",
+      "disturbo da sintomi somatici",
+      "disturbi del comportamento alimentare",
+      "psicosi",
+      "disturbi da uso di sostanze",
+      "psicogeriatria e disturbi comportamentali nelle malattie neurodegenerative (Malattia di Parkinson, Malattia di Alzheimer, demenza vascolare e fronto-temporale)"
+    ],
+    "link": "https://www.doctolib.it/psichiatra/agliana/irene-giovannuzzi-agliana?pid=practice-586757"
+  },
+  {
+    "id": 24,
+    "name": "Serena",
+    "surname": "Antenore",
+    "image": "doctors-images/antenore.webp",
+    "bio": "La Dott.ssa Serena Antenore si è laureata con lode in Medicina e Chirurgia all'Università degli Studi di Siena nel 2008 e si è Specializzata con lode in Oftalmologia presso il medesimo Ateneo nel 2015.\n\nHa svolto, presso l’Azienda Ospedaliera Universitaria Senese, attività di diagnosi clinica e strumentale, gestione medico-chirurgica delle emergenze oculistiche, preparazione dei pazienti agli interventi di chirurgica specialistica e follow-up, gestione dei pazienti pediatrici e adulti con patologie oncologiche oculari e pianificazione delle strategie terapeutiche mediante approccio multidisciplinare (GOM), procedure para chirurgiche e chirurgiche oculari.\n\nHa partecipato a numerosi Congressi e Corsi di aggiornamento professionale ed è autrice di diversi lavori scientifici.\n\nSvolge attività libero professionale nella province di Siena, Arezzo, Prato, Matera, Cosenza e ha collaborato come Specialista ambulatoriale presso AUSL7 Siena, AUSL 8 Arezzo e USL 9 Grosseto.\n\nAbilitazione:\nOrdini dei Medici Chirurghi e degli Odontoiatri (FNOMCEO) n. 1741 iscritto il 01/04/2009.",
+    "specialization": "Oculistica",
+    "services": [
+      "Ambliopìa (‘occhio pigro’) e strabismo",
+      "Vizi di refrazione (astigmatismo, miopia, ipermetropia)",
+      "Cataratta",
+      "Glaucoma",
+      "Maculopatie",
+      "Degenerazioni retiniche",
+      "Retinopatie (diabetica, ipertensiva)",
+      "Malattie infettive (congiuntiviti, uveiti, cheratiti, episcleriti)",
+      "Malattie autoimmuni",
+      "Patologie corneali (cheratocono, distrofie)",
+      "Patologie palpebrali (blefarite, orzaiolo, calazio)",
+      "Patologie vitreali (disgregazione vitreo, “mosche volanti”)",
+      "Patologie neuro-oftalmologiche (neuriti ottiche, ptosi palpebrale)"
+    ],
+    "link": "https://www.doctolib.it/oftalmologo/poggio-a-caiano/serena-antenore?pid=practice-586757"
   }
 ]
