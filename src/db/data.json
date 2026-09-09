@@ -303,7 +303,7 @@
     "link": "https://www.doctolib.it/psicologo/agliana/carlotta-coppini?pid=practice-586757"
   },
   {
-    "id": 22,
+    "id": 17,
     "name": "Francesca",
     "surname": "Maestrini",
     "image": "doctors-images/maestrini.webp",
@@ -318,7 +318,7 @@
     "link": "https://www.doctolib.it/fisioterapista/agliana/francesca-maestrini?pid=practice-586757"
   },
   {
-    "id": 23,
+    "id": 18,
     "name": "Irene",
     "surname": "Giovannuzzi",
     "image": "doctors-images/giovannuzzi.webp",
@@ -336,29 +336,5 @@
       "psicogeriatria e disturbi comportamentali nelle malattie neurodegenerative (Malattia di Parkinson, Malattia di Alzheimer, demenza vascolare e fronto-temporale)"
     ],
     "link": "https://www.doctolib.it/psichiatra/agliana/irene-giovannuzzi-agliana?pid=practice-586757"
-  },
-  {
-    "id": 24,
-    "name": "Serena",
-    "surname": "Antenore",
-    "image": "doctors-images/antenore.webp",
-    "bio": "La Dott.ssa Serena Antenore si è laureata con lode in Medicina e Chirurgia all'Università degli Studi di Siena nel 2008 e si è Specializzata con lode in Oftalmologia presso il medesimo Ateneo nel 2015.\n\nHa svolto, presso l’Azienda Ospedaliera Universitaria Senese, attività di diagnosi clinica e strumentale, gestione medico-chirurgica delle emergenze oculistiche, preparazione dei pazienti agli interventi di chirurgica specialistica e follow-up, gestione dei pazienti pediatrici e adulti con patologie oncologiche oculari e pianificazione delle strategie terapeutiche mediante approccio multidisciplinare (GOM), procedure para chirurgiche e chirurgiche oculari.\n\nHa partecipato a numerosi Congressi e Corsi di aggiornamento professionale ed è autrice di diversi lavori scientifici.\n\nSvolge attività libero professionale nella province di Siena, Arezzo, Prato, Matera, Cosenza e ha collaborato come Specialista ambulatoriale presso AUSL7 Siena, AUSL 8 Arezzo e USL 9 Grosseto.\n\nAbilitazione:\nOrdini dei Medici Chirurghi e degli Odontoiatri (FNOMCEO) n. 1741 iscritto il 01/04/2009.",
-    "specialization": "Oculistica",
-    "services": [
-      "Ambliopìa (‘occhio pigro’) e strabismo",
-      "Vizi di refrazione (astigmatismo, miopia, ipermetropia)",
-      "Cataratta",
-      "Glaucoma",
-      "Maculopatie",
-      "Degenerazioni retiniche",
-      "Retinopatie (diabetica, ipertensiva)",
-      "Malattie infettive (congiuntiviti, uveiti, cheratiti, episcleriti)",
-      "Malattie autoimmuni",
-      "Patologie corneali (cheratocono, distrofie)",
-      "Patologie palpebrali (blefarite, orzaiolo, calazio)",
-      "Patologie vitreali (disgregazione vitreo, “mosche volanti”)",
-      "Patologie neuro-oftalmologiche (neuriti ottiche, ptosi palpebrale)"
-    ],
-    "link": "https://www.doctolib.it/oftalmologo/poggio-a-caiano/serena-antenore?pid=practice-586757"
   }
 ]
