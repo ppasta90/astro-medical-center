@@ -1,16 +1,6 @@
 [
   {
     "id": 1,
-    "name": "Iacopo",
-    "surname": "Franchini",
-    "image": "doctors-images/franchini.webp",
-    "bio": "Laureato in Medicina e Chirurgia presso l'Università degli Studi di Firenze, il Dott. Franchini si è poi specializzato in Oftalmologia presso la stessa università. Negli anni di specializzazione ha acquisito le sue competenze cliniche e diagnostiche e sviluppato capacità chirurgiche sotto la direzione del Prof. Stanislao Rizzo. Ha appreso ed approfondito le tecniche di Chirurgia della Cataratta e Chirurgia Refrattiva. Dopo la specializzazione ha dedicato un anno alla ricerca nell'ambito delle Patologie Retiniche di interesse medico, con particolare riferimento allo sviluppo di nuovi farmaci intravitreali e all'individuazione di nuovi possibili regimi di trattamento della Degenerazione Maculare legata all'età. Lavora attualmente presso l'Azienda Ospedaliera Careggi come Dirigente Medico Ospedaliero, concentrando la sua attività nell'ambito della Chirurgia Oftalmica del Segmento Anteriore, con particolare riferimento alla Chirurgia della Cataratta, Refrattiva e del Glaucoma ed incrementando le proprie competenze diagnostiche e di chirurgia mininvasiva del Glaucoma. Svolge inoltre regolarmente interventi in ambito di Chirurgia Vitreoretinica. Sta attualmente proseguendo e concentrando la sua attività di ricerca sulla ridefinizione delle linee guida della chirurgia oftalmica in ambito di antisepsi, trattamento farmacologico perioperatorio della cataratta e terapia post-chirurgica antibiotica.",
-    "specialization": "Oculistica",
-    "services": [],
-    "link": "https://www.doctolib.it/oftalmologo/agliana/iacopo-franchini?pid=practice-586757"
-  },
-  {
-    "id": 2,
     "name": "Alessia",
     "surname": "Romani",
     "image": "doctors-images/romani.webp",
@@ -29,7 +19,7 @@
     "link": "https://www.doctolib.it/endocrinologo/pistoia/alessia-romani-pistoia?pid=practice-586757"
   },
   {
-    "id": 3,
+    "id": 2,
     "name": "Giacomo",
     "surname": "Noti",
     "image": "doctors-images/noti.webp",
@@ -49,7 +39,7 @@
     "link": "https://www.doctolib.it/ginecologo-ostetrico/agliana/giacomo-noti?pid=practice-586757"
   },
   {
-    "id": 4,
+    "id": 3,
     "name": "Giulia",
     "surname": "Bortot",
     "image": "doctors-images/bortot.webp",
@@ -69,7 +59,7 @@
     "link": "https://www.doctolib.it/urologo/agliana/giulia-bortot?pid=practice-586757"
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "Anna Maria",
     "surname": "Anichini",
     "image": "doctors-images/anichini.webp",
@@ -88,7 +78,7 @@
     "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/anna-maria-anichini?pid=practice-586757"
   },
   {
-    "id": 6,
+    "id": 5,
     "name": "Ilaria",
     "surname": "Scandagli",
     "image": "doctors-images/scandagli.webp",
@@ -112,24 +102,7 @@
     "link": "https://www.doctolib.it/dermatologo-venereologo/pistoia/ilaria-scandagli?pid=practice-586757"
   },
   {
-    "id": 7,
-    "name": "Emanuele",
-    "surname": "Ruggeri",
-    "image": "doctors-images/ruggeri.webp",
-    "bio": "Laureato in Medicina e Chirurgia presso la facoltà La Sapienza di Roma, ho ottenuto la specialization in psichiatria presso L'Università degli Studi di Firenze. Ho conseguito il diploma di Psicoterapeuta Cognitivo Comportamentale presso il CTCC di Firenze. Attualmente ricopre la posizione di medico psichiatra presso la Syracuse University in Florence, continuando a dedicarsi alla ricerca accademica in Italia ed all'estero.",
-    "specialization": "Psichiatria",
-    "services": [
-      "disturbi dell'umore",
-      "disturbi di personalità",
-      "abuso di sostanze",
-      "cefalea",
-      "disturbi del sonno",
-      "disturbi dell'alimentazione"
-    ],
-    "link": "https://www.doctolib.it/psichiatra/agliana/emanuele-ruggeri?pid=practice-586757"
-  },
-  {
-    "id": 8,
+    "id": 6,
     "name": "Linda",
     "surname": "Prosperi",
     "image": "doctors-images/prosperi.webp",
@@ -150,7 +123,7 @@
     "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/linda-prosperi?pid=practice-586757"
   },
   {
-    "id": 9,
+    "id": 7,
     "name": "Sandra",
     "surname": "Pellegrino",
     "image": "doctors-images/pellegrino.webp",
@@ -174,7 +147,7 @@
     "link": "https://www.doctolib.it/podologo/agliana/alessandra-pellegrino-agliana?pid=practice-586757"
   },
   {
-    "id": 10,
+    "id": 8,
     "name": "Sandro",
     "surname": "Pastacaldi",
     "image": "doctors-images/pastacaldi.webp",
@@ -193,7 +166,7 @@
     "link": "https://www.doctolib.it/ecografo/agliana/sandro-pastacaldi?pid=practice-586757"
   },
   {
-    "id": 11,
+    "id": 9,
     "name": "Francesca",
     "surname": "Mastrorosato",
     "image": "doctors-images/mastrorosato.webp",
@@ -218,7 +191,7 @@
     "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/francesca-mastrorosato-agliana?pid=practice-586757"
   },
   {
-    "id": 12,
+    "id": 10,
     "name": "Dalila",
     "surname": "Marangella",
     "image": "doctors-images/marangella.webp",
@@ -236,7 +209,7 @@
     "link": "https://www.doctolib.it/psicologo/agliana/dalila-marangella?pid=practice-586757"
   },
   {
-    "id": 13,
+    "id": 11,
     "name": "Jessica",
     "surname": "Cirillo",
     "image": "doctors-images/cirillo.webp",
@@ -253,27 +226,7 @@
     "link": ""
   },
   {
-    "id": 14,
-    "name": "Marianna",
-    "surname": "Lini",
-    "image": "doctors-images/lini.webp",
-    "bio": "Marianna si è laureata con lode in Ostetricia presso l'Università degli Studi di Firenze. La sua assistenza è dedicata all'accompagnamento della donna in ogni fase della sua vita fertile, dal menarca alla menopausa, e al neonato nel suo primo anno di vita. Ha deciso di svolgere la sua attività sul territorio, per applicare i principi della continuità dell'assistenza ed essere vicina alle donne, alle madri in gravidanza e, soprattutto, nelle delicate fasi del dopo parto.",
-    "specialization": "Ostetricia",
-    "services": [
-      "consulenze preconcezionali",
-      "consulenze in gravidanza",
-      "assistenza in puerperio",
-      "assistenza all'allattamento materno",
-      "assistenza alla cura del neonato",
-      "sonno sicuro e svezzamento",
-      "consulenze su contraccezione",
-      "salute mestruale",
-      "prevenzione oncologica"
-    ],
-    "link": "https://www.doctolib.it/ostetrico/campi-bisenzio/marianna-lini?pid=practice-586757"
-  },
-  {
-    "id": 15,
+    "id": 12,
     "name": "Daniele",
     "surname": "Della Latta",
     "image": "doctors-images/dellalatta.webp",
@@ -289,7 +242,7 @@
     "link": "https://www.doctolib.it/podologo/camaiore/daniele-della-latta?pid=practice-586757"
   },
   {
-    "id": 16,
+    "id": 13,
     "name": "Laura",
     "surname": "Giannini",
     "image": "doctors-images/giannini.webp",
@@ -299,7 +252,7 @@
     "link": "https://www.doctolib.it/psicologo/agliana/laura-giannini?pid=practice-586757"
   },
   {
-    "id": 17,
+    "id": 14,
     "name": "Ilenia",
     "surname": "Faleri",
     "image": "doctors-images/faleri.webp",
@@ -318,7 +271,7 @@
     "link": "https://www.doctolib.it/dietista/agliana/ilenia-faleri?pid=practice-586757"
   },
   {
-    "id": 18,
+    "id": 15,
     "name": "Serena",
     "surname": "Romiti",
     "image": "doctors-images/romiti.webp",
@@ -334,40 +287,7 @@
     "link": "https://www.doctolib.it/psicologo/agliana/serena-romiti?pid=practice-586757"
   },
   {
-    "id": 19,
-    "name": "Luigi",
-    "surname": "Sicignano",
-    "image": "doctors-images/sicignano.webp",
-    "bio": "Il Dott. Luigi Sicignano è Psicologo specializzando al secondo anno in psicoterapia cognitivo-comportamentale presso la scuola Studi Cognitivi di Firenze. Si è laureato in Psicologia cognitiva applicata presso l'Università degli Studi di Padova nel 2019 e successivamente ha effettuato un anno di formazione presso lo studio Gallimberti a Padova trattando pazienti con dipendenze. A inizio 2024 ha conseguito l'abilitazione all'utilizzo della Video Game Therapy e ha collaborato con l'associazione Gabriele Borgogni come psicologo dell'emergenza. Attualmente lavora come libero professionista da circa 2 anni in uno studio in condivisione con altri professionisti, con cui si è instaurata una proficua collaborazione. Da inizio marzo 2025 lavora presso l'Istituto Comprensivo Compagni-Carducci di Firenze come psicologo dello sportello d'ascolto per la prevenzione della dispersione scolastica.",
-    "specialization": "Psicologia",
-    "services": [
-      "ansia",
-      "attacchi di panico",
-      "depressione",
-      "stress",
-      "stress lavoro correlato",
-      "analisi e orientamento personale"
-    ],
-    "link": "https://www.doctolib.it/psicologo/agliana/luigi-sicignano?pid=practice-586757"
-  },
-  {
-    "id": 20,
-    "name": "Rachele",
-    "surname": "Canelli",
-    "image": "doctors-images/canelli.webp",
-    "bio": "La Dr.ssa Rachele Canelli svolge la sua attività presso la SOC ORL1 Prato, Firenze e Pistoia, con contratto a tempo indeterminato. Specializzata in Audiologia e Foniatria presso l'Università di Pisa, con una formazione centrata sulla diagnosi e sul trattamento dei disturbi uditivi, dell'equilibrio, della voce e della deglutizione. Si occupa sia di pazienti adulti che pediatrici, proponendo percorsi diagnostici personalizzati e, quando necessario, trattamenti riabilitativi e/o chirurgici. Particolare attenzione è rivolta alla prevenzione e alla cura delle patologie che influenzano la qualità della vita, come la perdita uditiva, i disturbi dell'equilibrio, della voce e della deglutizione. Opera all'interno di ambulatori specialistici, in un contesto multidisciplinare, che le consente di affrontare quotidianamente le principali patologie otorinolaringoiatriche. Nel corso degli anni ha partecipato a diverse attività di ricerca ed è coautrice di articoli pubblicati su riviste scientifiche internazionali.",
-    "specialization": "Audiologia",
-    "services": [
-      "ipoacusia",
-      "patologie dell'orecchio (otiti acute e croniche, perforazioni timpaniche)",
-      "vertigini",
-      "disfagia, disturbi della deglutizione",
-      "disfonia, disturbi della voce"
-    ],
-    "link": "https://www.doctolib.it/otorinolaringoiatra/viareggio/rachele-canelli?pid=practice-586757"
-  },
-  {
-    "id": 21,
+    "id": 16,
     "name": "Carlotta",
     "surname": "Coppini",
     "image": "doctors-images/coppini.webp",
