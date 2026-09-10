@@ -1,16 +1,15 @@
 ---
-import RenderCardsList from "./RenderCardsList";
+import DoctorsGrid from "./DoctorsGrid.astro";
+import { getDoctors } from "@/lib/doctors";
+
+const doctors = await getDoctors();
 ---
 
 <script>
-  declare global {
-    function gtag(...args: any[]): void;
-  }
-
   const showAllButton = document?.getElementById("show-all");
   showAllButton?.addEventListener("click", () => {
-    if (typeof gtag === "function") {
-      gtag("event", "show_all_specialists", {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "show_all_specialists", {
         event_category: "engagement",
         event_label: "View All Specialists",
       });
@@ -26,9 +25,9 @@ import RenderCardsList from "./RenderCardsList";
   <div
     class="w-[90%] gap-8 m-auto grid grid-cols-1 justify-between flex-wrap lg:gap-8 lg:flex-row"
   >
-    <RenderCardsList client:load />
+    <DoctorsGrid doctors={doctors.slice(0, 3)} compact homePreview />
   </div>
-  <div class="flex flex-col justify-center items-center bg-primary-light pt-8">
+  <div class="flex flex-col justify-center items-center pt-8">
     <a href="/specializzazioni" id="show-all" class="green-cta"> Vedi tutti </a>
   </div>
 </section>

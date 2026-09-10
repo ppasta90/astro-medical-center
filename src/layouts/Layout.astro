@@ -1,24 +1,37 @@
 ---
 import Footer from "@/components/Footer.astro";
-import Header from "@/components/Header";
+import Analytics from "@/components/Analytics.astro";
+import Header from "@/components/Header.astro";
+import { SITE } from "@/config/site";
+import { normalizePathname } from "@/lib/routes";
+import { getImage } from "astro:assets";
+import socialImageSource from "@/images/esterno1.webp";
 import "@/styles/globals.css";
 import "@fontsource-variable/dm-sans";
 import "@fontsource/bebas-neue";
-const { pathname } = Astro.url;
-// Optional page-specific description and title passed from pages
-export let pageDescription: string | undefined;
-export let pageTitle: string | undefined;
+const pathname = normalizePathname(Astro.url.pathname);
 
-// GTM Configuration
-const GTM_ID = "GTM-NPF3KJV6";
-
-// Extend the Window interface to include dataLayer
-declare global {
-  interface Window {
-    dataLayer: any[];
-  }
-  let dataLayer: any[];
+interface Props {
+  pageDescription?: string;
+  pageTitle?: string;
+  socialImage?: string;
+  socialImageAlt?: string;
+  ogType?: "website" | "profile";
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
+
+const {
+  pageDescription,
+  pageTitle,
+  socialImage,
+  socialImageAlt = "Ingresso del Centro Medico Agliana",
+  ogType = "website",
+  structuredData,
+} = Astro.props;
+
+const defaultDescription =
+  "Studi medici con sede ad Agliana, specializzati in ginecologia, ortopedia, dermatologia, psicologia, osteopatia, senologia, urologia e podologia.";
+
 const titles: { [key: string]: string } = {
   "/": "Centro Medico Agliana - Studi medici specialistici ad Agliana",
   "/specializzazioni": "Centro Medico Agliana - I nostri specialisti",
@@ -33,73 +46,87 @@ title = title || "Centro Medico Agliana";
 // Use dynamic title if provided, otherwise use the default
 const finalTitle = pageTitle || title;
 
-// Normalize pathname for canonical URLs: remove trailing slash(es) for non-root
-const normalizedPathname = pathname === "/" ? "/" : (pathname as string).replace(/\/+$/, "");
-const canonical =
-  normalizedPathname === "/"
-    ? "https://www.centromedicoagliana.it"
-    : `https://www.centromedicoagliana.it${normalizedPathname}`;
+const canonical = new URL(pathname, Astro.site ?? SITE.url).toString();
+const optimizedSocialImage = await getImage({
+  src: socialImageSource,
+  width: 1200,
+  height: 630,
+  fit: "cover",
+  format: "webp",
+  quality: 75,
+});
+const defaultSocialImageUrl = new URL(
+  optimizedSocialImage.src,
+  Astro.site ?? SITE.url,
+).toString();
+const socialImageUrl = socialImage
+  ? new URL(socialImage, SITE.url).toString()
+  : defaultSocialImageUrl;
 
+const clinicStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "@id": `${SITE.url}/#medical-clinic`,
+  name: SITE.name,
+  legalName: SITE.company.legalName,
+  url: SITE.url,
+  image: defaultSocialImageUrl,
+  telephone: SITE.contact.phone.e164,
+  email: SITE.contact.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: SITE.address.streetAddress,
+    addressLocality: SITE.address.locality,
+    addressRegion: SITE.address.region,
+    postalCode: SITE.address.postalCode,
+    addressCountry: SITE.address.country,
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: SITE.address.latitude,
+    longitude: SITE.address.longitude,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "15:00",
+      closes: "19:00",
+    },
+  ],
+  sameAs: SITE.socialProfiles,
+};
+const pageStructuredData = structuredData
+  ? Array.isArray(structuredData)
+    ? structuredData
+    : [structuredData]
+  : [];
+const structuredDataJson = JSON.stringify([
+  clinicStructuredData,
+  ...pageStructuredData,
+]).replace(/</g, "\\u003c");
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="it">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZSYEEGY2J7"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
-      }
-      /* @ts-ignore */
-      gtag("js", new Date());
-      /* @ts-ignore */
-      gtag("config", "G-ZSYEEGY2J7");
-    </script>
-    <!-- Google Tag Manager -->
-    <script is:inline>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-NPF3KJV6');
-    </script>
-    <!-- End Google Tag Manager -->
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <script type="text/javascript">
-      var _iub = _iub || [];
-      _iub.csConfiguration = {
-        siteId: 3774052,
-        cookiePolicyId: 34164499,
-        lang: "it",
-      };
-    </script>
-    <script
-      type="text/javascript"
-      src="https://cs.iubenda.com/autoblocking/3774052.js"></script>
-    <script
-      type="text/javascript"
-      src="//cdn.iubenda.com/cs/iubenda_cs.js"
-      charset="UTF-8"
-      async></script>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content={
-        pageDescription ??
-        "Studi medici con sede ad Agliana, specializzati in ginecologia, ortopedia, dermatologia, psicologia, osteopatia, senologia, urologia, podologia."
-      }
-    />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <Analytics />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="description" content={pageDescription ?? defaultDescription} />
+    <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Centro Medico Agliana" />
-    {pathname === "/" ? (
-      <meta name="facebook-domain-verification" content="r666v27b4i86vgmhj9t0crylzc84yc" />
-    ) : null}
+    {
+      pathname === "/" ? (
+        <meta
+          name="facebook-domain-verification"
+          content="r666v27b4i86vgmhj9t0crylzc84yc"
+        />
+      ) : null
+    }
     <meta
       name="keywords"
       content="centro medico agliana, ginecologia, ortopedia, dermatologia, psicologia, osteopatia, senologia, urologia, podologia"
@@ -107,53 +134,36 @@ const canonical =
     <meta property="og:title" content={finalTitle} />
     <meta
       property="og:description"
-      content={
-        pageDescription ??
-        "Studi medici con sede ad Agliana, specializzati in ginecologia, ortopedia, dermatologia, psicologia, osteopatia, senologia, urologia, podologia."
-      }
+      content={pageDescription ?? defaultDescription}
     />
-    <meta property="og:url" content="https://centromedicoagliana.it" />
-    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:alt" content={socialImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={finalTitle} />
+    <meta
+      name="twitter:description"
+      content={pageDescription ?? defaultDescription}
+    />
+    <meta name="twitter:image" content={socialImageUrl} />
     <title>{finalTitle}</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="canonical" href={canonical} />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16456523599"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      /* @ts-ignore */
-      gtag('js', new Date());
-      /* @ts-ignore */
-      gtag('config', 'AW-16456523599');
-    </script>
-    <!-- Event snippet for Contatto conversion page -->
-    <script>
-      function gtag_report_conversion(url: string | undefined) {
-        var callback = function () {
-          if (typeof(url) != 'undefined') {
-            window.location = url as any;
-          }
-        };
-        /* @ts-ignore */
-        gtag('event', 'conversion', {
-            'send_to': 'AW-16456523599/hG7fCL_g-L8bEM--iqc9',
-            'event_callback': callback
-        });
-        return false;
-      }
-    </script>
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={structuredDataJson}
+    />
   </head>
   <body>
     <main style="overflow-y: hidden;">
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
-      <Header client:load pathname={pathname} />
+      <Header pathname={pathname} />
       <slot />
       <Footer />
     </main>

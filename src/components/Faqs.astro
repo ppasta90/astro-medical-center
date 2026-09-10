@@ -1,71 +1,5 @@
 ---
-import Accordion from "./Accordion.tsx";
-const faqs = [
-  {
-    question: "Come posso prenotare una visita?",
-    answer:
-      "Puoi prenotare una visita scrivendo a info@centromedicoagliana.it oppure visitando la nostra pagina Doctolib",
-  },
-  {
-    question: "Come posso pagare una visita?",
-    answer:
-      "I pagamenti possono essere effettuati in contanti, con carta di credito o bancomat",
-  },
-  {
-    question: "Quali sono gli orari di apertura?",
-    answer:
-      "Siamo aperti tutti i pomeriggi, da lunedì a venerdì, dalle 15:00 alle 19:00",
-  },
-  {
-    question: "Posso prenotare una visita per conto di un'altra persona?",
-    answer:
-      "Sì, puoi prenotare una visita per conto di un'altra persona, ma ricorda di portare con te il suo codice fiscale",
-  },
-  {
-    question: "Posso annullare una visita già prenotata?",
-    answer:
-      "Sì, puoi annullare una visita già prenotata, ma ti chiediamo di farlo almeno 24 ore prima dell'appuntamento",
-  },
-  {
-    question: "Posso richiedere una visita a domicilio?",
-    answer:
-      "No, i nostri specialisti effettuano visite solo presso il nostro studio",
-  },
-  {
-    question: "Quali sono i costi delle visite?",
-    answer:
-      "I costi delle visite variano in base alla specializzazione del medico e alla tipologia di visita",
-  },
-  {
-    question: "Posso richiedere una visita urgente?",
-    answer:
-      "No, per urgenze consigliamo di recarsi al pronto soccorso più vicino",
-  },
-  {
-    question: "Accettate le assicurazioni?",
-    answer: "No, al momento non accettiamo pagamenti tramite assicurazioni",
-  },
-  {
-    question:
-      "È possibile effettuare esami di laboratorio presso il vostro centro?",
-    answer: "No, non effettuiamo esami di laboratorio",
-  },
-  {
-    question: "Ci sono parcheggi disponibili?",
-
-    answer: "Sì, disponiamo di un ampio parcheggio di fronte al nostro studio",
-  },
-  {
-    question: "Cosa succede se arrivo in ritardo all'appuntamento?",
-    answer:
-      "Se arrivi in ritardo all'appuntamento, ti chiediamo di avvisarci il prima possibile, così da ora organizzarci al meglio",
-  },
-  {
-    question: "Come posso contattarvi per ulteriori informazioni?",
-    answer:
-      "Puoi contattarci scrivendo a info@centromedicoagliana.it o chiamando il numero 0574 027087 dal lunedì al venerdì, dalle 15:00 alle 19:00",
-  },
-];
+import { FAQS } from "@/data/faqs";
 ---
 
 <section id="faq" class="bg-secondary flex flex-col relative py-20">
@@ -73,8 +7,30 @@ const faqs = [
     <h2 class="section-title mb-4">FAQ</h2>
     <h3 class="section-subtitle">Hai qualche dubbio?</h3>
     <p>Qui trovi tutte le nostre risposte alle domande più frequenti</p>
-    <div class="text-secondary flex flex-col gap-4 mt-4">
-      <Accordion client:visible data={faqs} />
+    <div class="mt-4 flex flex-col">
+      {
+        FAQS.map(({ question, answer }, index) => (
+          <details
+            class="group border-b border-primaryLight/40 py-5"
+            open={index === 0}
+          >
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-lg font-bold text-white marker:content-none">
+              {question}
+              <svg
+                aria-hidden="true"
+                class="h-6 w-6 shrink-0 transition-transform group-open:rotate-180"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <p class="pt-4 text-lg leading-relaxed text-white">{answer}</p>
+          </details>
+        ))
+      }
     </div>
   </div>
 </section>

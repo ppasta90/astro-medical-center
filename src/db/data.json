@@ -1,6 +1,10 @@
 [
   {
-    "id": 1,
+    "id": "romani-endocrinologa",
+    "order": 1,
+    "slug": "romani-endocrinologa",
+    "honorific": "Dott.ssa",
+    "professionTitle": "Endocrinologa",
     "name": "Alessia",
     "surname": "Romani",
     "image": "doctors-images/romani.webp",
@@ -19,7 +23,11 @@
     "link": "https://www.doctolib.it/endocrinologo/pistoia/alessia-romani-pistoia?pid=practice-586757"
   },
   {
-    "id": 2,
+    "id": "noti-ginecologo",
+    "order": 2,
+    "slug": "noti-ginecologo",
+    "honorific": "Dott.",
+    "professionTitle": "Ginecologo",
     "name": "Giacomo",
     "surname": "Noti",
     "image": "doctors-images/noti.webp",
@@ -39,7 +47,11 @@
     "link": "https://www.doctolib.it/ginecologo-ostetrico/agliana/giacomo-noti?pid=practice-586757"
   },
   {
-    "id": 3,
+    "id": "bortot-urologa",
+    "order": 3,
+    "slug": "bortot-urologa",
+    "honorific": "Dott.ssa",
+    "professionTitle": "Urologa",
     "name": "Giulia",
     "surname": "Bortot",
     "image": "doctors-images/bortot.webp",
@@ -59,7 +71,11 @@
     "link": "https://www.doctolib.it/urologo/agliana/giulia-bortot?pid=practice-586757"
   },
   {
-    "id": 4,
+    "id": "anichini-nutrizionista",
+    "order": 4,
+    "slug": "anichini-nutrizionista",
+    "honorific": "Dott.ssa",
+    "professionTitle": "Nutrizionista",
     "name": "Anna Maria",
     "surname": "Anichini",
     "image": "doctors-images/anichini.webp",
@@ -78,7 +94,11 @@
     "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/anna-maria-anichini?pid=practice-586757"
   },
   {
-    "id": 5,
+    "id": "scandagli-dermatologa",
+    "order": 5,
+    "slug": "scandagli-dermatologa",
+    "honorific": "Dott.ssa",
+    "professionTitle": "Dermatologa",
     "name": "Ilaria",
     "surname": "Scandagli",
     "image": "doctors-images/scandagli.webp",
@@ -102,7 +122,11 @@
     "link": "https://www.doctolib.it/dermatologo-venereologo/pistoia/ilaria-scandagli?pid=practice-586757"
   },
   {
-    "id": 6,
+    "id": "prosperi-nutrizionista",
+    "order": 6,
+    "slug": "prosperi-nutrizionista",
+    "honorific": "Dott.ssa",
+    "professionTitle": "Nutrizionista",
     "name": "Linda",
     "surname": "Prosperi",
     "image": "doctors-images/prosperi.webp",
@@ -123,7 +147,11 @@
     "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/linda-prosperi?pid=practice-586757"
   },
   {
-    "id": 7,
+    "id": "pellegrino-podologa",
+    "order": 7,
+    "slug": "pellegrino-podologa",
+    "honorific": "Dott.ssa",
+    "professionTitle": "Podologa",
     "name": "Sandra",
     "surname": "Pellegrino",
     "image": "doctors-images/pellegrino.webp",
@@ -147,7 +175,11 @@
     "link": "https://www.doctolib.it/podologo/agliana/alessandra-pellegrino-agliana?pid=practice-586757"
   },
   {
-    "id": 8,
+    "id": "pastacaldi-ecografista",
+    "order": 8,
+    "slug": "pastacaldi-ecografista",
+    "honorific": "Dott.",
+    "professionTitle": "Ecografista",
     "name": "Sandro",
     "surname": "Pastacaldi",
     "image": "doctors-images/pastacaldi.webp",
@@ -166,7 +198,11 @@
     "link": "https://www.doctolib.it/ecografo/agliana/sandro-pastacaldi?pid=practice-586757"
   },
   {
-    "id": 9,
+    "id": "mastrorosato-nutrizionista",
+    "order": 9,
+    "slug": "mastrorosato-nutrizionista",
+    "honorific": "Dott.ssa",
+    "professionTitle": "Nutrizionista",
     "name": "Francesca",
     "surname": "Mastrorosato",
     "image": "doctors-images/mastrorosato.webp",
@@ -191,12 +227,16 @@
     "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/francesca-mastrorosato-agliana?pid=practice-586757"
   },
   {
-    "id": 10,
+    "id": "marangella-psicologa-sessuologa",
+    "order": 10,
+    "slug": "marangella-psicologa-sessuologa",
+    "honorific": "Dott.ssa",
+    "professionTitle": "Psicologa e Sessuologa",
     "name": "Dalila",
     "surname": "Marangella",
     "image": "doctors-images/marangella.webp",
     "bio": "Laureata in Psicologia, sono psicologa e consulente in sessuologia, iscritta all'albo A degli psicologi della Toscana , alla Fiss( Federazione Italiana Sessuologia Scientifica) e ASI ( Associazione dei sessuologi Italiani) .La mia attività è rivolta a singoli individui o coppie, adolescenti e adulti , offrendo uno spazio di informazione , ascolto , supporto  e riflessione attraverso cui esplorare ed affrontare difficoltà relative alla sfera della sessualità e volte alla prevenzione e promozione del benessere sessuale, ma anche relative a stress,ansia , dipendenza affettiva, percorsi psico educativi , sostegno alla genitorialità.",
-    "specialization": "Psiocologia e sessuologia",
+    "specialization": "Psicologia e sessuologia",
     "services": [
       "sessualità",
       "stress",
@@ -209,7 +249,11 @@
     "link": "https://www.doctolib.it/psicologo/agliana/dalila-marangella?pid=practice-586757"
   },
   {
-    "id": 11,
+    "id": "cirillo-massofisioterapista",
+    "order": 11,
+    "slug": "cirillo-massofisioterapista",
+    "honorific": "Dott.ssa",
+    "professionTitle": "Massofisioterapista",
     "name": "Jessica",
     "surname": "Cirillo",
     "image": "doctors-images/cirillo.webp",
@@ -226,7 +270,11 @@
     "link": ""
   },
   {
-    "id": 12,
+    "id": "della-latta-podologo",
+    "order": 12,
+    "slug": "della-latta-podologo",
+    "honorific": "Dott.",
+    "professionTitle": "Podologo",
     "name": "Daniele",
     "surname": "Della Latta",
     "image": "doctors-images/dellalatta.webp",
@@ -242,7 +290,11 @@
     "link": "https://www.doctolib.it/podologo/camaiore/daniele-della-latta?pid=practice-586757"
   },
   {
-    "id": 13,
+    "id": "giannini-psicologa",
+    "order": 13,
+    "slug": "giannini-psicologa",
+    "honorific": "Dott.ssa",
+    "professionTitle": "Psicologa",
     "name": "Laura",
     "surname": "Giannini",
     "image": "doctors-images/giannini.webp",
@@ -252,7 +304,11 @@
     "link": "https://www.doctolib.it/psicologo/agliana/laura-giannini?pid=practice-586757"
   },
   {
-    "id": 14,
+    "id": "faleri-dietista",
+    "order": 14,
+    "slug": "faleri-dietista",
+    "honorific": "Dott.ssa",
+    "professionTitle": "Dietista",
     "name": "Ilenia",
     "surname": "Faleri",
     "image": "doctors-images/faleri.webp",
@@ -271,7 +327,11 @@
     "link": "https://www.doctolib.it/dietista/agliana/ilenia-faleri?pid=practice-586757"
   },
   {
-    "id": 15,
+    "id": "romiti-psicologa",
+    "order": 15,
+    "slug": "romiti-psicologa",
+    "honorific": "Dott.ssa",
+    "professionTitle": "Psicologa",
     "name": "Serena",
     "surname": "Romiti",
     "image": "doctors-images/romiti.webp",
@@ -287,7 +347,11 @@
     "link": "https://www.doctolib.it/psicologo/agliana/serena-romiti?pid=practice-586757"
   },
   {
-    "id": 16,
+    "id": "coppini-psicologa",
+    "order": 16,
+    "slug": "coppini-psicologa",
+    "honorific": "Dott.ssa",
+    "professionTitle": "Psicologa",
     "name": "Carlotta",
     "surname": "Coppini",
     "image": "doctors-images/coppini.webp",
@@ -303,7 +367,11 @@
     "link": "https://www.doctolib.it/psicologo/agliana/carlotta-coppini?pid=practice-586757"
   },
   {
-    "id": 17,
+    "id": "maestrini-fisioterapista",
+    "order": 17,
+    "slug": "maestrini-fisioterapista",
+    "honorific": "Dott.ssa",
+    "professionTitle": "Fisioterapista",
     "name": "Francesca",
     "surname": "Maestrini",
     "image": "doctors-images/maestrini.webp",
@@ -318,7 +386,11 @@
     "link": "https://www.doctolib.it/fisioterapista/agliana/francesca-maestrini?pid=practice-586757"
   },
   {
-    "id": 18,
+    "id": "giovannuzzi-psichiatra",
+    "order": 18,
+    "slug": "giovannuzzi-psichiatra",
+    "honorific": "Dott.ssa",
+    "professionTitle": "Psichiatra",
     "name": "Irene",
     "surname": "Giovannuzzi",
     "image": "doctors-images/giovannuzzi.webp",

@@ -6,11 +6,25 @@ import Location from "../components/Location.astro";
 import Contacts from "../components/Contacts.astro";
 import Faqs from "../components/Faqs.astro";
 import CarouselWrapper from "@/components/CarouselWrapper.astro";
+import { FAQS } from "@/data/faqs";
+
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map(({ question, answer }) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: answer,
+    },
+  })),
+};
 ---
 
-<Layout>
+<Layout structuredData={faqStructuredData}>
   <Hero />
-  <CarouselWrapper/>
+  <CarouselWrapper />
   <Specializations />
   <Location />
   <Contacts />

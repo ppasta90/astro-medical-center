@@ -1,22 +1,6 @@
 ---
-import { FaMapMarkerAlt } from "react-icons/fa";
-import { MdOpenInNew, MdWatch, MdWatchLater } from "react-icons/md";
+import { SITE } from "@/config/site";
 ---
-
-<script>
-  const openGoogleMaps = () => {
-    window.open(
-      "https://maps.app.goo.gl/vwhCbpj6a6aBzzmH6",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  };
-
-  document.getElementById("mapLink")?.addEventListener("click", (event) => {
-    event.preventDefault();
-    openGoogleMaps();
-  });
-</script>
 
 <section id="dove-siamo" class="flex flex-col relative py-20">
   <div
@@ -29,16 +13,35 @@ import { MdOpenInNew, MdWatch, MdWatchLater } from "react-icons/md";
         dell&apos;autostrada A11
       </h3>
       <div class="flex items-center gap-1 text-darkBlue">
-        <button class="bg-opacity-0 border-none grid place-content-center">
-          <FaMapMarkerAlt size={20} />
-        </button>
+        <span aria-hidden="true" class="grid place-content-center">
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"
+            ></path><circle cx="12" cy="10" r="2"></circle>
+          </svg>
+        </span>
         <p class="text-lg font-sans">
-          Via Michelagelo Buonarroti, n.c. mancante, Agliana (PT)
+          {SITE.address.display}
         </p>
       </div>
       <div class="flex items-center gap-1">
-        <span>
-          <MdWatchLater size={20} />
+        <span aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
+          </svg>
         </span>
         <p class="text-lg font-sans">Lunedì - Venerdì 15:00 - 19:00</p>
       </div>
@@ -46,30 +49,60 @@ import { MdOpenInNew, MdWatch, MdWatchLater } from "react-icons/md";
         <a
           id="mapLink"
           class="inline-flex gap-1"
-          href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2874.793570456051!2d11.01097547535706!3d43.901541971091454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132af51c952e35ff%3A0x9f40d897e8d92b8e!2sVia%20Michelangelo%20Buonarroti%2C%203%2C%2051031%20Agliana%20PT!5e0!3m2!1sit!2sit!4v1700825573878!5m2!1sit!2sit"
+          href={SITE.address.directionsUrl}
         >
           <span
             class="bg-opacity-0 border-none grid place-content-center cursor-pointer"
+            aria-hidden="true"
           >
-            <MdOpenInNew size={20} />
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M14 4h6v6M20 4 10 14"></path><path
+                d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"
+              ></path>
+            </svg>
           </span>
           <p class="text-lg font-sans">Come raggiungerci</p>
         </a>
       </div>
     </div>
-    <div class="w-full lg:w-1/2">
-      <iframe
-        title="Google Maps Centro Medico Agliana"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5749.587138120305!2d11.01355!3d43.901542!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132af5944bb76417%3A0x83f7e34050001a6d!2sCentro%20Medico%20Agliana%20Sas%20di%20Pastacaldi%20Paolo%20%26%20C.!5e0!3m2!1sit!2sit!4v1726503971408!5m2!1sit!2sit"
-        width="600"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
-        loading="eager"
-        fetchpriority="high"
-        referrerpolicy="no-referrer-when-downgrade"
-        aria-label="Mappa Google del Centro Medico Agliana"
-      ></iframe>
+    <div
+      class="flex min-h-80 w-full items-center justify-center rounded-2xl bg-secondaryLight p-8 text-center lg:w-1/2"
+    >
+      <div class="max-w-md text-darkBlue">
+        <svg
+          aria-hidden="true"
+          class="mx-auto mb-5"
+          viewBox="0 0 24 24"
+          width="42"
+          height="42"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"
+          ></path><circle cx="12" cy="10" r="2"></circle>
+        </svg>
+        <h3 class="text-2xl font-bold">Apri la posizione su Google Maps</h3>
+        <p class="mt-3 leading-relaxed">
+          La mappa non viene caricata automaticamente, così la pagina resta più
+          veloce e non contatta Google senza una tua azione.
+        </p>
+        <a
+          href={SITE.address.directionsUrl}
+          target="_blank"
+          rel="noreferrer noopener"
+          class="blue-cta mt-6 inline-flex"
+        >
+          APRI GOOGLE MAPS
+        </a>
+      </div>
     </div>
   </div>
 </section>

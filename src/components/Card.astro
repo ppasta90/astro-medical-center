@@ -1,0 +1,62 @@
+---
+import { SITE } from "@/config/site";
+import type { Doctor } from "@/types/doctor";
+
+interface Props {
+  doctor: Doctor;
+  compact?: boolean;
+}
+
+const { doctor, compact = false } = Astro.props;
+---
+
+<article
+  class="flex h-full flex-col rounded-2xl bg-secondaryLight p-4 text-darkBlue sm:p-8"
+  data-doctor-card
+  data-specialization={doctor.specialization}
+>
+  <header class="flex flex-col text-center">
+    <img
+      src={`/${doctor.image}`}
+      class="mx-auto aspect-square rounded-full object-cover"
+      alt={`Foto di ${doctor.honorific} ${doctor.name} ${doctor.surname}`}
+      width="112"
+      height="112"
+      loading="lazy"
+      decoding="async"
+    />
+    <h2 class="mt-4 text-2xl font-bold">
+      {doctor.name}
+      {doctor.surname}
+    </h2>
+    <p class="mt-2 text-xl">{doctor.specialization}</p>
+    <div class="mt-5 flex flex-wrap justify-center gap-3">
+      <a href={SITE.contact.phone.href} class="blue-cta">CHIAMA ORA</a>
+      {
+        doctor.link && (
+          <a
+            href={doctor.link}
+            target="_blank"
+            rel="noreferrer noopener"
+            class="white-cta"
+          >
+            PRENOTA ONLINE
+          </a>
+        )
+      }
+    </div>
+  </header>
+
+  <div class="mt-8 flex flex-1 flex-col rounded-xl bg-white p-6">
+    <h3 class="text-lg font-bold text-secondary">Esperienze</h3>
+    <p class:list={["mt-3 leading-relaxed", compact && "line-clamp-5"]}>
+      {doctor.bio}
+    </p>
+    <a
+      href={`/${doctor.slug}`}
+      class="mt-5 inline-flex font-bold text-secondary underline underline-offset-4"
+    >
+      Approfondisci
+    </a>
+  </div>
+</article>

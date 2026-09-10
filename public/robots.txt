@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow:
-Sitemap: https://centromedicoagliana.it/sitemap-index.xml
+Sitemap: https://www.centromedicoagliana.it/sitemap-index.xml

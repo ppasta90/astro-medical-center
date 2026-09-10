@@ -1,26 +1,31 @@
-<section class="text-white text-center bg-primaryLight pb-20 pt-40 xl:pb-28 xl:pt-48">
-  <div
-    class="flex flex-col justify-center items-center bg-primary-light text-secondary"
-  >
+---
+import { SITE } from "@/config/site";
+---
+
+<section
+  class="text-white text-center bg-primaryLight pb-20 pt-40 xl:pb-28 xl:pt-48"
+>
+  <div class="flex flex-col justify-center items-center text-secondary">
     <h1
       class="font-serif text-secondary mb-4 text-5xl md:text-6xl lg:text-[80px]"
     >
       CENTRO MEDICO AGLIANA
     </h1>
     <h2
-      class="font-dmsans max-w-[90%] lg:max-w-[70%] text-xl md:text-2xl mb-10 lg:mb-8 text-darkBlue"
+      class="font-sans max-w-[90%] lg:max-w-[70%] text-xl md:text-2xl mb-10 lg:mb-8 text-darkBlue"
     >
       Siamo uno studio privato che ospita professionisti operanti in varie
       discipline mediche
     </h2>
     <div class="flex flex-col md:flex-row items-center gap-4">
       <div class="green-cta">
-        <a href="tel:0574027087" onclick="gtag_report_conversion('tel:0574027087');">CHIAMA ORA!</a>
+        <a href={SITE.contact.phone.href}>CHIAMA ORA!</a>
       </div>
       <div class="blue-cta py-[10px]">
         <a
-          href="https://www.doctolib.it/centro-medico/agliana/centro-medico-agliana-sas-di-pastacaldi-paolo-c"
-          target="_blank">PRENOTA ONLINE</a
+          href={SITE.booking.profileUrl}
+          target="_blank"
+          rel="noreferrer noopener">PRENOTA ONLINE</a
         >
       </div>
     </div>

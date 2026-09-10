@@ -1,14 +1,19 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
-
-import partytown from "@astrojs/partytown";
+import { SITE } from "./src/config/site";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://www.centromedicoagliana.it",
-  integrations: [tailwind({
-    applyBaseStyles: false
-  }), react(), sitemap(), partytown()]
+  site: SITE.url,
+  trailingSlash: "never",
+  build: {
+    format: "file",
+  },
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    sitemap(),
+  ],
 });

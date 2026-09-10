@@ -1,0 +1,95 @@
+---
+import Card from "@/components/Card.astro";
+import type { Doctor } from "@/types/doctor";
+
+interface Props {
+  doctors: Doctor[];
+  filterable?: boolean;
+  compact?: boolean;
+  homePreview?: boolean;
+}
+
+const {
+  doctors,
+  filterable = false,
+  compact = false,
+  homePreview = false,
+} = Astro.props;
+const specializations = [
+  ...new Set(doctors.map(({ specialization }) => specialization)),
+].sort((first, second) => first.localeCompare(second, "it"));
+---
+
+<div data-doctors-list>
+  {
+    filterable && (
+      <div class="mb-8 flex max-w-lg flex-col gap-2 px-6 md:px-20">
+        <label
+          for="specialization-select"
+          class="font-sans text-lg font-semibold text-white"
+        >
+          Filtra per specializzazione
+        </label>
+        <select
+          id="specialization-select"
+          data-specialization-filter
+          class="rounded-md border-2 border-transparent bg-white px-4 py-3 font-sans text-darkBlue focus:border-primaryLight"
+        >
+          <option value="">Tutte le specializzazioni</option>
+          {specializations.map((specialization) => (
+            <option value={specialization}>{specialization}</option>
+          ))}
+        </select>
+        <p class="text-sm text-white" aria-live="polite" data-filter-status>
+          {doctors.length} specialisti disponibili
+        </p>
+      </div>
+    )
+  }
+
+  <div
+    class="grid grid-cols-1 gap-8 px-6 md:px-20 lg:grid-cols-2 2xl:grid-cols-3"
+  >
+    {
+      doctors.map((doctor, index) => (
+        <div class:list={[homePreview && index === 2 && "hidden 2xl:block"]}>
+          <Card doctor={doctor} compact={compact} />
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  document
+    .querySelectorAll<HTMLElement>("[data-doctors-list]")
+    .forEach((list) => {
+      const select = list.querySelector<HTMLSelectElement>(
+        "[data-specialization-filter]",
+      );
+      const status = list.querySelector<HTMLElement>("[data-filter-status]");
+      const cards = [
+        ...list.querySelectorAll<HTMLElement>("[data-doctor-card]"),
+      ];
+
+      select?.addEventListener("change", () => {
+        const selected = select.value;
+        let visibleCount = 0;
+
+        cards.forEach((card) => {
+          const isVisible =
+            !selected || card.dataset.specialization === selected;
+          card.parentElement?.toggleAttribute("hidden", !isVisible);
+          if (isVisible) visibleCount += 1;
+        });
+
+        if (status) {
+          status.textContent = `${visibleCount} ${
+            visibleCount === 1
+              ? "specialista disponibile"
+              : "specialisti disponibili"
+          }`;
+        }
+      });
+    });
+</script>

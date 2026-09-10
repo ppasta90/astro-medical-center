@@ -1,0 +1,104 @@
+<!--
+  Consent must be initialized before any Google tag. Iubenda's prior-blocking
+  script then controls when the analytics scripts below are allowed to run.
+-->
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  window.gtag =
+    window.gtag ||
+    function (...args) {
+      window.dataLayer.push(args);
+    };
+
+  window.gtag("consent", "default", {
+    ad_storage: "denied",
+    analytics_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    wait_for_update: 500,
+  });
+</script>
+
+<script is:inline>
+  window._iub = window._iub || [];
+  window._iub.csConfiguration = {
+    siteId: 3774052,
+    cookiePolicyId: 34164499,
+    lang: "it",
+    googleConsentMode: true,
+    googleAdsDataRedaction: true,
+  };
+</script>
+<script
+  is:inline
+  type="text/javascript"
+  src="https://cs.iubenda.com/autoblocking/3774052.js"></script>
+<script
+  is:inline
+  type="text/javascript"
+  src="https://cdn.iubenda.com/cs/iubenda_cs.js"
+  charset="UTF-8"
+  async></script>
+
+<!-- Google tag (gtag.js) -->
+<script
+  is:inline
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-ZSYEEGY2J7"></script>
+<script is:inline>
+  window.gtag("js", new Date());
+  window.gtag("config", "G-ZSYEEGY2J7");
+  window.gtag("config", "AW-16456523599");
+
+  window.gtag_report_conversion = function (url) {
+    let navigated = false;
+    const navigate = function () {
+      if (!url || navigated) return;
+      navigated = true;
+      window.location.href = url;
+    };
+
+    window.gtag("event", "conversion", {
+      send_to: "AW-16456523599/hG7fCL_g-L8bEM--iqc9",
+      event_callback: navigate,
+      event_timeout: 1200,
+    });
+
+    if (url) window.setTimeout(navigate, 1200);
+    return false;
+  };
+
+  document.addEventListener("click", function (event) {
+    if (!(event.target instanceof Element)) return;
+
+    const telephoneLink = event.target.closest('a[href^="tel:"]');
+    if (
+      !telephoneLink ||
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey
+    )
+      return;
+
+    event.preventDefault();
+    window.gtag_report_conversion(telephoneLink.href);
+  });
+</script>
+
+<!-- Google Tag Manager -->
+<script is:inline>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    const f = d.getElementsByTagName(s)[0];
+    const j = d.createElement(s);
+    const dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "GTM-NPF3KJV6");
+</script>
+<!-- End Google Tag Manager -->

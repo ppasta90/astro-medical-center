@@ -1,66 +1,39 @@
 # Google Ads Conversion Tracking - Evento "Contatto"
 
-## Implementazione completata
+## Implementazione
 
-Sono stati aggiunti gli eventi di conversione Google Ads a tutti i punti in cui l'utente può effettuare una chiamata cliccando su un pulsante.
+Il tracking delle chiamate è centralizzato in `src/components/Analytics.astro` e si
+applica automaticamente a tutti i link con `href="tel:..."`, inclusi quelli
+renderizzati dai componenti Astro.
 
 ### ID Conversione
 - **Conversion ID**: `AW-16456523599`
 - **Conversion Label**: `hG7fCL_g-L8bEM--iqc9`
 
-### Punti di tracking implementati
+### Copertura
 
-#### 1. **Layout principale** (`src/layouts/Layout.astro`)
-- Aggiunto script `gtag_report_conversion()` nel `<head>`
-- Questo script è disponibile globalmente su tutte le pagine
-
-#### 2. **Hero section** (`src/components/Hero.astro`)
-- ✅ Pulsante "CHIAMA ORA!" nella sezione hero
-  - URL: `tel:0574027087`
-  - Evento inviato al click
-
-#### 3. **Header desktop** (`src/components/Header.tsx`)
-- ✅ Pulsante "CHIAMA ORA" nel menu desktop (hidden su tablet)
-  - URL: `tel:0574027087`
-  - Implementato con `onClick` handler React
-
-#### 4. **Sezione Contatti** (`src/components/Contacts.astro`)
-- ✅ Link telefonico con icona
-  - URL: `tel:0574027087`
-  - Evento tracciato al click
-
-#### 5. **Pagina Profilo Medico** (`src/pages/[slug].astro`)
-- ✅ Pulsante "CHIAMA ORA" (mobile only)
-  - URL: `tel:+390574718506`
-  - Evento tracciato al click
-
-#### 6. **Menu Mobile** (`src/components/DrawerContent.tsx`)
-- ✅ Link "CHIAMA" nel drawer menu
-  - URL: `tel:0574027087`
-  - Evento tracciato + chiusura drawer
-
-#### 7. **Componente DoctorProfile** (`src/components/DoctorProfile.astro`)
-- ✅ Pulsante "📞 CHIAMA ORA: 0574 027 087"
-  - URL: `tel:0574027087`
-  - Evento tracciato al click
-  - (Componente non attualmente utilizzato, ma aggiornato per completezza)
+- Hero e sezione contatti
+- Header desktop e menu mobile
+- Card degli specialisti
+- Pagine dei medici
+- Pagina "Lavora con noi"
+- Qualsiasi futuro link telefonico inserito nel layout principale
 
 ## Come funziona il tracking
 
-Quando un utente clicca su uno dei pulsanti telefono:
+Quando un utente clicca su un link telefonico:
 
-1. Viene triggerato l'evento di conversione Google Ads
-2. L'evento viene inviato con:
-   - `'send_to': 'AW-16456523599/hG7fCL_g-L8bEM--iqc9'`
-   - `'event_callback'`: callback che esegue l'azione effettiva (tel: link)
-
-3. Google Ads traccia la conversione
-4. Dopo il tracciamento, la navigazione procede normalmente
+1. Il listener delegato intercetta il link `tel:`.
+2. `window.gtag_report_conversion()` accoda l'evento Google Ads.
+3. La chiamata viene aperta tramite `event_callback`.
+4. Un fallback di 1200 ms garantisce comunque l'apertura del dialer se il tag
+   non richiama la callback.
 
 ## Numeri di telefono tracciati
 
-- **Numero principale**: `0574027087` (Centro Medico Agliana)
-- **Numero alternativo**: `+390574718506` (Nelle pagine dei medici)
+- **Numero principale**: `+390574027087` (Centro Medico Agliana)
+- Il recapito è definito una sola volta in `src/config/site.ts` e riutilizzato
+  da tutti i componenti.
 
 ## Verifica del tracking
 
@@ -69,8 +42,9 @@ Per verificare che il tracking funzioni:
 1. Apri Chrome DevTools (F12)
 2. Vai alla scheda "Network"
 3. Filtra per "conversion" o "google"
-4. Clicca su uno dei pulsanti telefonici
-5. Dovresti vedere una richiesta a `googleads.g.doubleclick.net` con l'evento di conversione
+4. Accetta i cookie di misurazione nel banner Iubenda
+5. Clicca su uno dei pulsanti telefonici
+6. Verifica la richiesta di conversione e il valore `send_to`
 
 Oppure in Google Ads:
 1. Vai a "Strumenti" → "Conversioni"
@@ -79,7 +53,11 @@ Oppure in Google Ads:
 
 ## Note importanti
 
-- Lo script di conversione è agnostico al tipo di browser/device
-- Funziona sia su desktop che mobile
-- I numeri tel: sono standard HTML e funzionano su tutti i device
-- L'evento viene inviato indipendentemente se l'utente ha un'app telefonica o meno
+- `gtag` e `gtag_report_conversion` sono esposti esplicitamente su `window`.
+- Gli handler non sono duplicati nei singoli componenti.
+- Il Consent Mode v2 parte con tutte le categorie Google impostate su `denied`.
+- Iubenda è inizializzato prima di GA4, Google Ads e Google Tag Manager e aggiorna
+  il consenso tramite `googleConsentMode: true`.
+- Il fallback `<noscript>` di GTM è omesso: senza JavaScript la CMP non potrebbe
+  acquisire il consenso prima del caricamento del container.
+- La stessa configurazione è usata anche dalla pagina 404.

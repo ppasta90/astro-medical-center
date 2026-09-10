@@ -1,90 +1,53 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import specializationsData from "../db/data.json";
-import { capitalizeFirstLetter, generateDoctorSlug } from "@/lib/utils";
+import { capitalizeFirstLetter } from "@/lib/utils";
+import { SITE } from "@/config/site";
+import { getDoctors } from "@/lib/doctors";
+import type { Doctor } from "@/types/doctor";
 
-// Detect gender for profession title
-const detectGender = (name: string): "male" | "female" => {
-  const femaleNames = [
-    "alessia",
-    "giulia",
-    "anna",
-    "ilaria",
-    "linda",
-    "sandra",
-    "francesca",
-    "dalila",
-    "jessica",
-    "marianna",
-    "laura",
-    "ilenia",
-    "serena",
-    "rachele",
-    "carlotta",
-  ];
-  const maleExceptions = ["andrea", "luca", "nicola", "mattia"];
-  const normalizedName = name.toLowerCase().trim();
+export async function getStaticPaths() {
+  const doctors = await getDoctors();
 
-  if (femaleNames.includes(normalizedName)) return "female";
-  if (maleExceptions.includes(normalizedName)) return "male";
-  if (normalizedName.endsWith("a")) return "female";
-  return "male";
-};
-
-const specializationToProfession: {
-  [key: string]: { male: string; female: string };
-} = {
-  Audiologia: { male: "Audiologo", female: "Audiologa" },
-  Otorinolaringoiatria: { male: "Otorino", female: "Otorino" },
-  Oculistica: { male: "Oculista", female: "Oculista" },
-  Endocrinologia: { male: "Endocrinologo", female: "Endocrinologa" },
-  Ginecologia: { male: "Ginecologo", female: "Ginecologa" },
-  Podologia: { male: "Podologo", female: "Podologa" },
-  Dermatologia: { male: "Dermatologo", female: "Dermatologa" },
-  Urologia: { male: "Urologo", female: "Urologa" },
-  Psicologia: { male: "Psicologo", female: "Psicologa" },
-  Psichiatria: { male: "Psichiatra", female: "Psichiatra" },
-  Senologia: { male: "Senologo", female: "Senologa" },
-  Ostetricia: { male: "Ostetrico", female: "Ostetrica" },
-  Nutrizione: { male: "Nutrizionista", female: "Nutrizionista" },
-  Dietistica: { male: "Dietista", female: "Dietista" },
-  Ecografia: { male: "Ecografista", female: "Ecografista" },
-  Massofisioterapia: {
-    male: "Massofisioterapista",
-    female: "Massofisioterapista",
-  },
-  "Psiocologia e sessuologia": {
-    male: "Psicologo e Sessuologo",
-    female: "Psicologa e Sessuologa",
-  },
-  Fisioterapia: { male: "Fisioterapista", female: "Fisioterapista" },
-};
-
-export function getStaticPaths() {
-  return specializationsData.map((doctor) => ({
-    params: {
-      slug: generateDoctorSlug(
-        doctor.surname,
-        doctor.specialization,
-        doctor.name,
-      ),
-    },
+  return doctors.map((doctor) => ({
+    params: { slug: doctor.slug },
     props: { doctor },
   }));
 }
 
+interface Props {
+  doctor: Doctor;
+}
+
 const { doctor } = Astro.props;
-const gender = detectGender(doctor.name);
-const professionTitle =
-  specializationToProfession[doctor.specialization]?.[gender] ||
-  doctor.specialization;
-const pageTitle = `Dott. ${doctor.name} ${doctor.surname} - ${professionTitle}`;
-const specializedGender =
-  gender === "female" ? "specializzata" : "specializzato";
-const pageDescription = `Conosci il Dott. ${doctor.name} ${doctor.surname}, ${professionTitle} ${specializedGender} in ${doctor.specialization} presso Centro Medico Agliana. Prenota una visita online o chiama per informazioni.`;
+const pageTitle = `${doctor.honorific} ${doctor.name} ${doctor.surname} - ${doctor.professionTitle}`;
+const pageDescription = `${doctor.honorific} ${doctor.name} ${doctor.surname}, ${doctor.professionTitle} presso il Centro Medico Agliana. Prenota una visita online o chiama per informazioni.`;
+const physicianStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "@id": `${SITE.url}/${doctor.slug}#physician`,
+  name: `${doctor.honorific} ${doctor.name} ${doctor.surname}`,
+  honorificPrefix: doctor.honorific,
+  jobTitle: doctor.professionTitle,
+  description: doctor.bio,
+  image: `${SITE.url}/${doctor.image}`,
+  url: `${SITE.url}/${doctor.slug}`,
+  medicalSpecialty: doctor.specialization,
+  telephone: SITE.contact.phone.e164,
+  worksFor: {
+    "@id": `${SITE.url}/#medical-clinic`,
+  },
+  ...(doctor.link ? { sameAs: [doctor.link] } : {}),
+};
 ---
 
-<Layout pageDescription={pageDescription} pageTitle={pageTitle}>
+<Layout
+  pageDescription={pageDescription}
+  pageTitle={pageTitle}
+  socialImage={`/${doctor.image}`}
+  socialImageAlt={`Foto di ${doctor.honorific} ${doctor.name} ${doctor.surname}`}
+  ogType="profile"
+  structuredData={physicianStructuredData}
+>
   <section class="bg-secondary pt-32 pb-20">
     <!-- Header Section -->
     <div class="w-[90%] m-auto mb-12">
@@ -93,20 +56,24 @@ const pageDescription = `Conosci il Dott. ${doctor.name} ${doctor.surname}, ${pr
         <div class="flex-shrink-0 flex justify-center">
           <img
             src={`/${doctor.image}`}
-            alt={`Foto del Dott. ${doctor.name} ${doctor.surname}`}
+            alt={`Foto di ${doctor.honorific} ${doctor.name} ${doctor.surname}`}
             class="w-72 h-72 rounded-3xl object-cover"
-            loading="lazy"
+            width="288"
+            height="288"
+            loading="eager"
+            fetchpriority="high"
           />
         </div>
 
         <!-- Info Right -->
         <div class="flex-grow text-center md:text-left">
           <h1 class="section-title text-center md:text-left mb-4">
-            Dott. {doctor.name}
+            {doctor.honorific}
+            {doctor.name}
             {doctor.surname}
           </h1>
           <h2 class="section-subtitle text-white text-center md:text-left mb-8">
-            {professionTitle}
+            {doctor.professionTitle}
           </h2>
           {
             doctor.link === "" && (
@@ -132,11 +99,7 @@ const pageDescription = `Conosci il Dott. ${doctor.name} ${doctor.surname}, ${pr
               )
             }
             <!-- Mobile only CHIAMA ORA button -->
-            <a
-              href="tel:+390574718506"
-              onclick="gtag_report_conversion('tel:+390574718506');"
-              class="white-cta block sm:hidden"
-            >
+            <a href={SITE.contact.phone.href} class="white-cta block sm:hidden">
               CHIAMA ORA
             </a>
           </div>
@@ -176,7 +139,7 @@ const pageDescription = `Conosci il Dott. ${doctor.name} ${doctor.surname}, ${pr
       <div class="text-center mt-16">
         <a
           href="/specializzazioni"
-          class="inline-flex items-center text-primary font-bold hover:underline text-xl font-serif"
+          class="inline-flex items-center text-primaryLight font-bold hover:underline text-xl font-serif"
         >
           ← Torna alla lista degli specialisti
         </a>

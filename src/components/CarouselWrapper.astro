@@ -1,5 +1,5 @@
 ---
-import { getImage } from "astro:assets";
+import { Picture } from "astro:assets";
 import img1 from "../images/esterno1.webp";
 import img2 from "../images/esterno2.webp";
 import img3 from "../images/esterno3.webp";
@@ -8,107 +8,160 @@ import img5 from "../images/ingresso1.webp";
 import img6 from "../images/ingresso2.webp";
 import img7 from "../images/ufficio1.webp";
 import img8 from "../images/ufficio2.webp";
-import Carousel from "./Carousel";
-
-const optimizedImg1 = await getImage({
-  src: img1,
-  format: "webp",
-  width: 1500,
-  height: 1000,
-  quality: 60,
-});
-const optimizedImg2 = await getImage({
-  src: img2,
-  format: "webp",
-  width: 1500,
-  height: 1000,
-  quality: 60,
-});
-const optimizedImg3 = await getImage({
-  src: img3,
-  format: "webp",
-  width: 1500,
-  height: 1000,
-  quality: 60,
-});
-const optimizedImg4 = await getImage({
-  src: img4,
-  format: "webp",
-  width: 1500,
-  height: 1000,
-  quality: 60,
-});
-const optimizedImg5 = await getImage({
-  src: img5,
-  format: "webp",
-  width: 1500,
-  height: 1000,
-  quality: 60,
-});
-const optimizedImg6 = await getImage({
-  src: img6,
-  format: "webp",
-  width: 1500,
-  height: 1000,
-  quality: 60,
-});
-const optimizedImg7 = await getImage({
-  src: img7,
-  format: "webp",
-  width: 1500,
-  height: 1000,
-  quality: 60,
-});
-const optimizedImg8 = await getImage({
-  src: img8,
-  format: "webp",
-  width: 1500,
-  height: 1000,
-  quality: 60,
-});
 
 const images = [
-  {
-    src: optimizedImg1.src,
-    title: "Esterno",
-    alt: "esterno",
-  },
-  {
-    src: optimizedImg2.src,
-    title: "Porta esterna",
-    alt: "porta esterna",
-  },
-  {
-    src: optimizedImg3.src,
-    title: "Porta esterna",
-    alt: "Porta esterna",
-  },
-  {
-    src: optimizedImg4.src,
-    title: "logo centro medico",
-    alt: "logo centro medico",
-  },
-  {
-    src: optimizedImg5.src,
-    title: "Ingresso studio",
-    alt: "Ingresso studio",
-  },
-  {
-    src: optimizedImg6.src,
-    title: "Ingresso studio",
-    alt: "Ingresso studio",
-  },
-  {
-    src: optimizedImg7.src,
-    title: "Stanza dettaglio",
-    alt: "Stanza dettaglio",
-  },
-  {
-    src: optimizedImg8.src,
-    title: "Stanza dettaglio",
-    alt: "Stanza dettaglio",
-  },
+  { src: img1, alt: "Ingresso esterno del Centro Medico Agliana" },
+  { src: img2, alt: "Porta d'ingresso del Centro Medico Agliana" },
+  { src: img3, alt: "Esterno del Centro Medico Agliana" },
+  { src: img4, alt: "Logo del Centro Medico Agliana" },
+  { src: img5, alt: "Ingresso interno del centro medico" },
+  { src: img6, alt: "Area di accoglienza del centro medico" },
+  { src: img7, alt: "Dettaglio di uno studio medico" },
+  { src: img8, alt: "Ambiente di uno studio medico" },
 ];
 ---
 
-<Carousel images={images} client:load />
+<section
+  class="relative bg-white"
+  aria-label="Galleria fotografica del Centro Medico Agliana"
+  aria-roledescription="carosello"
+  data-carousel
+>
+  <div class="aspect-[3/2] overflow-hidden bg-gray-100">
+    {
+      images.map((image, index) => (
+        <figure
+          data-carousel-slide
+          role="group"
+          aria-roledescription="diapositiva"
+          aria-label={`${index + 1} di ${images.length}`}
+          hidden={index !== 0}
+          class="h-full w-full"
+        >
+          <Picture
+            src={image.src}
+            formats={["avif"]}
+            fallbackFormat="webp"
+            widths={[640, 960, 1500]}
+            sizes="100vw"
+            quality={65}
+            alt={image.alt}
+            loading={index === 0 ? "eager" : "lazy"}
+            decoding="async"
+            class="h-full w-full object-cover"
+          />
+        </figure>
+      ))
+    }
+  </div>
+
+  <div
+    class="absolute inset-x-0 bottom-4 flex items-center justify-center gap-3"
+  >
+    <button type="button" class="carousel-control" data-carousel-previous>
+      <span aria-hidden="true">←</span>
+      <span class="sr-only">Immagine precedente</span>
+    </button>
+    <button
+      type="button"
+      class="carousel-control min-w-28"
+      data-carousel-toggle
+    >
+      <span data-carousel-toggle-label>Pausa</span>
+    </button>
+    <button type="button" class="carousel-control" data-carousel-next>
+      <span aria-hidden="true">→</span>
+      <span class="sr-only">Immagine successiva</span>
+    </button>
+  </div>
+  <p class="sr-only" aria-live="polite" data-carousel-status>
+    Immagine 1 di {images.length}
+  </p>
+</section>
+
+<script>
+  document
+    .querySelectorAll<HTMLElement>("[data-carousel]")
+    .forEach((carousel) => {
+      const slides = [
+        ...carousel.querySelectorAll<HTMLElement>("[data-carousel-slide]"),
+      ];
+      const previous = carousel.querySelector<HTMLButtonElement>(
+        "[data-carousel-previous]",
+      );
+      const next = carousel.querySelector<HTMLButtonElement>(
+        "[data-carousel-next]",
+      );
+      const toggle = carousel.querySelector<HTMLButtonElement>(
+        "[data-carousel-toggle]",
+      );
+      const toggleLabel = carousel.querySelector<HTMLElement>(
+        "[data-carousel-toggle-label]",
+      );
+      const status = carousel.querySelector<HTMLElement>(
+        "[data-carousel-status]",
+      );
+      const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      );
+      let activeIndex = 0;
+      let autoplayTimer: number | undefined;
+      let isPaused = reducedMotion.matches;
+
+      const render = (nextIndex: number, announce = false) => {
+        activeIndex = (nextIndex + slides.length) % slides.length;
+        slides.forEach((slide, index) => {
+          slide.hidden = index !== activeIndex;
+        });
+        if (status) {
+          status.setAttribute("aria-live", announce ? "polite" : "off");
+          status.textContent = `Immagine ${activeIndex + 1} di ${slides.length}`;
+        }
+      };
+
+      const stopAutoplay = () => {
+        if (autoplayTimer) window.clearInterval(autoplayTimer);
+        autoplayTimer = undefined;
+      };
+
+      const startAutoplay = () => {
+        stopAutoplay();
+        if (isPaused || document.hidden) return;
+        autoplayTimer = window.setInterval(() => render(activeIndex + 1), 4000);
+      };
+
+      const updateToggle = () => {
+        if (toggleLabel) toggleLabel.textContent = isPaused ? "Avvia" : "Pausa";
+        toggle?.setAttribute("aria-pressed", String(isPaused));
+      };
+
+      const pauseAfterInteraction = () => {
+        isPaused = true;
+        stopAutoplay();
+        updateToggle();
+      };
+
+      previous?.addEventListener("click", () => {
+        pauseAfterInteraction();
+        render(activeIndex - 1, true);
+      });
+      next?.addEventListener("click", () => {
+        pauseAfterInteraction();
+        render(activeIndex + 1, true);
+      });
+      toggle?.addEventListener("click", () => {
+        isPaused = !isPaused;
+        updateToggle();
+        startAutoplay();
+      });
+      document.addEventListener("visibilitychange", startAutoplay);
+      reducedMotion.addEventListener("change", (event) => {
+        isPaused = event.matches;
+        updateToggle();
+        startAutoplay();
+      });
+
+      updateToggle();
+      startAutoplay();
+    });
+</script>

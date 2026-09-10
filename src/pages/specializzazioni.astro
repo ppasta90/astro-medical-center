@@ -1,6 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import RenderCardsList from "@/components/RenderCardsList";
+import DoctorsGrid from "@/components/DoctorsGrid.astro";
+import { getDoctors } from "@/lib/doctors";
+
+const doctors = await getDoctors();
 const pageTitle =
   "I nostri specialisti: Dermatologia, Ginecologia, Oculistica e altre specializzazioni";
 ---
@@ -10,7 +13,9 @@ const pageTitle =
   pageDescription="I nostri medici specialisti in Dermatologia, Ginecologia, Oculistica e altre specializzazioni presso il Centro Medico Agliana."
 >
   <section class="bg-secondary py-20">
-    <h1 class="text-primary text-center font-serif text-[80px] pb-6 pt-6">
+    <h1
+      class="text-primaryLight text-center font-serif text-5xl md:text-[80px] pb-6 pt-14"
+    >
       I NOSTRI SPECIALISTI
     </h1>
     <h2
@@ -25,6 +30,6 @@ const pageTitle =
       della medicina, sono
       <strong>professionisti altamente qualificati e competenti</strong>.
     </p>
-    <RenderCardsList isMainPage={false} client:load />
+    <DoctorsGrid doctors={doctors} filterable />
   </section>
 </Layout>

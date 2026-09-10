@@ -1,43 +1,10 @@
 ---
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FiFacebook } from "react-icons/fi";
 import logo from "../images/logo.svg";
 import { Image } from "astro:assets";
+import { SITE } from "@/config/site";
 ---
 
-<script>
-  function updateBookingButtonPosition() {
-    const bookingButton = document.getElementById("booking-button");
-    const footer = document.querySelector("footer");
-    const widgetText = document.getElementById("widget-text");
-    const isDesktop = window.innerWidth > 768;
-
-    if (!isDesktop && widgetText) {
-      widgetText.textContent = "";
-    }
-
-    if (!isDesktop || !footer || !bookingButton) return;
-
-    const footerRect = footer.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-
-    if (widgetText) widgetText.textContent = "Prenota online con";
-
-    if (footerRect.top < windowHeight) {
-      bookingButton.style.bottom = `${windowHeight - footerRect.top - 240}px`;
-      bookingButton.style.right = "64px";
-    } else {
-      bookingButton.style.bottom = "16px";
-      bookingButton.style.right = "32px";
-    }
-  }
-
-  window.addEventListener("scroll", updateBookingButtonPosition);
-  window.addEventListener("resize", updateBookingButtonPosition);
-  document.addEventListener("DOMContentLoaded", updateBookingButtonPosition);
-</script>
-
-<footer class="bg-lightGreen py-8">
+<footer class="bg-primaryLight px-0 pb-28 pt-8 md:pb-8">
   <div class="flex flex-col md:flex-row justify-between w-[90%] m-auto gap-4">
     <div class="flex flex-col gap-4">
       <a aria-label="logo Centro Medico Agliana" href="/" class="mb-8">
@@ -46,24 +13,29 @@ import { Image } from "astro:assets";
       <div class="flex flex-col gap-4 text-secondary">
         <div class="text-sm">
           <p class="font-bold">
-            Centro Medico Agliana SAS di Pastacaldi Paolo & C.
+            {SITE.company.legalName}
           </p>
 
-          <p>Partita IVA: 01393880479</p>
-          <p>Numero REA PT - 146792</p>
+          <p>Partita IVA: {SITE.company.vatNumber}</p>
+          <p>Numero REA {SITE.company.reaNumber}</p>
           <a
             aria-label="Scrivici una mail pec"
-            href="mailto: centromedicoagliana@pec.it"
+            href={`mailto:${SITE.contact.pec}`}
           >
-            PEC: centromedicoagliana@pec.it
+            PEC: {SITE.contact.pec}
           </a>
         </div>
       </div>
       <div class="text-sm text-secondary">
-        <p>Via Michelagelo Buonarroti, n.c. mancante, Agliana (PT)</p>
-        <p>0574 02 70 87</p>
-        <p>info@centromedicoagliana.it</p>
-        <p>Lunedì - Venerdì 15:00 - 19:00</p>
+        <p>{SITE.address.display}</p>
+        <a
+          aria-label={SITE.contact.phone.ariaLabel}
+          href={SITE.contact.phone.href}
+        >
+          {SITE.contact.phone.display}
+        </a>
+        <p>{SITE.contact.email}</p>
+        <p>{SITE.openingHours}</p>
       </div>
     </div>
     <div>
@@ -77,7 +49,7 @@ import { Image } from "astro:assets";
             target="_blank"
             rel="noreferrer noopener"
           >
-            <FiFacebook size={25} />
+            <span aria-hidden="true" class="text-xl font-bold">f</span>
           </a>
           <a
             aria-label="Instagram"
@@ -85,7 +57,7 @@ import { Image } from "astro:assets";
             target="_blank"
             rel="noreferrer noopener"
           >
-            <FaInstagram size={25} />
+            <span aria-hidden="true" class="text-2xl">◎</span>
           </a>
           <a
             aria-label="Linkedin"
@@ -93,66 +65,33 @@ import { Image } from "astro:assets";
             target="_blank"
             rel="noreferrer noopener"
           >
-            <FaLinkedin size={25} />
+            <span aria-hidden="true" class="text-lg font-bold">in</span>
           </a>
           <a
-            href="https://www.doctolib.it/centro-medico/agliana/centro-medico-agliana-sas-di-pastacaldi-paolo-c/booking?utm_campaign=website-button&utm_source=centro-medico-agliana-sas-di-pastacaldi-paolo-c-website-button&utm_medium=referral&utm_content=withoutpreview-blue-floating-bottom-right&utm_term=centro-medico-agliana-sas-di-pastacaldi-paolo-c"
-            style="display:flex;text-align:center;background-color:#107ACA;color:#ffffff;font-size:14px;overflow:hidden;font-family:Roboto, sans-serif;box-sizing:border-box;align-items:center;padding:0 24px;z-index:1000;height:48px;text-decoration:none;position:fixed;bottom:16px;right:32px;border-bottom-left-radius:none;border-bottom-right-radius:none;border-top-left-radius:4px;border-top-right-radius:4px;border-radius:24px"
+            href={SITE.booking.widgetUrl}
             target="_blank"
+            rel="noreferrer noopener"
             id="booking-button"
+            aria-label="Prenota un appuntamento online su Doctolib"
+            class="fixed bottom-4 right-4 z-40 inline-flex min-h-12 items-center rounded-full bg-[#107aca] px-5 text-sm font-bold text-white shadow-lg"
           >
-            <span id="widget-text">Prenota un appuntamento online</span>
-            <img
-              style="height:19px;vertical-align:middle;width:auto"
-              src="https://pro.doctolib.it/external_button/doctolib-white-transparent.png"
-              alt="Doctolib"
-            /></a
+            <span>Prenota su Doctolib</span></a
           >
         </div>
 
         <div id="policies" class="flex flex-col text-sm">
           <a
             href="https://www.iubenda.com/privacy-policy/34164499"
-            class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe"
-            title="Privacy Policy ">Privacy Policy</a
-          ><script type="text/javascript">
-            (function (w, d) {
-              var loader = function () {
-                var s = d.createElement("script"),
-                  tag = d.getElementsByTagName("script")[0];
-                s.src = "https://cdn.iubenda.com/iubenda.js";
-                tag.parentNode.insertBefore(s, tag);
-              };
-              if (w.addEventListener) {
-                w.addEventListener("load", loader, false);
-              } else if (w.attachEvent) {
-                w.attachEvent("onload", loader);
-              } else {
-                w.onload = loader;
-              }
-            })(window, document);
-          </script>
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Privacy Policy">Privacy Policy</a
+          >
           <a
             href="https://www.iubenda.com/privacy-policy/34164499/cookie-policy"
-            class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe"
-            title="Cookie Policy ">Cookie Policy</a
-          ><script type="text/javascript">
-            (function (w, d) {
-              var loader = function () {
-                var s = d.createElement("script"),
-                  tag = d.getElementsByTagName("script")[0];
-                s.src = "https://cdn.iubenda.com/iubenda.js";
-                tag.parentNode.insertBefore(s, tag);
-              };
-              if (w.addEventListener) {
-                w.addEventListener("load", loader, false);
-              } else if (w.attachEvent) {
-                w.attachEvent("onload", loader);
-              } else {
-                w.onload = loader;
-              }
-            })(window, document);
-          </script>
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Cookie Policy">Cookie Policy</a
+          >
         </div>
       </div>
     </div>

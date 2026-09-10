@@ -1,0 +1,151 @@
+---
+import { Image } from "astro:assets";
+import logo from "@/images/logo.svg";
+import { SITE } from "@/config/site";
+
+interface Props {
+  pathname: string;
+}
+
+const { pathname } = Astro.props;
+---
+
+<header
+  class="fixed z-50 flex h-20 w-full items-center justify-between bg-white px-6 font-sans text-darkBlue shadow-sm lg:px-8"
+>
+  <a href="/" aria-label="Centro Medico Agliana, torna alla home">
+    <Image src={logo} width={200} height={150} alt="Centro Medico Agliana" />
+  </a>
+
+  <nav
+    aria-label="Navigazione principale"
+    class="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center lg:flex"
+  >
+    <ul class="inline-flex list-none items-center gap-5 text-lg xl:text-xl">
+      <li>
+        <a href="/" aria-current={pathname === "/" ? "page" : undefined}>Home</a
+        >
+      </li>
+      <li><a href="/#dove-siamo">Dove siamo</a></li>
+      <li><a href="/#contatti">Contatti</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <div class="hidden gap-4 lg:flex">
+    {
+      pathname === "/specializzazioni" && (
+        <a href={SITE.booking.profileUrl} class="white-cta">
+          PRENOTA ONLINE
+        </a>
+      )
+    }
+    {
+      pathname === "/" && (
+        <a href="/specializzazioni" class="white-cta">
+          TROVA LO SPECIALISTA
+        </a>
+      )
+    }
+    <a href={SITE.contact.phone.href} class="blue-cta hidden xl:inline-flex">
+      CHIAMA ORA
+    </a>
+  </div>
+
+  <button
+    type="button"
+    class="grid min-h-11 min-w-11 place-content-center rounded-md lg:hidden"
+    aria-label="Apri il menu di navigazione"
+    aria-controls="mobile-navigation"
+    aria-expanded="false"
+    data-menu-open
+  >
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      width="26"
+      height="26"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+
+  <dialog
+    id="mobile-navigation"
+    class="m-0 h-dvh max-h-none w-[min(85vw,22rem)] max-w-none bg-primaryLight p-0 text-secondary shadow-xl"
+    data-mobile-menu
+  >
+    <div class="flex h-full flex-col p-6">
+      <button
+        type="button"
+        class="ml-auto grid min-h-11 min-w-11 place-content-center rounded-md"
+        aria-label="Chiudi il menu di navigazione"
+        data-menu-close
+      >
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          width="28"
+          height="28"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M6 6l12 12M18 6 6 18"></path>
+        </svg>
+      </button>
+      <nav
+        aria-label="Navigazione mobile"
+        class="grid flex-1 place-content-center"
+      >
+        <ul class="flex flex-col items-center gap-8 font-serif text-4xl">
+          <li><a href="/">HOME</a></li>
+          <li><a href="/specializzazioni">SPECIALISTI</a></li>
+          <li><a href="/#dove-siamo">DOVE SIAMO</a></li>
+          <li><a href="/#contatti">CONTATTI</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href={SITE.contact.phone.href}>CHIAMA</a></li>
+        </ul>
+      </nav>
+    </div>
+  </dialog>
+</header>
+
+<script>
+  const menu = document.querySelector<HTMLDialogElement>("[data-mobile-menu]");
+  const openButton =
+    document.querySelector<HTMLButtonElement>("[data-menu-open]");
+  const closeButton =
+    document.querySelector<HTMLButtonElement>("[data-menu-close]");
+
+  const setExpanded = (expanded: boolean) => {
+    openButton?.setAttribute("aria-expanded", String(expanded));
+  };
+
+  openButton?.addEventListener("click", () => {
+    menu?.showModal();
+    setExpanded(true);
+    closeButton?.focus();
+  });
+
+  closeButton?.addEventListener("click", () => menu?.close());
+  menu?.addEventListener("close", () => {
+    setExpanded(false);
+    openButton?.focus();
+  });
+  menu?.addEventListener("click", (event) => {
+    if (event.target === menu) menu.close();
+  });
+  menu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => menu.close());
+  });
+</script>
+
+<style>
+  dialog::backdrop {
+    background: rgb(0 0 0 / 55%);
+  }
+</style>
