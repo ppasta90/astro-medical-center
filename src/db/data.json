@@ -20,7 +20,10 @@
       "andrologia",
       "ecografia tiroidea"
     ],
-    "link": "https://www.doctolib.it/endocrinologo/pistoia/alessia-romani-pistoia?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/endocrinologo/pistoia/alessia-romani-pistoia?pid=practice-586757"
+    }
   },
   {
     "id": "noti-ginecologo",
@@ -44,7 +47,10 @@
       "Menopausa",
       "Chirurgia ginecologica,"
     ],
-    "link": "https://www.doctolib.it/ginecologo-ostetrico/agliana/giacomo-noti?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/ginecologo-ostetrico/agliana/giacomo-noti?pid=practice-586757"
+    }
   },
   {
     "id": "bortot-urologa",
@@ -68,7 +74,10 @@
       "enuresi",
       "chirurgia urologica"
     ],
-    "link": "https://www.doctolib.it/urologo/agliana/giulia-bortot?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/urologo/agliana/giulia-bortot?pid=practice-586757"
+    }
   },
   {
     "id": "anichini-nutrizionista",
@@ -91,7 +100,10 @@
       "educazione alimentare familiare",
       "educazione alimentare nello sportivo"
     ],
-    "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/anna-maria-anichini?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/biologo-nutrizionista/agliana/anna-maria-anichini?pid=practice-586757"
+    }
   },
   {
     "id": "scandagli-dermatologa",
@@ -119,7 +131,10 @@
       "peeling estetico",
       "laser CO2"
     ],
-    "link": "https://www.doctolib.it/dermatologo-venereologo/pistoia/ilaria-scandagli?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/dermatologo-venereologo/pistoia/ilaria-scandagli?pid=practice-586757"
+    }
   },
   {
     "id": "prosperi-nutrizionista",
@@ -144,7 +159,10 @@
       "insufficienza renale",
       "iperuricemia"
     ],
-    "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/linda-prosperi?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/biologo-nutrizionista/agliana/linda-prosperi?pid=practice-586757"
+    }
   },
   {
     "id": "pellegrino-podologa",
@@ -172,7 +190,10 @@
       "piede geriatrico",
       "medicazioni per lesioni del piede"
     ],
-    "link": "https://www.doctolib.it/podologo/agliana/alessandra-pellegrino-agliana?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/podologo/agliana/alessandra-pellegrino-agliana?pid=practice-586757"
+    }
   },
   {
     "id": "pastacaldi-ecografista",
@@ -195,7 +216,10 @@
       "Ecografia linfonodi",
       "Ecografia cute e sottocute"
     ],
-    "link": "https://www.doctolib.it/ecografo/agliana/sandro-pastacaldi?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/ecografo/agliana/sandro-pastacaldi?pid=practice-586757"
+    }
   },
   {
     "id": "mastrorosato-nutrizionista",
@@ -224,7 +248,10 @@
       "Alimentazione vegetariana",
       "Alimentazione per neoplasie"
     ],
-    "link": "https://www.doctolib.it/biologo-nutrizionista/agliana/francesca-mastrorosato-agliana?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/biologo-nutrizionista/agliana/francesca-mastrorosato-agliana?pid=practice-586757"
+    }
   },
   {
     "id": "marangella-psicologa-sessuologa",
@@ -246,7 +273,10 @@
       "sostegno alla genitorialità",
       "terapia di coppia"
     ],
-    "link": "https://www.doctolib.it/psicologo/agliana/dalila-marangella?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/psicologo/agliana/dalila-marangella?pid=practice-586757"
+    }
   },
   {
     "id": "cirillo-massofisioterapista",
@@ -267,7 +297,9 @@
       "massaggio anticeullite tonificante",
       "massaggio californiano relax"
     ],
-    "link": ""
+    "booking": {
+      "kind": "phone"
+    }
   },
   {
     "id": "della-latta-podologo",
@@ -287,7 +319,10 @@
       "plantare ortopedico",
       "esame baropodometrico"
     ],
-    "link": "https://www.doctolib.it/podologo/camaiore/daniele-della-latta?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/podologo/camaiore/daniele-della-latta?pid=practice-586757"
+    }
   },
   {
     "id": "giannini-psicologa",
@@ -301,7 +336,10 @@
     "bio": "La Dott.ssa Laura Giannini è una psicologa laureata presso l'Università di Firenze e iscritta all'Albo degli Psicologi della Toscana (n. 10076). Frequenta attualmente la Scuola di Specializzazione in Psicoterapia Breve Strategica del prof. Giorgio Nardone. Questo approccio terapeutico si distingue per interventi mirati e orientati alla soluzione, volti a ottenere cambiamenti concreti e rapidi, lavorando sui meccanismi che mantengono il disagio psicologico. Si occupa di bambini, adolescenti e adulti, affrontando tematiche legate all'ansia, ai disturbi dell'umore, alle difficoltà comportamentali e relazionali, offrendo anche supporto nelle fasi di transizione della vita. Il suo obiettivo è aiutare le persone a sviluppare le risorse interiori per migliorare il loro benessere psicologico, adottando un approccio empatico e non giudicante.",
     "specialization": "Psicologia",
     "services": [],
-    "link": "https://www.doctolib.it/psicologo/agliana/laura-giannini?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/psicologo/agliana/laura-giannini?pid=practice-586757"
+    }
   },
   {
     "id": "faleri-dietista",
@@ -324,7 +362,10 @@
       "celiachia e intolleranze alimentari",
       "dieta vegetariana e vegana"
     ],
-    "link": "https://www.doctolib.it/dietista/agliana/ilenia-faleri?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/dietista/agliana/ilenia-faleri?pid=practice-586757"
+    }
   },
   {
     "id": "romiti-psicologa",
@@ -344,7 +385,10 @@
       "Supporto alla crescita personale e identitaria nei giovani adulti, nei momenti di scelta, crisi o trasformazione",
       "Supporto psicologico per i giovani adulti nelle difficoltà relazionali e affettive, nella coppia, in famiglia o nei contesti sociali e lavorativi"
     ],
-    "link": "https://www.doctolib.it/psicologo/agliana/serena-romiti?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/psicologo/agliana/serena-romiti?pid=practice-586757"
+    }
   },
   {
     "id": "coppini-psicologa",
@@ -364,7 +408,10 @@
       "sostegno alla genitorialità",
       "psicoterapia psicoanalitica"
     ],
-    "link": "https://www.doctolib.it/psicologo/agliana/carlotta-coppini?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/psicologo/agliana/carlotta-coppini?pid=practice-586757"
+    }
   },
   {
     "id": "maestrini-fisioterapista",
@@ -383,7 +430,10 @@
       "Trattamento delle problematiche del rachide (scoliosi, mal di schiena)",
       "Programmi personalizzati di riatletizzazione e di mantenimento"
     ],
-    "link": "https://www.doctolib.it/fisioterapista/agliana/francesca-maestrini?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/fisioterapista/agliana/francesca-maestrini?pid=practice-586757"
+    }
   },
   {
     "id": "giovannuzzi-psichiatra",
@@ -407,6 +457,9 @@
       "disturbi da uso di sostanze",
       "psicogeriatria e disturbi comportamentali nelle malattie neurodegenerative (Malattia di Parkinson, Malattia di Alzheimer, demenza vascolare e fronto-temporale)"
     ],
-    "link": "https://www.doctolib.it/psichiatra/agliana/irene-giovannuzzi-agliana?pid=practice-586757"
+    "booking": {
+      "kind": "external",
+      "url": "https://www.doctolib.it/psichiatra/agliana/irene-giovannuzzi-agliana?pid=practice-586757"
+    }
   }
 ]

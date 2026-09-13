@@ -16,6 +16,7 @@ pnpm-debug.log*
 # browser test artifacts
 playwright-report/
 test-results/
+.lighthouseci/
 
 # local Codex workspace marker
 /.codex

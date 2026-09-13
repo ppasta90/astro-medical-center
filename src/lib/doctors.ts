@@ -1,9 +1,8 @@
 import { getCollection } from "astro:content";
+import { sortDoctors } from "@/domain/sort-doctors";
 
 export const getDoctors = async () => {
   const entries = await getCollection("doctors");
 
-  return entries
-    .map(({ data }) => data)
-    .sort((first, second) => first.order - second.order);
+  return sortDoctors(entries.map(({ data }) => data));
 };

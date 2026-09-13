@@ -9,13 +9,18 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",
-    "format": "prettier --write src scripts tests astro.config.mjs eslint.config.mjs playwright.config.ts tailwind.config.mjs vercel.json package.json .github/workflows/quality.yml",
-    "format:check": "prettier --check src scripts tests astro.config.mjs eslint.config.mjs playwright.config.ts tailwind.config.mjs vercel.json package.json .github/workflows/quality.yml",
-    "check:data": "node scripts/check-data.mjs",
+    "format": "prettier --write src scripts tests docs README.md CONVERSION_TRACKING.md astro.config.mjs eslint.config.mjs lighthouserc.cjs playwright.config.ts vitest.config.ts tailwind.config.mjs vercel.json package.json .github",
+    "format:check": "prettier --check src scripts tests docs README.md CONVERSION_TRACKING.md astro.config.mjs eslint.config.mjs lighthouserc.cjs playwright.config.ts vitest.config.ts tailwind.config.mjs vercel.json package.json .github",
+    "check:data": "node --import tsx scripts/check-data.ts",
+    "check:bundle": "node --import tsx scripts/check-build-budget.ts",
     "check:links": "node scripts/check-links.mjs",
-    "check": "npm run lint && npm run format:check && npm run check:data && npm run build && npm run check:links",
+    "check:routes": "node --import tsx scripts/check-routes.ts",
+    "check:static": "npm run lint && npm run format:check && npm run check:data && npm run build && npm run check:bundle && npm run check:links && npm run check:routes",
+    "check": "npm run check:static && npm run test:unit",
     "test": "npm run check && npm run test:e2e",
-    "test:e2e": "playwright test"
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "test:performance": "npm run build && lhci autorun"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
@@ -32,12 +37,15 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
     "@eslint/js": "^10.0.1",
+    "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.63.0",
     "eslint": "^10.10.0",
     "eslint-plugin-astro": "^1.7.0",
     "globals": "^17.12.0",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript-eslint": "^8.70.0"
+    "tsx": "^4.23.13",
+    "typescript-eslint": "^8.70.0",
+    "vitest": "^4.1.11"
   }
 }

@@ -6,7 +6,63 @@ on:
   pull_request:
 
 jobs:
-  quality:
+  pull-request-title:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Reject generic title
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          normalized_title="${PR_TITLE,,}"
+          if [[ ${#PR_TITLE} -lt 12 || "$normalized_title" =~ ^(dev|update|changes|wip)$ ]]; then
+            echo "Use a descriptive PR title with at least 12 characters."
+            exit 1
+          fi
+
+  static-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Static checks and build contracts
+        run: npm run check:static
+
+  unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Unit tests
+        run: npm run test:unit
+
+  browser:
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -26,8 +82,36 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Static checks and build
-        run: npm run check
+      - name: Build site
+        run: npm run build
 
       - name: Browser smoke tests
         run: npm run test:e2e
+
+  performance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lighthouse budgets
+        run: npm run test:performance
+
+      - name: Upload Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: .lighthouseci/reports
+          if-no-files-found: ignore

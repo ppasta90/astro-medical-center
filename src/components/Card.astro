@@ -1,6 +1,7 @@
 ---
 import { SITE } from "@/config/site";
 import type { Doctor } from "@/types/doctor";
+import { getExternalBookingUrl } from "@/domain/doctor";
 
 interface Props {
   doctor: Doctor;
@@ -8,6 +9,7 @@ interface Props {
 }
 
 const { doctor, compact = false } = Astro.props;
+const bookingUrl = getExternalBookingUrl(doctor.booking);
 ---
 
 <article
@@ -33,9 +35,9 @@ const { doctor, compact = false } = Astro.props;
     <div class="mt-5 flex flex-wrap justify-center gap-3">
       <a href={SITE.contact.phone.href} class="blue-cta">CHIAMA ORA</a>
       {
-        doctor.link && (
+        bookingUrl && (
           <a
-            href={doctor.link}
+            href={bookingUrl}
             target="_blank"
             rel="noreferrer noopener"
             class="white-cta"

@@ -109,3 +109,28 @@ test("metadati social e dati strutturati sono coerenti", async ({ page }) => {
     "noindex, follow",
   );
 });
+
+test("le varianti di prenotazione espongono azioni coerenti", async ({
+  page,
+}) => {
+  await page.route(/^https?:\/\//, async (request) => {
+    const hostname = new URL(request.request().url()).hostname;
+    if (hostname === "127.0.0.1") await request.continue();
+    else await request.abort();
+  });
+
+  await page.goto("/romani-endocrinologa");
+  await expect(
+    page.getByRole("link", { name: "Prenota online" }),
+  ).toHaveAttribute("href", /^https:\/\/www\.doctolib\.it\//);
+
+  await page.goto("/cirillo-massofisioterapista");
+  await expect(
+    page.getByText(
+      "Prenotazione online non disponibile, chiamaci per prenotare",
+    ),
+  ).toBeVisible();
+  await expect(page.getByRole("link", { name: "Prenota online" })).toHaveCount(
+    0,
+  );
+});

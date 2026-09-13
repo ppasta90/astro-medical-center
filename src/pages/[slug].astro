@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { capitalizeFirstLetter } from "@/lib/utils";
 import { SITE } from "@/config/site";
+import { getExternalBookingUrl } from "@/domain/doctor";
 import { getDoctors } from "@/lib/doctors";
 import type { Doctor } from "@/types/doctor";
 
@@ -19,6 +20,7 @@ interface Props {
 }
 
 const { doctor } = Astro.props;
+const bookingUrl = getExternalBookingUrl(doctor.booking);
 const pageTitle = `${doctor.honorific} ${doctor.name} ${doctor.surname} - ${doctor.professionTitle}`;
 const pageDescription = `${doctor.honorific} ${doctor.name} ${doctor.surname}, ${doctor.professionTitle} presso il Centro Medico Agliana. Prenota una visita online o chiama per informazioni.`;
 const physicianStructuredData = {
@@ -36,7 +38,7 @@ const physicianStructuredData = {
   worksFor: {
     "@id": `${SITE.url}/#medical-clinic`,
   },
-  ...(doctor.link ? { sameAs: [doctor.link] } : {}),
+  ...(bookingUrl ? { sameAs: [bookingUrl] } : {}),
 };
 ---
 
@@ -76,7 +78,7 @@ const physicianStructuredData = {
             {doctor.professionTitle}
           </h2>
           {
-            doctor.link === "" && (
+            !bookingUrl && (
               <p class="text-white text-center md:text-left mb-8 underline">
                 Prenotazione online non disponibile, chiamaci per prenotare
               </p>
@@ -87,9 +89,9 @@ const physicianStructuredData = {
             class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
           >
             {
-              doctor.link && (
+              bookingUrl && (
                 <a
-                  href={doctor.link}
+                  href={bookingUrl}
                   target="_blank"
                   rel="noreferrer"
                   class="green-cta"
