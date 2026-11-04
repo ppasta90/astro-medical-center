@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 
 const doctors = JSON.parse(readFileSync("src/db/data.json", "utf8"));
-const uniqueFields = ["id", "order", "slug"];
+const uniqueFields = ["id", "slug"];
 const expectedPublicContacts = {
   "bortot-urologa": { phone: undefined, email: "bgiulss88@gmail.com" },
   "cirillo-massofisioterapista": {

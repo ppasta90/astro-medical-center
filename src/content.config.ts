@@ -10,7 +10,6 @@ const doctors = defineCollection({
   schema: z
     .object({
       id: z.string().regex(slugPattern),
-      order: z.number().int().positive(),
       slug: z.string().regex(slugPattern),
       honorific: z.enum(["Dott.", "Dott.ssa"]),
       professionTitle: z.string().trim().min(1),

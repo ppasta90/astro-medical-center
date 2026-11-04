@@ -5,5 +5,9 @@ export const getDoctors = async () => {
 
   return entries
     .map(({ data }) => data)
-    .sort((first, second) => first.order - second.order);
+    .sort(
+      (first, second) =>
+        first.surname.localeCompare(second.surname, "it") ||
+        first.name.localeCompare(second.name, "it"),
+    );
 };
