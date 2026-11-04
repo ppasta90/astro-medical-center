@@ -139,6 +139,13 @@ test("i contatti specialista mostrano solo i canali disponibili", async ({
   await expect(pastacaldiCard.locator('a[href^="mailto:"]')).toHaveCount(0);
   await expect(pastacaldiCard.locator('a[href*="doctolib.it"]')).toBeVisible();
 
+  const bortotCard = page
+    .locator("[data-doctor-card]")
+    .filter({ hasText: "Giulia Bortot" });
+  await expect(
+    bortotCard.locator('a[href="mailto:bgiulss88@gmail.com"]'),
+  ).toBeVisible();
+
   await page.goto("/romani-endocrinologa");
   await expect(page.locator('a[href="tel:+393313521633"]')).toBeVisible();
   await expect(
@@ -153,6 +160,18 @@ test("i contatti specialista mostrano solo i canali disponibili", async ({
   );
   expect(physician.telephone).toBe("+393313521633");
   expect(physician.email).toBe("dr.alessiaromani@gmail.com");
+
+  await page.goto("/bortot-urologa");
+  await expect(
+    page.locator('a[href="mailto:bgiulss88@gmail.com"]'),
+  ).toBeVisible();
+  const bortotSchemas = JSON.parse(
+    await page.locator('script[type="application/ld+json"]').textContent(),
+  );
+  const bortotPhysician = bortotSchemas.find(
+    (schema: { "@type": string }) => schema["@type"] === "Physician",
+  );
+  expect(bortotPhysician.email).toBe("bgiulss88@gmail.com");
 });
 
 test("la prenotazione globale indirizza alla sezione specialisti", async ({
