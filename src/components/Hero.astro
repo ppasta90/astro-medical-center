@@ -1,5 +1,5 @@
 ---
-import { SITE } from "@/config/site";
+
 ---
 
 <section
@@ -17,17 +17,6 @@ import { SITE } from "@/config/site";
       Siamo uno studio privato che ospita professionisti operanti in varie
       discipline mediche
     </h2>
-    <div class="flex flex-col md:flex-row items-center gap-4">
-      <div class="green-cta">
-        <a href={SITE.contact.phone.href}>CHIAMA ORA!</a>
-      </div>
-      <div class="blue-cta py-[10px]">
-        <a
-          href={SITE.booking.profileUrl}
-          target="_blank"
-          rel="noreferrer noopener">PRENOTA ONLINE</a
-        >
-      </div>
-    </div>
+    <a href="/specializzazioni" class="blue-cta">TROVA LO SPECIALISTA</a>
   </div>
 </section>

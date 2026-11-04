@@ -28,12 +28,6 @@ import { SITE } from "@/config/site";
       </div>
       <div class="text-sm text-secondary">
         <p>{SITE.address.display}</p>
-        <a
-          aria-label={SITE.contact.phone.ariaLabel}
-          href={SITE.contact.phone.href}
-        >
-          {SITE.contact.phone.display}
-        </a>
         <p>{SITE.contact.email}</p>
         <p>{SITE.openingHours}</p>
       </div>
@@ -68,14 +62,12 @@ import { SITE } from "@/config/site";
             <span aria-hidden="true" class="text-lg font-bold">in</span>
           </a>
           <a
-            href={SITE.booking.widgetUrl}
-            target="_blank"
-            rel="noreferrer noopener"
+            href="/specializzazioni"
             id="booking-button"
-            aria-label="Prenota un appuntamento online su Doctolib"
+            aria-label="Trova lo specialista e consulta i recapiti disponibili"
             class="fixed bottom-4 right-4 z-40 inline-flex min-h-12 items-center rounded-full bg-[#107aca] px-5 text-sm font-bold text-white shadow-lg"
           >
-            <span>Prenota su Doctolib</span></a
+            <span>Trova lo specialista</span></a
           >
         </div>
 

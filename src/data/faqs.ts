@@ -3,7 +3,8 @@ import { SITE } from "@/config/site";
 export const FAQS = [
   {
     question: "Come posso prenotare una visita?",
-    answer: `Puoi prenotare una visita scrivendo a ${SITE.contact.email} oppure visitando la nostra pagina Doctolib.`,
+    answer:
+      "Consulta la sezione Specialisti, scegli il professionista e utilizza il numero di telefono, l'indirizzo email o il link Doctolib disponibile nella sua scheda.",
   },
   {
     question: "Come posso pagare una visita?",
@@ -60,6 +61,6 @@ export const FAQS = [
   },
   {
     question: "Come posso contattarvi per ulteriori informazioni?",
-    answer: `Puoi contattarci scrivendo a ${SITE.contact.email} o chiamando il numero ${SITE.contact.phone.display} dal lunedì al venerdì, dalle 15:00 alle 19:00.`,
+    answer: `Per informazioni generali puoi scriverci a ${SITE.contact.email}. Per prenotare, utilizza i recapiti presenti nella scheda dello specialista.`,
   },
 ] as const;

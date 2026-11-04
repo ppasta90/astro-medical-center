@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import logo from "@/images/logo.svg";
-import { SITE } from "@/config/site";
 
 interface Props {
   pathname: string;
@@ -34,22 +33,12 @@ const { pathname } = Astro.props;
 
   <div class="hidden gap-4 lg:flex">
     {
-      pathname === "/specializzazioni" && (
-        <a href={SITE.booking.profileUrl} class="white-cta">
-          PRENOTA ONLINE
-        </a>
-      )
-    }
-    {
-      pathname === "/" && (
-        <a href="/specializzazioni" class="white-cta">
+      pathname !== "/specializzazioni" && (
+        <a href="/specializzazioni" class="blue-cta">
           TROVA LO SPECIALISTA
         </a>
       )
     }
-    <a href={SITE.contact.phone.href} class="blue-cta hidden xl:inline-flex">
-      CHIAMA ORA
-    </a>
   </div>
 
   <button
@@ -107,7 +96,6 @@ const { pathname } = Astro.props;
           <li><a href="/#dove-siamo">DOVE SIAMO</a></li>
           <li><a href="/#contatti">CONTATTI</a></li>
           <li><a href="/#faq">FAQ</a></li>
-          <li><a href={SITE.contact.phone.href}>CHIAMA</a></li>
         </ul>
       </nav>
     </div>

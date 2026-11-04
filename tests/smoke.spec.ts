@@ -154,3 +154,28 @@ test("i contatti specialista mostrano solo i canali disponibili", async ({
   expect(physician.telephone).toBe("+393313521633");
   expect(physician.email).toBe("dr.alessiaromani@gmail.com");
 });
+
+test("la prenotazione globale indirizza alla sezione specialisti", async ({
+  page,
+}) => {
+  await page.route(/^https?:\/\//, async (request) => {
+    const hostname = new URL(request.request().url()).hostname;
+    if (hostname === "127.0.0.1") await request.continue();
+    else await request.abort();
+  });
+
+  await page.goto("/");
+  await expect(page.locator('a[href="tel:+390574027087"]')).toHaveCount(0);
+  await expect(page.getByText("0574 027087")).toHaveCount(0);
+  await expect(page.getByText(/la nostra segreteria/i)).toHaveCount(0);
+
+  const contacts = page.locator("#contatti");
+  await expect(contacts).toContainText(
+    "Per prenotare una visita, consulta la sezione Specialisti e scegli il professionista di tuo interesse.",
+  );
+  await expect(contacts.locator('a[href="/specializzazioni"]')).toBeVisible();
+
+  await page.goto("/lavora-con-noi");
+  await expect(page.locator('a[href="tel:+390574027087"]')).toHaveCount(0);
+  await expect(page.getByText("0574 027087")).toHaveCount(0);
+});

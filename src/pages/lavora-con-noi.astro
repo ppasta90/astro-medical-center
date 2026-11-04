@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { Picture } from "astro:assets";
 import { SITE } from "@/config/site";
-import reception from "../images/segreteria.webp";
+import office from "../images/ufficio1.webp";
 ---
 
 <Layout
@@ -22,7 +22,7 @@ import reception from "../images/segreteria.webp";
 
       <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
         <Picture
-          src={reception}
+          src={office}
           formats={["avif"]}
           fallbackFormat="webp"
           widths={[480, 768, 1024]}
@@ -92,38 +92,6 @@ import reception from "../images/segreteria.webp";
                 </span>
                 <span>{SITE.contact.email}</span>
               </a>
-
-              <a
-                aria-label="Chiama per informazioni"
-                href={SITE.contact.phone.href}
-                class="flex items-center gap-3 text-gray-700 hover:text-primaryDark transition-colors duration-200"
-              >
-                <span
-                  class="flex items-center text-secondary"
-                  aria-hidden="true"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92z"
-                    ></path>
-                  </svg>
-                </span>
-                <span>{SITE.contact.phone.display}</span>
-              </a>
-
-              <div class="mt-6 p-4 bg-primaryLight rounded-lg">
-                <p class="text-sm text-gray-600">
-                  <strong>Orari di contatto:</strong><br />
-                  Dal lunedì al venerdì dalle ore 15:00 alle 19:00
-                </p>
-              </div>
             </div>
           </div>
         </div>

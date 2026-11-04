@@ -1,5 +1,5 @@
 ---
-import reception from "../images/segreteria.webp";
+import office from "../images/ufficio1.webp";
 import { Picture } from "astro:assets";
 import { SITE } from "@/config/site";
 ---
@@ -7,13 +7,13 @@ import { SITE } from "@/config/site";
 <section id="contatti" class="bg-primaryLight py-20">
   <div class="w-[90%] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20">
     <Picture
-      src={reception}
+      src={office}
       formats={["avif"]}
       fallbackFormat="webp"
       widths={[480, 768, 1024]}
       sizes="(min-width: 1024px) 45vw, 90vw"
       quality={65}
-      alt="bancone segreteria centro medico"
+      alt="Ambiente del Centro Medico Agliana"
       loading="lazy"
       decoding="async"
       class="w-full rounded-lg object-cover lg:w-[45%]"
@@ -26,10 +26,13 @@ import { SITE } from "@/config/site";
       <div class="flex gap-4 justify-between font-sans">
         <div class="flex flex-col gap-4">
           <p>
-            La nostra segreteria è aperta <b
-              >dal lunedi al venerdì dalle ore 15:00 alle 19:00</b
-            >. Per prenotazioni e informazioni non esitare a contattarci oppure
-            vieni a trovarci, la nostra segreteria sarà lieta di aiutarti.
+            Per prenotare una visita, consulta la sezione <a
+              href="/specializzazioni"
+              class="font-bold text-secondary underline underline-offset-4"
+              >Specialisti</a
+            > e scegli il professionista di tuo interesse. Nella sua scheda troverai,
+            quando disponibili, il numero di telefono, l'indirizzo email o il link
+            diretto a Doctolib da utilizzare per la prenotazione.
           </p>
           <a
             aria-label="Scrivici una mail"
@@ -50,27 +53,6 @@ import { SITE } from "@/config/site";
               </svg>
             </span>
             <span>{SITE.contact.email}</span>
-          </a>
-          <a
-            aria-label={SITE.contact.phone.ariaLabel}
-            href={SITE.contact.phone.href}
-            class="flex gap-2"
-          >
-            <span class="flex items-center text-secondary" aria-hidden="true">
-              <svg
-                viewBox="0 0 24 24"
-                width="20"
-                height="20"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92z"
-                ></path>
-              </svg>
-            </span>
-            <span>{SITE.contact.phone.display}</span>
           </a>
         </div>
       </div>
