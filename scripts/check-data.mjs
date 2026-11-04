@@ -24,6 +24,10 @@ const expectedPublicContacts = {
     phone: "3519834696",
     email: "marangelladalila@gmail.com",
   },
+  "pellegrino-podologa": {
+    phone: undefined,
+    email: "dottssasandrapellegrino@gmail.com",
+  },
 };
 
 for (const field of uniqueFields) {

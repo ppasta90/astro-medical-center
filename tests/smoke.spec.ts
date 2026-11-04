@@ -139,6 +139,11 @@ test("i contatti specialista mostrano solo i canali disponibili", async ({
   await expect(pastacaldiCard.locator('a[href^="mailto:"]')).toHaveCount(0);
   await expect(pastacaldiCard.locator('a[href*="doctolib.it"]')).toBeVisible();
 
+  const pellegrinoCard = page
+    .locator("[data-doctor-card]")
+    .filter({ hasText: "Sandra Pellegrino" });
+  await expect(pellegrinoCard.locator('a[href^="tel:"]')).toHaveCount(0);
+
   const bortotCard = page
     .locator("[data-doctor-card]")
     .filter({ hasText: "Giulia Bortot" });
@@ -172,6 +177,16 @@ test("i contatti specialista mostrano solo i canali disponibili", async ({
     (schema: { "@type": string }) => schema["@type"] === "Physician",
   );
   expect(bortotPhysician.email).toBe("bgiulss88@gmail.com");
+
+  await page.goto("/pellegrino-podologa");
+  await expect(page.locator('a[href^="tel:"]')).toHaveCount(0);
+  const pellegrinoSchemas = JSON.parse(
+    await page.locator('script[type="application/ld+json"]').textContent(),
+  );
+  const pellegrinoPhysician = pellegrinoSchemas.find(
+    (schema: { "@type": string }) => schema["@type"] === "Physician",
+  );
+  expect(pellegrinoPhysician.telephone).toBeUndefined();
 });
 
 test("la prenotazione globale indirizza alla sezione specialisti", async ({
