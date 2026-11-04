@@ -36,7 +36,7 @@ const { doctor, compact = false } = Astro.props;
         doctor.phone && (
           <a
             href={phoneHref(doctor.phone)}
-            class="blue-cta inline-flex items-center !justify-end gap-2"
+            class="blue-cta inline-flex items-center justify-center gap-2"
             aria-label={`Prenota telefonicamente con ${doctor.name} ${doctor.surname}`}
           >
             <PhoneIcon /> PRENOTA
