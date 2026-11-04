@@ -39,13 +39,6 @@ const { doctor, compact = false } = Astro.props;
         )
       }
       {
-        doctor.email && (
-          <a href={`mailto:${doctor.email}`} class="white-cta">
-            EMAIL
-          </a>
-        )
-      }
-      {
         doctor.link && (
           <a
             href={doctor.link}

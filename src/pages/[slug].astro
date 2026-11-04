@@ -37,7 +37,6 @@ const physicianStructuredData = {
     "@id": `${SITE.url}/#medical-clinic`,
   },
   ...(doctor.phone ? { telephone: `+39${doctor.phone}` } : {}),
-  ...(doctor.email ? { email: doctor.email } : {}),
   ...(doctor.link ? { sameAs: [doctor.link] } : {}),
 };
 ---
@@ -85,13 +84,6 @@ const physicianStructuredData = {
               doctor.phone && (
                 <a href={phoneHref(doctor.phone)} class="white-cta">
                   TELEFONO
-                </a>
-              )
-            }
-            {
-              doctor.email && (
-                <a href={`mailto:${doctor.email}`} class="white-cta">
-                  EMAIL
                 </a>
               )
             }

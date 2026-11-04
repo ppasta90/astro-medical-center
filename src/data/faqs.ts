@@ -4,7 +4,7 @@ export const FAQS = [
   {
     question: "Come posso prenotare una visita?",
     answer:
-      "Consulta la sezione Specialisti, scegli il professionista e utilizza il numero di telefono, l'indirizzo email o il link Doctolib disponibile nella sua scheda.",
+      "Consulta la sezione Specialisti, scegli il professionista e utilizza il numero di telefono o il link Doctolib disponibile nella sua scheda.",
   },
   {
     question: "Come posso pagare una visita?",

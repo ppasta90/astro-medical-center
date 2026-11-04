@@ -29,7 +29,6 @@ const doctors = defineCollection({
         .string()
         .regex(/^3\d{9}$/)
         .optional(),
-      email: z.string().email().optional(),
       link: z.union([z.literal(""), z.string().url()]),
     })
     .refine(({ id, slug }) => id === slug, {
