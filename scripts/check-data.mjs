@@ -2,6 +2,29 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 
 const doctors = JSON.parse(readFileSync("src/db/data.json", "utf8"));
 const uniqueFields = ["id", "order", "slug"];
+const expectedPublicContacts = {
+  "bortot-urologa": { phone: undefined, email: "bgiuliss88@gmail.com" },
+  "cirillo-massofisioterapista": {
+    phone: "3516592267",
+    email: "jesjes@live.it",
+  },
+  "coppini-psicologa": {
+    phone: "3508266621",
+    email: "coppinicarlotta26@gmail.com",
+  },
+  "giannini-psicologa": {
+    phone: "3294584304",
+    email: "lauragiannini.psicologa@gmail.com",
+  },
+  "giovannuzzi-psichiatra": {
+    phone: "3759043552",
+    email: "irene.giovannuzzi3@gmail.com",
+  },
+  "marangella-psicologa-sessuologa": {
+    phone: "3519834696",
+    email: "marangelladalila@gmail.com",
+  },
+};
 
 for (const field of uniqueFields) {
   const values = doctors.map((doctor) => doctor[field]);
@@ -22,6 +45,27 @@ for (const doctor of doctors) {
   }
 
   if (doctor.link) new URL(doctor.link);
+
+  if (doctor.phone && !/^3\d{9}$/.test(doctor.phone)) {
+    throw new Error(`${doctor.name} ${doctor.surname}: telefono non valido`);
+  }
+
+  if (doctor.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(doctor.email)) {
+    throw new Error(`${doctor.name} ${doctor.surname}: email non valida`);
+  }
+}
+
+if (doctors.some(({ surname }) => surname === "Scandagli")) {
+  throw new Error("Scandagli deve essere rimossa dall'elenco degli specialisti");
+}
+
+for (const [slug, expected] of Object.entries(expectedPublicContacts)) {
+  const doctor = doctors.find((candidate) => candidate.slug === slug);
+
+  if (!doctor) throw new Error(`Specialista atteso non trovato: ${slug}`);
+  if (doctor.phone !== expected.phone || doctor.email !== expected.email) {
+    throw new Error(`${slug}: recapiti pubblici non conformi`);
+  }
 }
 
 const referencedImages = new Set(
