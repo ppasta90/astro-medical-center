@@ -4,6 +4,7 @@ import { capitalizeFirstLetter } from "@/lib/utils";
 import { SITE } from "@/config/site";
 import { getDoctors } from "@/lib/doctors";
 import { phoneHref } from "@/lib/contact";
+import PhoneIcon from "@/components/PhoneIcon.astro";
 import type { Doctor } from "@/types/doctor";
 
 export async function getStaticPaths() {
@@ -82,8 +83,12 @@ const physicianStructuredData = {
           >
             {
               doctor.phone && (
-                <a href={phoneHref(doctor.phone)} class="white-cta">
-                  TELEFONO
+                <a
+                  href={phoneHref(doctor.phone)}
+                  class="white-cta items-center gap-2"
+                  aria-label={`Prenota telefonicamente con ${doctor.name} ${doctor.surname}`}
+                >
+                  <PhoneIcon /> PRENOTA
                 </a>
               )
             }

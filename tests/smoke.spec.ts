@@ -61,8 +61,8 @@ test("menu mobile, filtro e carosello restano accessibili senza React", async ({
   await expect(visibleCards).toHaveCount(3);
   await expect(visibleCards).toContainText([
     "Anna Maria Anichini",
-    "Linda Prosperi",
     "Francesca Mastrorosato",
+    "Linda Prosperi",
   ]);
 });
 
@@ -127,7 +127,7 @@ test("i contatti specialista mostrano solo i canali disponibili", async ({
   await expect(romaniCard.locator('a[href="tel:+393313521633"]')).toBeVisible();
   await expect(
     romaniCard.locator('a[href="mailto:dr.alessiaromani@gmail.com"]'),
-  ).toBeVisible();
+  ).toHaveCount(0);
   await expect(
     romaniCard.locator('a[href*="doctolib.it/endocrinologo"]'),
   ).toBeVisible();
@@ -149,13 +149,13 @@ test("i contatti specialista mostrano solo i canali disponibili", async ({
     .filter({ hasText: "Giulia Bortot" });
   await expect(
     bortotCard.locator('a[href="mailto:bgiulss88@gmail.com"]'),
-  ).toBeVisible();
+  ).toHaveCount(0);
 
   await page.goto("/romani-endocrinologa");
   await expect(page.locator('a[href="tel:+393313521633"]')).toBeVisible();
   await expect(
     page.locator('a[href="mailto:dr.alessiaromani@gmail.com"]'),
-  ).toBeVisible();
+  ).toHaveCount(0);
 
   const physicianSchemas = JSON.parse(
     await page.locator('script[type="application/ld+json"]').textContent(),
@@ -164,19 +164,19 @@ test("i contatti specialista mostrano solo i canali disponibili", async ({
     (schema: { "@type": string }) => schema["@type"] === "Physician",
   );
   expect(physician.telephone).toBe("+393313521633");
-  expect(physician.email).toBe("dr.alessiaromani@gmail.com");
+  expect(physician.email).toBeUndefined();
 
   await page.goto("/bortot-urologa");
   await expect(
     page.locator('a[href="mailto:bgiulss88@gmail.com"]'),
-  ).toBeVisible();
+  ).toHaveCount(0);
   const bortotSchemas = JSON.parse(
     await page.locator('script[type="application/ld+json"]').textContent(),
   );
   const bortotPhysician = bortotSchemas.find(
     (schema: { "@type": string }) => schema["@type"] === "Physician",
   );
-  expect(bortotPhysician.email).toBe("bgiulss88@gmail.com");
+  expect(bortotPhysician.email).toBeUndefined();
 
   await page.goto("/pellegrino-podologa");
   await expect(page.locator('a[href^="tel:"]')).toHaveCount(0);
