@@ -56,7 +56,9 @@ for (const doctor of doctors) {
 }
 
 if (doctors.some(({ surname }) => surname === "Scandagli")) {
-  throw new Error("Scandagli deve essere rimossa dall'elenco degli specialisti");
+  throw new Error(
+    "Scandagli deve essere rimossa dall'elenco degli specialisti",
+  );
 }
 
 for (const [slug, expected] of Object.entries(expectedPublicContacts)) {
