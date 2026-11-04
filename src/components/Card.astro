@@ -1,5 +1,5 @@
 ---
-import { SITE } from "@/config/site";
+import { phoneHref } from "@/lib/contact";
 import type { Doctor } from "@/types/doctor";
 
 interface Props {
@@ -31,7 +31,20 @@ const { doctor, compact = false } = Astro.props;
     </h2>
     <p class="mt-2 text-xl">{doctor.specialization}</p>
     <div class="mt-5 flex flex-wrap justify-center gap-3">
-      <a href={SITE.contact.phone.href} class="blue-cta">CHIAMA ORA</a>
+      {
+        doctor.phone && (
+          <a href={phoneHref(doctor.phone)} class="blue-cta">
+            TELEFONO
+          </a>
+        )
+      }
+      {
+        doctor.email && (
+          <a href={`mailto:${doctor.email}`} class="white-cta">
+            EMAIL
+          </a>
+        )
+      }
       {
         doctor.link && (
           <a

@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { capitalizeFirstLetter } from "@/lib/utils";
 import { SITE } from "@/config/site";
 import { getDoctors } from "@/lib/doctors";
+import { phoneHref } from "@/lib/contact";
 import type { Doctor } from "@/types/doctor";
 
 export async function getStaticPaths() {
@@ -20,7 +21,7 @@ interface Props {
 
 const { doctor } = Astro.props;
 const pageTitle = `${doctor.honorific} ${doctor.name} ${doctor.surname} - ${doctor.professionTitle}`;
-const pageDescription = `${doctor.honorific} ${doctor.name} ${doctor.surname}, ${doctor.professionTitle} presso il Centro Medico Agliana. Prenota una visita online o chiama per informazioni.`;
+const pageDescription = `${doctor.honorific} ${doctor.name} ${doctor.surname}, ${doctor.professionTitle} presso il Centro Medico Agliana. Consulta i recapiti disponibili per prenotare una visita.`;
 const physicianStructuredData = {
   "@context": "https://schema.org",
   "@type": "Physician",
@@ -32,10 +33,11 @@ const physicianStructuredData = {
   image: `${SITE.url}/${doctor.image}`,
   url: `${SITE.url}/${doctor.slug}`,
   medicalSpecialty: doctor.specialization,
-  telephone: SITE.contact.phone.e164,
   worksFor: {
     "@id": `${SITE.url}/#medical-clinic`,
   },
+  ...(doctor.phone ? { telephone: `+39${doctor.phone}` } : {}),
+  ...(doctor.email ? { email: doctor.email } : {}),
   ...(doctor.link ? { sameAs: [doctor.link] } : {}),
 };
 ---
@@ -75,17 +77,24 @@ const physicianStructuredData = {
           <h2 class="section-subtitle text-white text-center md:text-left mb-8">
             {doctor.professionTitle}
           </h2>
-          {
-            doctor.link === "" && (
-              <p class="text-white text-center md:text-left mb-8 underline">
-                Prenotazione online non disponibile, chiamaci per prenotare
-              </p>
-            )
-          }
           <!-- Call to Action Buttons -->
           <div
             class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
           >
+            {
+              doctor.phone && (
+                <a href={phoneHref(doctor.phone)} class="white-cta">
+                  TELEFONO
+                </a>
+              )
+            }
+            {
+              doctor.email && (
+                <a href={`mailto:${doctor.email}`} class="white-cta">
+                  EMAIL
+                </a>
+              )
+            }
             {
               doctor.link && (
                 <a
@@ -98,10 +107,6 @@ const physicianStructuredData = {
                 </a>
               )
             }
-            <!-- Mobile only CHIAMA ORA button -->
-            <a href={SITE.contact.phone.href} class="white-cta block sm:hidden">
-              CHIAMA ORA
-            </a>
           </div>
         </div>
       </div>

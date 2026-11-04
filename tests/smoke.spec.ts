@@ -109,3 +109,48 @@ test("metadati social e dati strutturati sono coerenti", async ({ page }) => {
     "noindex, follow",
   );
 });
+
+test("i contatti specialista mostrano solo i canali disponibili", async ({
+  page,
+}) => {
+  await page.route(/^https?:\/\//, async (request) => {
+    const hostname = new URL(request.request().url()).hostname;
+    if (hostname === "127.0.0.1") await request.continue();
+    else await request.abort();
+  });
+
+  await page.goto("/specializzazioni");
+
+  const romaniCard = page
+    .locator("[data-doctor-card]")
+    .filter({ hasText: "Alessia Romani" });
+  await expect(romaniCard.locator('a[href="tel:+393313521633"]')).toBeVisible();
+  await expect(
+    romaniCard.locator('a[href="mailto:dr.alessiaromani@gmail.com"]'),
+  ).toBeVisible();
+  await expect(
+    romaniCard.locator('a[href*="doctolib.it/endocrinologo"]'),
+  ).toBeVisible();
+
+  const pastacaldiCard = page
+    .locator("[data-doctor-card]")
+    .filter({ hasText: "Sandro Pastacaldi" });
+  await expect(pastacaldiCard.locator('a[href^="tel:"]')).toHaveCount(0);
+  await expect(pastacaldiCard.locator('a[href^="mailto:"]')).toHaveCount(0);
+  await expect(pastacaldiCard.locator('a[href*="doctolib.it"]')).toBeVisible();
+
+  await page.goto("/romani-endocrinologa");
+  await expect(page.locator('a[href="tel:+393313521633"]')).toBeVisible();
+  await expect(
+    page.locator('a[href="mailto:dr.alessiaromani@gmail.com"]'),
+  ).toBeVisible();
+
+  const physicianSchemas = JSON.parse(
+    await page.locator('script[type="application/ld+json"]').textContent(),
+  );
+  const physician = physicianSchemas.find(
+    (schema: { "@type": string }) => schema["@type"] === "Physician",
+  );
+  expect(physician.telephone).toBe("+393313521633");
+  expect(physician.email).toBe("dr.alessiaromani@gmail.com");
+});
